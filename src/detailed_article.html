@@ -163,8 +163,10 @@
                             <div class="article-sign-up__content-wrapper">
                                 <p class="article-sign-up__title title-h2">Запишитесь на сакральную церемонию рапэ</p>
                                 <form data-popup-message="#popup__success" action="#" data-dev class="article-sign-up__form form">
-                                    <div class="article-sign-up_input-group input-group">
-                                        <input
+                                    <div class="article-sign-up_input-group input-group popup__label--star popup__label--required">
+
+                                        <div class="form__input-wrapper">
+                                            <input
                                             class="article-sign-up__input input--name text"
                                             type="text"
                                             placeholder="Введите имя"
@@ -173,9 +175,16 @@
                                             autocomplete="off"
                                             name="form[]"
                                         />
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
+                                        
                                     </div>
-                                    <div class="article-sign-up_input-group input-group">
-                                        <input
+                                    <div class="article-sign-up_input-group input-group popup__label--star popup__label--required">
+                                    
+                                        <div class="form__input-wrapper">
+                                            <input
                                             class="article-sign-up__input input--tel text"
                                             type="tel"
                                             placeholder="+7(900) 000-00-00"
@@ -184,7 +193,10 @@
                                             name="form[]"
                                             data-required="tel"
                                         />
-
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
                                         <span class="error-span subscription">Введите числовое значение</span>
                                     </div>
                                     <button class="article-sign-up__btn button-long-arr" type="submit">

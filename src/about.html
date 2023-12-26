@@ -236,8 +236,11 @@
                             <div class="record__content-wrapper">
                                 <p class="record__title title-h2">Запишитесь на бесплатную консультацию к нашему психологу</p>
                                 <form data-popup-message="#popup__success" action="#" data-dev class="record__form form">
-                                    <div class="record_input-group input-group">
-                                        <input
+                                    <div class="record_input-group input-group popup__label--star popup__label--required">
+                                        
+                                        
+                                        <div class="form__input-wrapper">
+                                            <input
                                             class="record__input input--name text"
                                             data-validate
                                             data-required="text"
@@ -246,10 +249,17 @@
                                             type="text"
                                             placeholder="Введите имя"
                                         />
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
+                                        
                                         <span class="error-span subscription"></span>
                                     </div>
-                                    <div class="record_input-group input-group">
-                                        <input
+                                    <div class="record_input-group input-group popup__label--star popup__label--required">
+                                     
+                                        <div class="form__input-wrapper">
+                                            <input
                                             class="record__input input--tel text"
                                             data-validate
                                             autocomplete="off"
@@ -258,7 +268,10 @@
                                             type="tel"
                                             placeholder="+7(900) 000-00-00"
                                         />
-
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
                                         <span class="error-span subscription">Введите числовое значение</span>
                                     </div>
                                     <button class="record__btn button-long-arr" type="submit">
