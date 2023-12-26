@@ -166,7 +166,7 @@ const form = () => {
 
 
   // form fields
-  formFieldsInit({ viewPass: false });
+  formFieldsInit({ viewPass: true });
   
   // submit form
   formSubmit();
@@ -195,10 +195,10 @@ const form = () => {
     const passFirst = document.querySelector('.popup__label--pass-first input')
     const passRepeat = document.querySelector('.popup__label--pass-repeat input')
 
-    function pass () {
+    function passRep () {
         const inputValue = passRepeat.value.trim();
         const inputFirstValue = passFirst.value.trim();
-        const parent = passRepeat.parentElement;
+        const parent = passRepeat.parentElement.parentElement;
         const span = parent.nextElementSibling;
 
             if (inputValue !== inputFirstValue) {
@@ -210,17 +210,31 @@ const form = () => {
             }
     }
 
+    function passFir () {
+        const inputValue = passFirst.value.trim();
+        const parent = passFirst.parentElement.parentElement;
+
+        if (!/^[a-zA-Zа-яА-Я0-9]{8,}$/.test(inputValue) && inputValue !='') {
+            parent.classList.add('_form-error');
+        }  else  {
+            parent.classList.remove('_form-error');
+        }
+    }
+
     passFirst.addEventListener('input', () => {
-        pass()
+        passRep()
+        passFir()
+
     })
     passFirst.addEventListener('blur', () => {
-        pass()
+        passRep()
+        passFir()
     })
     passRepeat.addEventListener('input', () => {
-        pass()
+        passRep()
     })
     passRepeat.addEventListener('blur', () => {
-        pass()
+        passRep()
     })
 
 
@@ -229,8 +243,8 @@ const form = () => {
     tel.forEach(item => {
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
-            const span = item.nextElementSibling;
-            const parent = item.parentElement;
+            const span = item.parentElement.nextElementSibling;
+            const parent = item.parentElement.parentElement;
 
             if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='') {
                 span.classList.add('active');
@@ -246,7 +260,7 @@ const form = () => {
     mail.forEach(item => {
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
-            const parent = item.parentElement;
+            const parent = item.parentElement.parentElement;
 
             if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(inputValue) && inputValue !='') {
                 parent.classList.add('_form-error');
@@ -261,18 +275,20 @@ const form = () => {
     required.forEach(item => {
         item.addEventListener('blur', () => {
             const inputValue = item.value.trim();
-            if (inputValue === '' || item.parentElement.classList.contains('_form-error')) {
-                item.parentElement.classList.add('popup__label--star');
+            console.log( item.parentElement.querySelector('.star'))
+            if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
+                item.parentElement.querySelector('.star').style.opacity = 1;
             }  else  {
-                item.parentElement.classList.remove('popup__label--star');
+                item.parentElement.querySelector('.star').style.opacity = 0;
             }
         })
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
-            if (inputValue === '' || item.parentElement.classList.contains('_form-error')) {
-                item.parentElement.classList.add('popup__label--star');
+            console.log( item.parentElement.querySelector('.star'))
+            if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
+                item.parentElement.querySelector('.star').style.opacity = 1;
             }  else  {
-                item.parentElement.classList.remove('popup__label--star');
+                item.parentElement.querySelector('.star').style.opacity = 0;
             }
         })
     })

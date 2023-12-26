@@ -1100,20 +1100,30 @@
                             <div class="sign-up__content-wrapper">
                                 <p class="sign-up__title title-h2">Запишитесь <br />на бесплатную консультацию к нашему психологу</p>
                                 <form data-popup-message="#popup__success" action="#" data-dev class="sign-up__form form">
-                                    <div class="sign-up_input-group input-group">
-                                        <input class="sign-up__input input--name text" type="text" placeholder="Введите имя"   data-validate
-                                        data-required="text"
-                                        autocomplete="off"
-                                        name="form[]" />
-                               
-                                    </div>
-                                    <div class="sign-up_input-group input-group">
-                                        <input class="sign-up__input input--tel text" 
-                                        type="tel" placeholder="+7(900) 000-00-00"    
-                                        data-validate
-                                        autocomplete="off"
-                                        name="form[]" data-required='tel'/>
+                                    <div class="sign-up_input-group input-group popup__label--star popup__label--required">
 
+                                        <div class="form__input-wrapper">
+                                            <input class="sign-up__input input--name text" type="text" placeholder="Введите имя"   data-validate
+                                            data-required="text"
+                                            autocomplete="off"
+                                            name="form[]" />
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
+                                    </div>
+                                    <div class="sign-up_input-group input-group popup__label--star popup__label--required">
+                                     
+                                        <div class="form__input-wrapper">
+                                            <input class="sign-up__input input--tel text" 
+                                            type="tel" placeholder="+7(900) 000-00-00"    
+                                            data-validate
+                                            autocomplete="off"
+                                            name="form[]" data-required='tel'/>
+        
+                                            <span class="star"></span>
+                                       
+                                        </div>
                                         <span class="error-span subscription">Введите числовое значение</span>
                                     </div>
                                     <button class="sign-up__btn button-long-arr" type="submit">

@@ -524,7 +524,7 @@
                                 />
                             </label>
 
-                            <span class="error-span subscription"></span>
+                            <span class="error-span subscription">Пользователь не найден</span>
                         </div>
 
                         <button type="submit" class="popup__body-btn button button-long-arr popup__password-recovery-body-btn">
@@ -580,15 +580,18 @@
                         <div class="popup__input-group input-group">
                             <label class="popup__label popup__label--star popup__label--required">
                                 <span class="popup__label-text subscription">E-mail</span>
-                                <input
-                                    class="input__field text input--mail popup__form-input"
-                                    type="text"
-                                    placeholder="Введите электронную почту"
-                                    data-validate
-                                    data-required="email"
-                                    autocomplete="off"
-                                    name="form[]"
-                                />
+                                <div class="form__input-wrapper">
+                                    <input
+                                        class="input__field text input--mail popup__form-input"
+                                        type="text"
+                                        placeholder="Введите электронную почту"
+                                        data-validate
+                                        data-required="email"
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+                                    <span class="star"></span>
+                                </div>
                             </label>
 
                             <span class="error-span subscription"></span>
@@ -596,15 +599,19 @@
                         <div class="popup__input-group input-group">
                             <label class="popup__label popup__label--star popup__label--required">
                                 <span class="popup__label-text subscription">Имя</span>
-                                <input
-                                    class="input__field text input--name popup__form-input"
-                                    type="text"
-                                    placeholder="Введите ваше имя"
-                                    data-validate
-                                    data-required
-                                    autocomplete="off"
-                                    name="form[]"
-                                />
+
+                                <div class="form__input-wrapper">
+                                    <input
+                                        class="input__field text input--name popup__form-input"
+                                        type="text"
+                                        placeholder="Введите ваше имя"
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+                                    <span class="star"></span>
+                                </div>
                             </label>
 
                             <span class="error-span subscription"></span>
@@ -612,46 +619,84 @@
                         <div class="popup__input-group input-group">
                             <label class="popup__label popup__label--star popup__label--required">
                                 <span class="popup__label-text subscription">Фамилия</span>
-                                <input
-                                    class="input__field text input--name popup__form-input"
-                                    type="text"
-                                    placeholder="Введите вашу фамилию"
-                                    data-validate
-                                    data-required
-                                    autocomplete="off"
-                                    name="form[]"
-                                />
+
+                                <div class="form__input-wrapper">
+                                    <input
+                                        class="input__field text input--name popup__form-input"
+                                        type="text"
+                                        placeholder="Введите вашу фамилию"
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+
+                                    <span class="star"></span>
+                                </div>
                             </label>
 
                             <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__input-group input-group">
-                            <label class="popup__label popup__label--star popup__label--required popup__label--pass-first __viewpass">
+                            <label class="popup__label popup__label--pass-first __viewpass popup__label--star popup__label--required">
                                 <span class="popup__label-text subscription">Пароль</span>
-                                <input
-                                    class="input__field text popup__form-input"
-                                    type="password"
-                                    placeholder="Придумайте пароль"
-                                    data-validate
-                                    data-required="password"
-                                    autocomplete="off"
-                                    name="form[]"
-                                />
+
+                                <div class="form__input-wrapper">
+                                    <input
+                                        class="input__field text popup__form-input"
+                                        type="password"
+                                        placeholder="Придумайте пароль"
+                                        data-validate
+                                        data-required="password"
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+
+                                    <span class="star"></span>
+                                    <button class="viewpass-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                            <path
+                                                d="M16.6823 5.6625C16.8868 5.89219 17 6.1906 17 6.5C17 6.8094 16.8868 7.10781 16.6823 7.3375C15.3875 8.75 12.4404 11.5 9 11.5C5.55961 11.5 2.61247 8.75 1.3177 7.3375C1.1132 7.10781 1 6.8094 1 6.5C1 6.1906 1.1132 5.89219 1.3177 5.6625C2.61247 4.25 5.55961 1.5 9 1.5C12.4404 1.5 15.3875 4.25 16.6823 5.6625Z"
+                                                stroke="#0E1C15"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                            <path
+                                                d="M8.99943 8.99994C10.3615 8.99994 11.4657 7.88065 11.4657 6.49994C11.4657 5.11923 10.3615 3.99994 8.99943 3.99994C7.63737 3.99994 6.5332 5.11923 6.5332 6.49994C6.5332 7.88065 7.63737 8.99994 8.99943 8.99994Z"
+                                                stroke="#0E1C15"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                    <span class="password-span subscription"
+                                    >Требования к паролю - не менее 8 символов, без пробелов, латинские или кириллические буквы и цифры</span
+                                >
+                                </div>
+
+                               
                             </label>
-                            <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__input-group input-group">
                             <label class="popup__label popup__label--star popup__label--required popup__label--pass-repeat">
                                 <span class="popup__label-text subscription">Повторите пароль</span>
-                                <input
-                                    class="input__field text popup__form-input"
-                                    type="password"
-                                    placeholder="Повторите ваш пароль"
-                                    data-validate
-                                    data-required="password"
-                                    autocomplete="off"
-                                    name="form[]"
-                                />
+
+                                <div class="form__input-wrapper">
+                                    <input
+                                        class="input__field text popup__form-input"
+                                        type="password"
+                                        placeholder="Повторите ваш пароль"
+                                        data-validate
+                                        data-required="password"
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+
+                                    <span class="star"></span>
+                                </div>
                             </label>
                             <span class="error-span subscription">Пароли не совпадают</span>
                         </div>
@@ -835,27 +880,36 @@
                     <p class="popup__sign-up-form-text subscription">Заполни форму</p>
                     <div class="popup__sign-up-form-fields">
                         <div class="popup__sign-up-form-input-group input-group popup__label--star popup__label--required">
-                            <input
-                                class="input__field popup__sign-up-form-input text popup__sign-up-form-input--name input--name popup__form-input popup__form-input--white"
-                                type="text"
-                                placeholder="Введите имя"
-                                data-validate
-                                data-required
-                                autocomplete="off"
-                                name="form[]"
-                            />
+                            <div class="form__input-wrapper">
+                                <input
+                                    class="input__field popup__sign-up-form-input text popup__sign-up-form-input--name input--name popup__form-input popup__form-input--white"
+                                    type="text"
+                                    placeholder="Введите имя"
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+
+                                <span class="star"></span>
+                            </div>
+
                             <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__sign-up-form-input-group input-group popup__label--star popup__label--required">
-                            <input
-                                class="input__field popup__sign-up-form-input popup__sign-up-form-input--tel input--tel text popup__form-input popup__form-input--white"
-                                type="tel"
-                                placeholder="+7(900) 000-00-00"
-                                data-validate
-                                data-required="tel"
-                                autocomplete="off"
-                                name="form[]"
-                            />
+                            <div class="form__input-wrapper">
+                                <input
+                                    class="input__field popup__sign-up-form-input popup__sign-up-form-input--tel input--tel text popup__form-input popup__form-input--white"
+                                    type="tel"
+                                    placeholder="+7(900) 000-00-00"
+                                    data-validate
+                                    data-required="tel"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+
+                                <span class="star"></span>
+                            </div>
                             <span class="error-span subscription">Введите числовое значение</span>
                         </div>
                     </div>
@@ -951,51 +1005,68 @@
                     <p class="popup__review-form-text subscription">Заполни форму</p>
                     <div class="popup__review-form-fields">
                         <div class="popup__review-form-input-group input-group popup__label--star popup__label--required">
-                            <input
-                                class="input__field popup__review-form-input text popup__review-form-input--name input--name popup__form-input popup__form-input--white"
-                                type="text"
-                                placeholder="Введите имя"
-                                data-validate
-                                data-required
-                                autocomplete="off"
-                                type="text"
-                                name="form[]"
-                            />
+                            <div class="form__input-wrapper">
+                                <input
+                                    class="input__field popup__review-form-input text popup__review-form-input--name input--name popup__form-input popup__form-input--white"
+                                    type="text"
+                                    placeholder="Введите имя"
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                />
+
+                                <span class="star"></span>
+                            </div>
+
                             <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__review-form-input-group input-group popup__label--star popup__label--required">
-                            <input
-                                class="input__field popup__review-form-input popup__review-form-input--tel input--tel text popup__form-input popup__form-input--white"
-                                type="tel"
-                                placeholder="+7(900) 000-00-00"
-                                data-validate
-                                data-required="tel"
-                                autocomplete="off"
-                                name="form[]"
-                            />
+                            <div class="form__input-wrapper">
+                                <input
+                                    class="input__field popup__review-form-input popup__review-form-input--tel input--tel text popup__form-input popup__form-input--white"
+                                    type="tel"
+                                    placeholder="+7(900) 000-00-00"
+                                    data-validate
+                                    data-required="tel"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+
+                                <span class="star"></span>
+                            </div>
                             <span class="error-span subscription">Введите числовое значение</span>
                         </div>
                         <div class="popup__review-form-input-group input-group popup__label--star popup__label--required">
-                            <input
-                                class="input__field popup__review-form-input popup__review-form-input--text input--text text popup__form-input popup__form-input--white"
-                                type="text"
-                                placeholder="Напиши самые яркие впечатления кратко"
-                                data-validate
-                                data-required="text"
-                                autocomplete="off"
-                                name="form[]"
-                            />
+                            <div class="form__input-wrapper">
+                                <input
+                                    class="input__field popup__review-form-input popup__review-form-input--text input--text text popup__form-input popup__form-input--white"
+                                    type="text"
+                                    placeholder="Напиши самые яркие впечатления кратко"
+                                    data-validate
+                                    data-required="text"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+
+                                <span class="star"></span>
+                            </div>
+
                             <span class="error-span subscription"></span>
                         </div>
                         <div class="popup__review-form-input-group input-group popup__label--star popup__label--star--textarea popup__label--required">
-                            <textarea
-                                class="input__field popup__review-form-textarea popup__review-form-input--textarea input--textarea text popup__form-textarea popup__form-input--white"
-                                placeholder="Текст отзыва"
-                                data-validate
-                                data-required="text"
-                                autocomplete="off"
-                                name="form[]"
-                            ></textarea>
+                            <div class="form__input-wrapper">
+                                <textarea
+                                    class="input__field popup__review-form-textarea popup__review-form-input--textarea input--textarea text popup__form-textarea popup__form-input--white"
+                                    placeholder="Текст отзыва"
+                                    data-validate
+                                    data-required="text"
+                                    autocomplete="off"
+                                    name="form[]"
+                                ></textarea>
+                                <span class="star"></span>
+                            </div>
                             <span class="error-span subscription"></span>
                         </div>
                     </div>
