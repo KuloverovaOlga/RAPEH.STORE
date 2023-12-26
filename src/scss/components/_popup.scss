@@ -819,6 +819,9 @@ body::before {
             & input:focus ~ .password-span,
             & input:active ~ .password-span {
                 height: 4.5rem;
+                @media (max-width: 48em) {
+                    height: 9.6rem;
+                }
             }
             & input:focus ~ .star {
                 opacity: 0;
