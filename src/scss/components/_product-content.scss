@@ -277,7 +277,7 @@
         &.isActive {
             & .product-content__tab-info {
                 overflow-y: scroll;
-                height: 60.2rem;
+                max-height: 58.5rem;
             }
 
             & .product-content__tab-description,
@@ -391,7 +391,7 @@
     &__tab-info {
         overflow: hidden;
         height: fit-content;
-        max-height: 59.5rem;
+        max-height: 58.5rem;
         scrollbar-width: thin; /* для Firefox */
         scrollbar-color: $black $white;
         margin-right: -1.5rem;
@@ -424,7 +424,7 @@
 
     &__tab-description {
         display: -webkit-box !important;
-        -webkit-line-clamp: 20; // количество строк
+        -webkit-line-clamp: 18; // количество строк
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
     }
