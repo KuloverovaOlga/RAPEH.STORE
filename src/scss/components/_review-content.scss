@@ -204,6 +204,8 @@
   // .review-item__status
 
   &__status {
+    text-transform: lowercase;
+    color: $black-50;
   }
 
   // .review__photo-box

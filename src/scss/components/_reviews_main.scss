@@ -165,7 +165,10 @@
     height: 7rem;
     position: absolute;
     & svg {
-      object-fit: contain;
+      object-fit: cover;
+      & rect {
+        object-fit: cover;
+      }
     }
   }
 
