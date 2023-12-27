@@ -75,7 +75,7 @@ height: 100%;
     padding-top: 1.2rem;
     position: relative;
 width: 37.4rem;
-
+z-index: 1;
     &::after {
         content: "";
         position: absolute;
@@ -85,6 +85,7 @@ width: 37.4rem;
         height: 4rem;
         border-radius: 0 0 0 4rem;
         box-shadow: -1rem 1rem 0 0.5rem $white;
+        z-index: -1;
       }
       &::before {
         content: "";
@@ -95,7 +96,7 @@ width: 37.4rem;
     height: 4rem;
     border-radius: 0 0 0 4rem;
     box-shadow: -1rem 1rem 0 0.5rem $white;
-
+    z-index: -1;
       }
   }
 }

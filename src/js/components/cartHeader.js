@@ -7,6 +7,8 @@ const cartHeader = () => {
         cartHeader.classList.toggle('active');
     });
 
+    cartHeader.style.transition = 'transform 0.3s, opacity 0.3s';
+
     // // При нажатии на любую часть экрана, кроме блока корзины, скрываем блок корзины
     // document.addEventListener('click', function (event) {
     //     var isClickInsideCart = cartHeader.contains(event.target);

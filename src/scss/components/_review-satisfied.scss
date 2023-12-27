@@ -67,6 +67,11 @@
 		&__swiper-button-next.swiper-button-next.button-swiper {
 				position: static!important;
 				margin-top: 0!important;
+				background-color: $black;
+				& svg {
+				 stroke: $white;
+				 fill: $white;
+				}
 		
 		}
 }

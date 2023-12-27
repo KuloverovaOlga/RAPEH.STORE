@@ -210,6 +210,10 @@ body::before {
 
         &[disabled] {
             background-color: #d5d5d5;
+            &:hover {
+                background-color: #d5d5d5;
+                cursor: default;
+            }
         }
 
         & div,
@@ -559,7 +563,7 @@ body::before {
         }
     }
     &__body--success-title-review {
-        width: 56.7rem;
+        width: 57.7rem;
         @media (max-width: 48em) {
             width: 100%;
         }
@@ -568,6 +572,7 @@ body::before {
     // .popup__body--success-btn
 
     &__body--success-btn {
+        width: fit-content;
     }
 
     // ---------------------------------------password-recovery-end----------------------------

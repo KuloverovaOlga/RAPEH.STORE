@@ -1,15 +1,17 @@
 .cart-header {
     width: 45.8rem;
     position: fixed;
-    top: 11.2rem;
+    top: 10.7rem;
     right: 0;
     padding: 3.2rem;
     border-radius: 1.6rem;
     background-color: #f6f6f6;
     transform: scale(0);
-    transition: transform 0.5s ease;
+    opacity: 0;
+    // transition: transform 0.3s, opacity 0.3s;
     &.active {
         transform: scale(1);
+        opacity: 1;
     }
     @media (max-width: 48em) {
         display: none;

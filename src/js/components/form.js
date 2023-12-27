@@ -246,12 +246,16 @@ const form = () => {
             const span = item.parentElement.nextElementSibling;
             const parent = item.parentElement.parentElement;
 
-            if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='') {
+            if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='' ) {
+                console.log(inputValue.length)
                 span.classList.add('active');
                 parent.classList.add('_form-error');
-            }  else  {
+            }  else  if (inputValue.length < 11 ) {
+                parent.classList.add('_form-error');
+             } else {
                 span.classList.remove('active');
                 parent.classList.remove('_form-error');
+                console.log(inputValue.length)
             }
         })
     })
@@ -300,6 +304,7 @@ const form = () => {
         const submitButton = document.querySelector(submitButtonSelector);
     
         const formElements = form.querySelectorAll('input, textarea');
+        const formElementCheckbox = form.querySelectorAll('.popup__input-checkbox');
         const formElementsParents = form.querySelectorAll('.input-group')
         const formElementsLabel = form.querySelectorAll('.popup__label')
     
@@ -316,9 +321,13 @@ const form = () => {
          
                 return element.classList.contains('_form-error');
             });
+            const formErrorCheckbox = Array.from(formElementCheckbox).some(element => {
+         
+                return !element.checked;
+            });
          
             // Устанавливаем или удаляем атрибут disabled в зависимости от условия
-            if (isEmpty || (formError || formErrorLabel)) {
+            if (isEmpty || (formError || formErrorLabel) || formErrorCheckbox) {
                 submitButton.setAttribute('disabled', 'disabled');
             } else {
                 submitButton.removeAttribute('disabled');
@@ -336,6 +345,8 @@ const form = () => {
     setupFormListener('.popup__entrys-personal-area-form', '.popup__body-btn-personal-area-button');
     setupFormListener('.popup__password-recovery-form', '.popup__password-recovery-body-btn');
     setupFormListener('.popup__body-registration-form', '.popup__body-btn-registration-form');
+    setupFormListener('.popup__sign-up-form', '.popup__sign-up-form-btn');
+    setupFormListener('.popup__review-form', '.popup__review-form-btn');
 
 }
 
