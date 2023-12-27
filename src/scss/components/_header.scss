@@ -257,8 +257,8 @@ right: 0;
       right: 0;
       visibility: hidden;
       opacity: 0;
-
       transition: opacity 0.3s, visibility 0.3s;
+
       &.active {
         visibility: visible;
         opacity: 1;
@@ -277,7 +277,7 @@ right: 0;
       background-color: $light-grey;
       gap: 2.4rem;
       transform: scale(0);
-      transition: transform 0.3s;
+      // transition: transform 0.3s;
     }
 
     &__btn-modal-prev {
