@@ -146,9 +146,21 @@
 @media (max-width: 48em) {
     .product-reviews {
 
+        &__header-box {
+            display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 2.4rem;
+            margin-bottom: 3.2rem;
+		}
+        &__btn {
+          width: 100%;
+		}
     // .product-content__item
 
     &__review-item {
+        padding: 4rem ;
+        width: 100%;
       
     }
 
@@ -170,7 +182,7 @@
     // .product-content__review-item-text
 
     &__review-item-text {
-       
+        -webkit-line-clamp: 3; 
     }
 
     // .product-content__review-item-footer
