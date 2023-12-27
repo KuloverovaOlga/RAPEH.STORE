@@ -426,28 +426,46 @@
                         }
                     );
 
+                    // style="width: 36rem; padding: 2.4rem; background-color: #fff; border-radius: 1.6rem"
+
+                    // let iconBtnHref = './assets/images/balloonBtnIcon.svg';
+                    // let iconCancelHref = './assets/images/ballonCancelIcon.svg';
+
                     let placemark = new ymaps.Placemark(
                         [55.86773756887682, 37.66713250000002],
-                        {},
+                        {
+                            balloonContent: `
+                            <div class="balloon">
+                                <div class="balloon__title">Почта России отделение №121</div>
+                                <div class="balloon__address">107113, Москва, улица Сокольнический Вал, 2</div>
+                                <div class="balloon__schedule">пн-вс: 09:00-21:00</div>
+                                <div class="balloon__btn">
+                                    <p>Выбрать</p>
+                                </div>
+                                <div class="balloon__cancel"></div>
+                            </div>
+                            `,
+                        },
                         {
                             iconLayout: 'default#image',
-                            iconImageHref: './assets/images/place-mark.svg',
+                            iconImageHref: './assets/images/icons/place-mark.svg',
                             iconImageSize: [30, 35],
                             iconImageOffset: [-15, -35],
                         }
                     );
 
-                    map.controls.remove('geolocationControl'); // удаляем геолокацию
-                    map.controls.remove('searchControl'); // удаляем поиск
-                    map.controls.remove('trafficControl'); // удаляем контроль трафика
-                    map.controls.remove('typeSelector'); // удаляем тип
-                    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-                    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-                    map.controls.remove('rulerControl'); // удаляем контрол правил
-                    //   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+                    map.controls.remove('geolocationControl');
+                    map.controls.remove('searchControl');
+                    map.controls.remove('trafficControl');
+                    map.controls.remove('typeSelector');
+                    map.controls.remove('fullscreenControl');
+                    map.controls.remove('zoomControl');
+                    map.controls.remove('rulerControl');
+                    // map.behaviors.disable(["scrollZoom"]); // Опционально отключить скролл карты
 
                     map.geoObjects.add(placemark);
                 }
+
                 ymaps.ready(init);
             }
         });
