@@ -1,4 +1,5 @@
 import personalAccount from './personalAccountTabs';
+import personalAccountForm from './personalAccountForm';
 import catalog from './catalog';
 import catalogFilter from './catalogFilter';
 import cartHeader from './cartHeader';
@@ -17,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         personalAccount();
+    } catch {}
+    try {
+        personalAccountForm();
     } catch {}
     try {
         catalog();

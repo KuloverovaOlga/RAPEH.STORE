@@ -303,6 +303,9 @@
                             width: 3.2rem;
                             height: 3.2rem;
                         }
+                        &-text {
+                            color: rgba(18, 35, 26, 0.5);
+                        }
                     }
                     &-checkbox {
                         width: fit-content;
@@ -417,6 +420,17 @@
                         &-btn {
                             background-color: #c6ef4e;
                             color: #0e1c15;
+                            transition: all 0.5s ease-in-out;
+                            &:hover {
+                                background-color: #0e1c15;
+                                color: #fff;
+                                transition: all 0.5s ease-in-out;
+                                .account__table-bonuses-btn-icon {
+                                    svg {
+                                        fill: #fff;
+                                    }
+                                }
+                            }
                             &-icon {
                                 svg {
                                     fill: #0e1c15;
@@ -454,6 +468,16 @@
                         &-text {
                             color: #fc5b31;
                         }
+                    }
+                }
+            }
+        }
+        &.orders {
+            .range {
+                &__swiper-box {
+                    &::after {
+                        background-color: rgba(18, 35, 26, 0.1);
+                        z-index: 0;
                     }
                 }
             }
@@ -538,10 +562,11 @@
             &.orders__table-item {
                 display: flex;
                 align-items: center;
-                &:nth-child(even) {
+                &:hover {
                     .orders__table-element {
                         &._numbering {
                             color: #fc5b31;
+                            transition: color 0.5s ease-in-out;
                         }
                     }
                 }
