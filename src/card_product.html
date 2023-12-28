@@ -11,8 +11,8 @@
             <include src="./components/header.html"></include>
             <main class="main">
                 <include src="./components/popup.html"></include>
-
-                <section class="product-hero">
+                <include src="./components/watsapp.html"></include>
+                <section class="product-hero not-available">
                     <div class="container">
                         <div class="product-hero__inner">
                             <div class="product-hero__content-box">
@@ -20,7 +20,11 @@
 
                                 <div class="product-hero__info-box">
                                     <div class="product-hero__info-header">
-                                        <p class="product-hero__info-title title-h2">Рапэ Katukina Pau Mulata Katukina Pau Mulata</p>
+                                        <div class="product-hero__info-title-box">
+                                            <p class="product-hero__info-title title-h2">Рапэ Katukina Pau Mulata Katukina Pau Mulata</p>
+                                            <p class="product-hero__info-not-available title-h5">Нет в наличии</p>
+                                        </div>
+                                       
                                         <div class="product-hero__info-header-price-box">
                                             <p class="product-hero__info-header-current-price title-h4">1399<sup>₽</sup></p>
                                             <p class="product-hero__info-header-old-price title-h4">1399<sup>₽</sup></p>
@@ -418,7 +422,7 @@
                                         <div class="product-content__tab subscription active" data-tab="1"><span>Описание</span></div>
                                         <div class="product-content__tab subscription" data-tab="2"><span>Детали</span></div>
                                         <div class="product-content__tab subscription" data-tab="3"><span>Инструкция</span></div>
-                                        <div class="product-content__tab subscription" data-tab="4"><span>Отзывы</span></div>
+                                        
                                     </div>
                                 </div>
 
@@ -517,7 +521,9 @@
                                             <span>Свернуть</span>
                                         </button>
                                     </div>
-                                    <div class="product-content__tab-content-inner" data-tab="4">
+
+
+                                    <!-- <div class="product-content__tab-content-inner" data-tab="4">
                                         <div class="product-content__tab-review product-content__tab-info">
 
                                             <a class="product-content__review-item  " data-fancybox="gallery" href="#text-modal">
@@ -684,49 +690,15 @@
                                             <span class="isActive">Показать все</span>
                                             <span>Свернуть</span>
                                         </button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="review-text-modal" id="text-modal">
-                    <div class="review-item__content">
-                        <div class="review-item__header">
-                            <p class="review-item__title title-h3">
-                                Чувствую себя
-                                <span class="title-span">спокойно </span>
-                                <span class="title-span">и хорошо</span> ! Спасибо!
-                            </p>
-                        </div>
-                        <div class="review-item__text-wrapper">
-                            <p class="review-item__text text">
-                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
-                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
-                            </p>
-                            <p class="review-item__text text">
-                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
-                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
-                            </p>
-                            <p class="review-item__text text">
-                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
-                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
-                            </p>
-                        </div>
 
-                        <div class="review-item__footer">
-                            <div class="review-item__footer-info">
-                                <div class="review-item__photo-box">
-                                    <img src="./assets/images/photo.webp" alt="" />
-                                </div>
-                                <div class="review-item__footer-info-box">
-                                    <p class="review-item__name title-h5">Иванова Ольга</p>
-                                </div>
-                            </div>
-                            <p class="review__data subscription">13 октября 2023</p>
-                        </div>
-                    </div>
-                </div>
+          
+
                 <include src="./components/ribbon.html"></include>
                 <section class="disclaimer">
                     <div class="container">
@@ -743,6 +715,167 @@
                                     никакой ответственности, а также не преследует коммерческую цель.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="product-reviews">
+                    <div class="container">
+                        <div class="product-reviews__inner">
+                            <div class="product-reviews__header-box">
+                                <p class="product-reviews__title title-h2">Отзывы о товаре</p>
+                                <button data-popup="#popup__review" class="product-reviews__btn button button-long-arr">
+                                    <span class="product-reviews__btn-text button">Оставить отзыв</span>
+                                    <div class="product-reviews__btn-svg-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
+                                            <path
+                                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <ul class="product-reviews__reviews-list">
+                                <li class="product-reviews__reviews-item-wrapper">
+                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                        <div class="product-reviews__review-item-header">
+                                            <p class="product-reviews__review-item-title title-h3">
+                                                Чувствую себя
+                                                <span class="title-span">спокойно </span>
+                                                <span class="title-span">и хорошо</span> ! Спасибо!
+                                            </p>
+                                        </div>
+    
+                                        <p class="product-reviews__review-item-text text">
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                        </p>
+                                        <div class="product-reviews__review-item-footer">
+                                            <div class="product-reviews__review-item-footer-info">
+                                                <div class="product-reviews__review-item-photo-box">
+                                                    <img src="./assets/images/photo.webp" alt="" />
+                                                </div>
+                                                <div class="product-reviews__review-item-footer-info-box">
+                                                    <p class="product-reviews__review-item-name title-h5">Иванова Ольга</p>
+                                                    <p class="product-reviews__review-item-status subscription">Авторизованный пользователь</p>
+                                                </div>
+                                            </div>
+                                            <p class="review__data subscription">13 октября 2023</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-reviews__reviews-item-wrapper">
+                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                        <div class="product-reviews__review-item-header">
+                                            <p class="product-reviews__review-item-title title-h3">
+                                                Чувствую себя
+                                                <span class="title-span">спокойно </span>
+                                                <span class="title-span">и хорошо</span> ! Спасибо!
+                                            </p>
+                                        </div>
+    
+                                        <p class="product-reviews__review-item-text text">
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                        </p>
+                                        <div class="product-reviews__review-item-footer">
+                                            <div class="product-reviews__review-item-footer-info">
+                                                <div class="product-reviews__review-item-photo-box">
+                                                    <img src="./assets/images/unSignUpPhoto.webp" alt="" />
+                                                </div>
+                                                <div class="product-reviews__review-item-footer-info-box">
+                                                    <p class="product-reviews__review-item-name title-h5">Иванова Ольга</p>
+                                                    <p class="product-reviews__review-item-status subscription">неавторизованный пользователь</p>
+                                                </div>
+                                            </div>
+                                            <p class="review__data subscription">13 октября 2023</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-reviews__reviews-item-wrapper">
+                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                        <div class="product-reviews__review-item-header">
+                                            <p class="product-reviews__review-item-title title-h3">
+                                                Чувствую себя
+                                                <span class="title-span">спокойно </span>
+                                                <span class="title-span">и хорошо</span> ! Спасибо!
+                                            </p>
+                                        </div>
+    
+                                        <p class="product-reviews__review-item-text text">
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                        </p>
+                                        <div class="product-reviews__review-item-footer">
+                                            <div class="product-reviews__review-item-footer-info">
+                                                <div class="product-reviews__review-item-photo-box">
+                                                    <img src="./assets/images/photo.webp" alt="" />
+                                                </div>
+                                                <div class="product-reviews__review-item-footer-info-box">
+                                                    <p class="product-reviews__review-item-name title-h5">Иванова Ольга</p>
+                                                    <p class="product-reviews__review-item-status subscription">Авторизованный пользователь</p>
+                                                </div>
+                                            </div>
+                                            <p class="review__data subscription">13 октября 2023</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-reviews__reviews-item-wrapper">
+                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                        <div class="product-reviews__review-item-header">
+                                            <p class="product-reviews__review-item-title title-h3">
+                                                Чувствую себя
+                                                <span class="title-span">спокойно </span>
+                                                <span class="title-span">и хорошо</span> ! Спасибо!
+                                            </p>
+                                        </div>
+    
+                                        <p class="product-reviews__review-item-text text">
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                        </p>
+                                        <div class="product-reviews__review-item-footer">
+                                            <div class="product-reviews__review-item-footer-info">
+                                                <div class="product-reviews__review-item-photo-box">
+                                                    <img src="./assets/images/unSignUpPhoto.webp" alt="" />
+                                                </div>
+                                                <div class="product-reviews__review-item-footer-info-box">
+                                                    <p class="product-reviews__review-item-name title-h5">Иванова Ольга</p>
+                                                    <p class="product-reviews__review-item-status subscription">неавторизованный пользователь</p>
+                                                </div>
+                                            </div>
+                                            <p class="review__data subscription">13 октября 2023</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-reviews__reviews-item-wrapper">
+                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                        <div class="product-reviews__review-item-header">
+                                            <p class="product-reviews__review-item-title title-h3">
+                                                Чувствую себя
+                                                <span class="title-span">спокойно </span>
+                                                <span class="title-span">и хорошо</span> ! Спасибо!
+                                            </p>
+                                        </div>
+    
+                                        <p class="product-reviews__review-item-text text">
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                        </p>
+                                        <div class="product-reviews__review-item-footer">
+                                            <div class="product-reviews__review-item-footer-info">
+                                                <div class="product-reviews__review-item-photo-box">
+                                                    <img src="./assets/images/photo.webp" alt="" />
+                                                </div>
+                                                <div class="product-reviews__review-item-footer-info-box">
+                                                    <p class="product-reviews__review-item-name title-h5">Иванова Ольга</p>
+                                                    <p class="product-reviews__review-item-status subscription">Авторизованный пользователь</p>
+                                                </div>
+                                            </div>
+                                            <p class="review__data subscription">13 октября 2023</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <button class="product-reviews__button button">
+                               Показать еще
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -808,6 +941,45 @@
                         </div>
                     </div>
                 </section>
+
+
+                <div class="review-text-modal" id="text-modal">
+                    <div class="review-item__content">
+                        <div class="review-item__header">
+                            <p class="review-item__title title-h3">
+                                Чувствую себя
+                                <span class="title-span">спокойно </span>
+                                <span class="title-span">и хорошо</span> ! Спасибо!
+                            </p>
+                        </div>
+                        <div class="review-item__text-wrapper">
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                            <p class="review-item__text text">
+                                В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и
+                                хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                            </p>
+                        </div>
+
+                        <div class="review-item__footer">
+                            <div class="review-item__footer-info">
+                                <div class="review-item__photo-box">
+                                    <img src="./assets/images/photo.webp" alt="" />
+                                </div>
+                                <div class="review-item__footer-info-box">
+                                    <p class="review-item__name title-h5">Иванова Ольга</p>
+                                </div>
+                            </div>
+                            <p class="review__data subscription">13 октября 2023</p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <include src="./components/footer.html"></include>
             <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

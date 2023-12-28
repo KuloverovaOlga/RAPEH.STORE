@@ -73,11 +73,15 @@
                 gap: 1.8rem;
                 align-items: center;
                 position: relative;
+                
                 &._active {
                     .order-detail__information-status-circle {
-                        border: 1px solid #fc5b31;
+                        border: 1px solid $orange;
                         & > img {
                             opacity: 1;
+                        }
+                        &::after {
+                            background-color: $orange;
                         }
                     }
                 }
@@ -87,15 +91,31 @@
                 height: 6rem;
                 border-radius: 50%;
                 border: 1px solid rgba(18, 35, 26, 0.3);
+                background: $light-grey;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
+                z-index: 2;
                 & > img {
                     opacity: 0;
                     width: 3.2rem;
                     height: 3.2rem;
                 }
+                &:not(.order-detail__information-status-circle--last) {
+                    &::after {
+                        position: absolute;
+                        content:"";
+                        top: 50%;
+                        right: 0;
+                        transform: translateX(100%);
+                        width: calc(130% + 5.6rem);
+                        height: 1px;
+                        background-color: $black-30;
+                        display: block;
+                    }
+                }
+               
             }
             &-text {
                 @media (max-width: 48em) {

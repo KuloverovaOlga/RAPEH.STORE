@@ -2,6 +2,8 @@
     padding: 11rem 0;
     // .product-content__inner
 
+
+
     &__inner {
         display: flex;
         gap: 18rem;
@@ -247,7 +249,7 @@
 
     &__tab-content-wrap {
         background-color: $light-grey;
-        height: 80.5rem;
+     
         padding: 8rem 10rem 7.5rem 7rem;
         border-radius: 0 8rem 8rem 8rem;
         position: relative;
@@ -264,7 +266,7 @@
         z-index: 0;
         position: relative;
         padding-bottom: 2rem;
-
+height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -276,8 +278,7 @@
         }
         &.isActive {
             & .product-content__tab-info {
-                overflow-y: scroll;
-                max-height: 58.5rem;
+
             }
 
             & .product-content__tab-description,
@@ -298,93 +299,8 @@
         }
     }
 
-    &__tab-review {
-        display: flex;
-        flex-direction: column;
-        gap: 3.2rem;
-    }
-    // .product-content__item
 
-    &__review-item {
-        cursor: pointer;
-        background-color: $white;
-        border-radius: 4rem;
-        padding: 4rem;
-        display: flex;
-        flex-direction: column;
-        gap: 3.2rem;
-        justify-content: space-between;
-        margin-right: 1.5rem;
-    width: 90rem;
-    }
 
-    // .product-content__review-item-header
-
-    &__review-item-header {
-    }
-
-    // .product-content__review-item-title
-
-    &__review-item-title {
-        position: relative;
-        z-index: 2;
-        & span::before {
-            height: 3.6rem;
-        }
-    }
-
-    // .product-content__review-item-text
-
-    &__review-item-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* Максимальное количество строк */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    // .product-content__review-item-footer
-
-    &__review-item-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    // .product-content__review-item-footer-info
-
-    &__review-item-footer-info {
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
-    }
-
-    // .product-content__review-item-photo-box
-
-    &__review-item-photo-box {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 50%;
-        overflow: hidden;
-        & img {
-            object-fit: contain;
-        }
-    }
-
-    // .product-content__review-item-footer-info-box
-
-    &__review-item-footer-info-box {
-    }
-
-    // .product-content__review-item-name
-
-    &__review-item-name {
-    }
-
-    // .product-content__review-item-status
-
-    &__review-item-status {
-    }
 
     // .product-content__tab-content
 
@@ -395,31 +311,8 @@
         scrollbar-width: thin; /* для Firefox */
         scrollbar-color: $black $white;
         margin-right: -1.5rem;
-        /* Webkit (Chrome, Safari) */
-        &::-webkit-scrollbar {
-            width: 2px;
-        }
+        transition: max-height 0.5s;
 
-        &::-webkit-scrollbar-thumb {
-            background-color: $black;
-        }
-
-        &::-webkit-scrollbar-track {
-            background-color: $white;
-        }
-
-        /* Edge */
-        &::-ms-scrollbar {
-            width: 10px;
-        }
-
-        &::-ms-scrollbar-thumb {
-            background-color: $black;
-        }
-
-        &::-ms-scrollbar-track {
-            background-color: $white;
-        }
     }
 
     &__tab-description {
@@ -668,7 +561,7 @@
 
         &__tab {
             cursor: pointer;
-            width: 19rem;
+            width: 24rem;
             height: 6.3rem;
             display: flex;
             align-items: center;
@@ -684,12 +577,14 @@
                     border-radius: 7rem 7rem 0 0;
                 }
             }
-            &:nth-child(3) {
-                width: 23.5rem;
+
+            &:nth-child(2) {
+                width: 18rem;
             }
+       
             &:not(:first-of-type) {
                 margin-left: -4.5rem;
-                padding-left: 4.5rem;
+                padding-left: 3.5rem;
             }
             // &:after {
             //     content: '';
@@ -772,26 +667,30 @@
         // .product-content__tab-content-wrap
 
         &__tab-content-wrap {
-            height: 52.2rem;
+    
             padding: 4rem 4rem 8rem 4rem;
             border-radius: 0 4rem 4rem 4rem;
         }
 
         &__tab-content-inner {
             padding-bottom: 0;
-            max-height: 44rem;
+            height: 100%;
             &.active {
                 & .product-content__tab-info {
                 }
             }
             &.isActive {
                 & .product-content__tab-info {
-                    overflow-y: scroll;
+                 
                     // display: block !important;
                     // height: 39rem;
                     max-height: 39rem;
                 }
             }
+        }
+
+        &__tab-info  {
+
         }
 
         // .product-content__tab-content
@@ -839,73 +738,5 @@
                 border-bottom: 2px dotted $black-50;
             }
         }
-    
-
-    &__tab-review {
- 
-    }
-    // .product-content__item
-
-    &__review-item {
-        margin-right: 1.5rem;
-        width: calc(100% - 1.5rem);
-    }
-
-    // .product-content__review-item-header
-
-    &__review-item-header {
-    }
-
-    // .product-content__review-item-title
-
-    &__review-item-title {
-        position: relative;
-      z-index: 2;
-      & span::before {
-        height: 3.6rem;
-      }
-    }
-
-    // .product-content__review-item-text
-
-    &__review-item-text {
-       
-    }
-
-    // .product-content__review-item-footer
-
-    &__review-item-footer {
-        gap: 2.4rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    // .product-content__review-item-footer-info
-
-    &__review-item-footer-info {
-        gap: 1.6rem;
-    }
-
-    // .product-content__review-item-photo-box
-
-    &__review-item-photo-box {
-        width: 8rem;
-        height: 8rem;
-    }
-
-    // .product-content__review-item-footer-info-box
-
-    &__review-item-footer-info-box {
-    }
-
-    // .product-content__review-item-name
-
-    &__review-item-name {
-    }
-
-    // .product-content__review-item-status
-
-    &__review-item-status {
-    }
 }
 }

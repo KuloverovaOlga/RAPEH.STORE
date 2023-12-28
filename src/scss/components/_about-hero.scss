@@ -59,11 +59,7 @@
             box-shadow: -1rem -1rem 0 0.5rem $white;
         }
     }
-    &__btn-link {
-        position: absolute;
-        bottom: -4rem;
-        right: 0;
-    }
+
     &__img-decor {
         display: none;
     }
@@ -119,9 +115,7 @@
                 display: none;
             }
         }
-        &__btn-link {
-            display: none;
-        }
+   
 
         &__img-decor {
             display: block;

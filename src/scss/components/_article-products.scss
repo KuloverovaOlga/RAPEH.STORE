@@ -32,6 +32,9 @@
     // .article-products__header-btn-svg-box
 
     &__header-btn-svg-box {
+        & svg {
+            fill: $black;
+        }
     }
 
     // .article-products__swiper

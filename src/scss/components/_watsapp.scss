@@ -1,0 +1,33 @@
+.watswpp {
+ 
+
+    // .watswpp__btn-link
+
+    &__btn-link {
+        z-index: 10;
+        position: fixed;
+        bottom: 8rem;
+        right: 4rem;
+    }
+
+    // .watswpp__btn-svg-box
+
+    &__btn-svg-box {
+    }
+}
+@media (max-width: 48em) {
+    .watswpp {
+ 
+
+        // .watswpp__btn-link
+    
+        &__btn-link {
+      display: none;
+        }
+    
+        // .watswpp__btn-svg-box
+    
+        &__btn-svg-box {
+        }
+    }
+}
