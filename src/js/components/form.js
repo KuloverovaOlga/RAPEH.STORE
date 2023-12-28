@@ -247,7 +247,7 @@ const form = () => {
             const parent = item.parentElement.parentElement;
 
             if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='' ) {
-                console.log(inputValue.length)
+              
                 span.classList.add('active');
                 parent.classList.add('_form-error');
             }  else  if (inputValue.length < 11 ) {
@@ -255,7 +255,7 @@ const form = () => {
              } else {
                 span.classList.remove('active');
                 parent.classList.remove('_form-error');
-                console.log(inputValue.length)
+             
             }
         })
     })
@@ -274,12 +274,32 @@ const form = () => {
         })
     })
 
+    const name = document.querySelectorAll('.input--name')
+    name.forEach(item => {
+        item.addEventListener('input', () => {
+            const inputValue = item.value.trim();
+            const span = item.parentElement.nextElementSibling;
+            const parent = item.parentElement.parentElement;
+
+            if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(inputValue) && inputValue !='' ) {
+              
+                span.classList.add('active');
+                parent.classList.add('_form-error');
+            } else {
+                span.classList.remove('active');
+                parent.classList.remove('_form-error');
+             
+            }
+        })
+    })
+    
+
     const required = document.querySelectorAll('.popup__label--required input, .popup__label--required textarea')
 
     required.forEach(item => {
         item.addEventListener('blur', () => {
             const inputValue = item.value.trim();
-            console.log( item.parentElement.querySelector('.star'))
+           
             if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
                 item.parentElement.querySelector('.star').style.opacity = 1;
             }  else  {
@@ -288,7 +308,7 @@ const form = () => {
         })
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
-            console.log( item.parentElement.querySelector('.star'))
+        
             if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
                 item.parentElement.querySelector('.star').style.opacity = 1;
             }  else  {

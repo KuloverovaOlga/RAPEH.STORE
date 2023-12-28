@@ -53,8 +53,9 @@ padding: 11rem 0;
     // .sign-up__photo-box
 
     &__photo-box {
-        // width: 65.4rem;
+        width: 65.4rem;
         // height: 22rem;
+        height: 100%;
         border-radius: 4rem;
         overflow: hidden;
         & img {
@@ -77,6 +78,7 @@ padding: 11rem 0;
     // .sign-up__title
 
     &__title {
+   
         & br {
             display: none;
         }
@@ -126,6 +128,10 @@ padding: 11rem 0;
         & svg {
             fill: $white;
         }
+    }
+
+    &__success {
+        height: 5.2rem;
     }
 }
 
@@ -194,7 +200,7 @@ padding: 11rem 0;
             &__form {
                 display: flex;
                 flex-direction: column;
-                gap: 2.4rem;
+                gap: 3rem;
             }
         
             // .sign-up__input

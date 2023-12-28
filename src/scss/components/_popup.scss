@@ -49,6 +49,25 @@ body::before {
     position: relative;
     width: 100%;
 }
+
+
+.viewpass-btn {
+    position: absolute;
+    right: 2.4rem;
+    top: 2.5rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+width: 1.6rem;
+height: 1rem;
+    @media (max-width: 48em) {
+        right: 4rem;
+        top: 4rem;
+        width: 2rem;
+height: 1rem;
+    }
+}
+
 // --------------------------------------------------------------------------
 
 .popup {
@@ -71,8 +90,9 @@ body::before {
             padding: 0;
             & .popup__body {
                 width: 100vw;
-                height: 100vh;
-                padding: 22rem 2rem 2rem;
+                min-height: 100vh;
+                height: fit-content;
+                padding: 22rem 2rem ;
             }
             & .popup__content {
                 border-radius: 0;
@@ -134,7 +154,7 @@ body::before {
         flex-direction: column;
         gap: 1.6rem;
         @media (max-width: 48em) {
-            gap: 2.4rem;
+            gap: 3rem;
         }
     }
 
@@ -205,7 +225,7 @@ body::before {
         padding: 1.3rem 2.4rem;
         @media (max-width: 48em) {
             // margin-top: 2.4rem;
-            padding: 2rem 4.8rem;
+            padding: 2.5rem 4.8rem;
         }
 
         &[disabled] {
@@ -264,6 +284,7 @@ body::before {
         @media (max-width: 48em) {
             width: 100%;
             justify-content: space-between;
+            padding: 2.5rem 4.8rem;
         }
     }
 
@@ -294,6 +315,7 @@ body::before {
 
         @media (max-width: 48em) {
             padding: 2.6rem 10rem 2.6rem 4rem;
+            border-radius: 6.4rem;
         }
     }
     &__input-checkbox {
@@ -527,7 +549,7 @@ body::before {
             }
         }
         @media (max-width: 48em) {
-            height: 22rem;
+            height: 18rem;
         }
     }
     // ---------------------------------------success----------------------------
@@ -691,6 +713,13 @@ body::before {
                 width: 100%;
             }
         }
+
+        & .popup__label-pass{
+            & input:focus ~ .viewpass-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
     // .popup__body-btn
@@ -838,6 +867,17 @@ body::before {
             }
         }
 
+        & .popup__label--pass-repeat{
+            & input:focus ~ .star {
+                opacity: 0;
+                visibility: hidden;
+            }
+            & input:focus ~ .viewpass-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
         & .password-span {
             width: 50.7rem;
             display: block;
@@ -857,22 +897,7 @@ body::before {
             }
         }
 
-        & .viewpass-btn {
-            position: absolute;
-            right: 2.4rem;
-            top: 2rem;
-            transform: translateY(-50%);
-            opacity: 0;
-            visibility: hidden;
-width: 1.6rem;
-height: 1rem;
-            @media (max-width: 48em) {
-                right: 4rem;
-                top: 4rem;
-                width: 2rem;
-height: 1rem;
-            }
-        }
+       
     }
 
     // ---------------------------------------------popup__registration-enter-code

@@ -134,23 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
 
 
-// const lineWrapper = document.querySelectorAll('.order-detail__information-status-element')
 
-// lineWrapper.forEach((item, i) => {
-// const line = item.querySelector('.line')
-// const text = item.querySelector('.order-detail__information-status-text')
-// const circle = item.querySelector('.order-detail__information-status-circle')
+    // const form = document.querySelector('.sign-up__form')
+    // const btn = document.querySelector('.sign-up__form button')
 
-
-// // Извлечение ширины из объекта
-// var widthItem = (item.offsetWidth  - circle.offsetWidth) / 2 ;
-
-
-// console.log(widthItem)
-// if (line) {
-//     line.style.width = ` ${widthItem}px`
-// }
-// })
+    // form.addEventListener('submit', () => {
+    //     form.textContent = 'effsfsfe'
+    // })
 
 });
 

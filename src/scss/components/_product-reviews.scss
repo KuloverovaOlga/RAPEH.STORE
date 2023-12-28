@@ -220,5 +220,11 @@
 
     &__review-item-status {
     }
+
+    &__button {
+            &:hover:after {
+                width: 100%;
+            }
+    }
 }
 }
