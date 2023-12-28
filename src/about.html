@@ -11,7 +11,7 @@
     <body>
         <div class="wrapper">
             <include src="./components/header.html"></include>
-            <include src="./components/watsapp.html"></include>
+
             <main class="main main--about">
                 <include src="./components/popup.html"></include>
                 <include src="./components/bottom-menu.html"></include>
@@ -226,7 +226,7 @@
                             </div>
                             <div class="record__content-wrapper">
                                 <p class="record__title title-h2">Запишитесь на бесплатную консультацию к нашему психологу</p>
-                                <form data-popup-message="#popup__success" action="#" data-dev class="record__form form">
+                                <form data-popup-message="" action="#" data-dev class="record__form form text-change__form">
                                     <div class="record_input-group input-group popup__label--star popup__label--required">
                                         
                                         
@@ -245,7 +245,7 @@
                                        
                                         </div>
                                         
-                                        <span class="error-span subscription"></span>
+                                        <span class="error-span subscription">Введите текстовое значение</span>
                                     </div>
                                     <div class="record_input-group input-group popup__label--star popup__label--required">
                                      
@@ -276,6 +276,7 @@
                                         </div>
                                     </button>
                                 </form>
+                                <p class="record__success text-change__form-success title-h5">Ваша заявка успешно отправлена!</p>
                             </div>
                         </div>
                     </div>

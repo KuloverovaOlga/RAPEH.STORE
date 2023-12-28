@@ -192,6 +192,8 @@ export function formSubmit(options = { validate: true }) {
       form.addEventListener('submit', function (e) {
         const form = e.target;
         formSubmitAction(form, e);
+
+       
       });
       form.addEventListener('reset', function (e) {
         const form = e.target;
@@ -232,6 +234,12 @@ export function formSubmit(options = { validate: true }) {
         // in development mode
         e.preventDefault();
         formSent(form);
+
+        if (form.classList.contains('text-change__form')) {
+          const success = form.parentElement.querySelector('.text-change__form-success')
+          success.style.display = 'block'
+          form.style.display = 'none'
+        }
       }
     } else {
       e.preventDefault();
