@@ -5,10 +5,11 @@ const productCardMin = () => {
     
         if (target.classList.contains("product-card__like-box")) {
           e.preventDefault();
-          target.closest(".product-card").classList.toggle("isActive");
+          target.closest(".product-card").classList.toggle("isFavorite");
         }
         if (target.classList.contains("product-card__basket")) {
           e.preventDefault();
+          target.closest(".product-card").classList.toggle("isBasket");
         }
       });
     })

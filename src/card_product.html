@@ -13,7 +13,9 @@
                 <include src="./components/popup.html"></include>
                 <include src="./components/watsapp.html"></include>
                 <include src="./components/bottom-menu.html"></include>
-                <section class="product-hero not-available">
+                <include src="./components/notification.html"></include>
+                <!-- not-available -->
+                <section class="product-hero ">
                     <div class="container">
                         <div class="product-hero__inner">
                             <div class="product-hero__content-box">
@@ -25,7 +27,7 @@
                                             <p class="product-hero__info-title title-h2">Рапэ Katukina Pau Mulata Katukina Pau Mulata</p>
                                             <p class="product-hero__info-not-available title-h5">Нет в наличии</p>
                                         </div>
-                                       
+
                                         <div class="product-hero__info-header-price-box">
                                             <p class="product-hero__info-header-current-price title-h4">1399<sup>₽</sup></p>
                                             <p class="product-hero__info-header-old-price title-h4">1399<sup>₽</sup></p>
@@ -61,7 +63,7 @@
 
                                     <div class="product-hero__info-interaction-box scrollingMeny scrollingMenyBottom">
                                         <div class="product-hero__info-interaction-row">
-                                            <div class="product-hero__info-basket-box">
+                                            <a href="#" class="product-hero__info-basket-box">
                                                 <div class="product-hero__info-basket-wrapper">
                                                     <div class="product-hero__info-basket-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none">
@@ -109,9 +111,19 @@
                                                     <p class="product-hero__info-current-price title-h4">1399<sup>₽</sup></p>
                                                     <p class="product-hero__info-old-price title-h4">1399<sup>₽</sup></p>
                                                 </div>
-                                            </div>
+
+                                                <div class="product-hero__information-counter">
+                                                    <div class="product-hero__information-counter-btn product-hero__information-counter-btn--min">
+                                                        <img src="./assets/images/icons/cart2.svg" alt="" />
+                                                    </div>
+                                                    <p class="product-hero__information-counter-number title-h5">1</p>
+                                                    <div class="product-hero__information-counter-btn product-hero__information-counter-btn--plus">
+                                                        <img src="./assets/images/icons/cart3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                            </a>
                                             <button class="product-hero__info-basket-favorite">
-                                                <div class="product-hero__info-basket-favorite-svg-box">
+                                                <span class="product-hero__info-basket-favorite-svg-box">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                                                         <path
                                                             class="product-hero__item-svg-stroke-fill"
@@ -121,7 +133,7 @@
                                                             stroke-linejoin="round"
                                                         />
                                                     </svg>
-                                                </div>
+                                                </span>
                                             </button>
                                         </div>
                                         <div class="product-hero__info-interaction-coin-box">
@@ -423,7 +435,6 @@
                                         <div class="product-content__tab subscription active" data-tab="1"><span>Описание</span></div>
                                         <div class="product-content__tab subscription" data-tab="2"><span>Детали</span></div>
                                         <div class="product-content__tab subscription" data-tab="3"><span>Инструкция</span></div>
-                                        
                                     </div>
                                 </div>
 
@@ -476,26 +487,29 @@
                                                 </li>
                                                 <li class="product-content__tab-details-item">
                                                     <p class="product-content__tab-details-item-title title-h4">Вес, г</p>
-                                                    <span></span><p class="product-content__tab-details-item-desk text">3,6,10</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">3,6,10</p>
                                                 </li>
                                                 <li class="product-content__tab-details-item">
                                                     <p class="product-content__tab-details-item-title title-h4">Крепость</p>
-                                                    <span></span>  <p class="product-content__tab-details-item-desk text">легкий</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">легкий</p>
                                                 </li>
                                                 <li class="product-content__tab-details-item">
                                                     <p class="product-content__tab-details-item-title title-h4">Страна происхождения</p>
-                                                    <span></span>    <p class="product-content__tab-details-item-desk text">Африка</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">Африка</p>
                                                 </li>
                                                 <li class="product-content__tab-details-item">
                                                     <p class="product-content__tab-details-item-title title-h4">Вес, г</p>
-                                                    <span></span>   <p class="product-content__tab-details-item-desk text">3,6,10</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">3,6,10</p>
                                                 </li>
                                                 <li class="product-content__tab-details-item">
                                                     <p class="product-content__tab-details-item-title title-h4">Крепость</p>
-                                                    <span></span>   <p class="product-content__tab-details-item-desk text">легкий</p>
+                                                    <span></span>
+                                                    <p class="product-content__tab-details-item-desk text">легкий</p>
                                                 </li>
-
-                                                
                                             </ul>
                                         </div>
                                         <button class="product-content__tab-content-button button button-link">
@@ -508,11 +522,18 @@
                                             <ul class="product-content__tab-instructions-list">
                                                 <li class="product-content__tab-instructions-item">
                                                     <p class="product-content__tab-instructions-item-title title-h4">Применение</p>
-                                                    <p class="product-content__tab-instructions-item-desk text">Для приема Рапэ Katukina Pau Mulata необходимо смешать порцию напитка 1.5-2.5 г (1 ч.л. без горки = 2 г) с горячей водой и размешать до полного растворения. Можно добавлять в другие безалкогольные напитки (смузи, сок, какао). Применять 1 раз в первой половине дня.Не рекомендуется превышать указанную дозировку.</p>
+                                                    <p class="product-content__tab-instructions-item-desk text">
+                                                        Для приема Рапэ Katukina Pau Mulata необходимо смешать порцию напитка 1.5-2.5 г (1 ч.л. без горки = 2 г) с горячей
+                                                        водой и размешать до полного растворения. Можно добавлять в другие безалкогольные напитки (смузи, сок, какао).
+                                                        Применять 1 раз в первой половине дня.Не рекомендуется превышать указанную дозировку.
+                                                    </p>
                                                 </li>
                                                 <li class="product-content__tab-instructions-item">
                                                     <p class="product-content__tab-instructions-item-title title-h4">Курс приема</p>
-                                                    <p class="product-content__tab-instructions-item-desk text">Рапэ Katukina Pau Mulata можно применять по желанию и необходимости, либо курсом до 3х недель, после чего необходимо сделать перерыв.</p>
+                                                    <p class="product-content__tab-instructions-item-desk text">
+                                                        Рапэ Katukina Pau Mulata можно применять по желанию и необходимости, либо курсом до 3х недель, после чего
+                                                        необходимо сделать перерыв.
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -526,8 +547,6 @@
                         </div>
                     </div>
                 </section>
-
-          
 
                 <include src="./components/ribbon.html"></include>
                 <section class="disclaimer">
@@ -556,18 +575,18 @@
                                 <p class="product-reviews__title title-h2">Отзывы о товаре</p>
                                 <button data-popup="#popup__review" class="product-reviews__btn button button-long-arr">
                                     <span class="product-reviews__btn-text button">Оставить отзыв</span>
-                                    <div class="product-reviews__btn-svg-box">
+                                    <span class="product-reviews__btn-svg-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
                                             <path
                                                 d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
                                             />
                                         </svg>
-                                    </div>
+                                    </span>
                                 </button>
                             </div>
                             <ul class="product-reviews__reviews-list">
                                 <li class="product-reviews__reviews-item-wrapper">
-                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                    <a class="product-reviews__review-item" data-fancybox="gallery" href="#text-modal">
                                         <div class="product-reviews__review-item-header">
                                             <p class="product-reviews__review-item-title title-h3">
                                                 Чувствую себя
@@ -575,9 +594,9 @@
                                                 <span class="title-span">и хорошо</span> ! Спасибо!
                                             </p>
                                         </div>
-    
+
                                         <p class="product-reviews__review-item-text text">
-                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло!
                                         </p>
                                         <div class="product-reviews__review-item-footer">
                                             <div class="product-reviews__review-item-footer-info">
@@ -594,7 +613,7 @@
                                     </a>
                                 </li>
                                 <li class="product-reviews__reviews-item-wrapper">
-                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                    <a class="product-reviews__review-item" data-fancybox="gallery" href="#text-modal">
                                         <div class="product-reviews__review-item-header">
                                             <p class="product-reviews__review-item-title title-h3">
                                                 Чувствую себя
@@ -602,9 +621,11 @@
                                                 <span class="title-span">и хорошо</span> ! Спасибо!
                                             </p>
                                         </div>
-    
+
                                         <p class="product-reviews__review-item-text text">
-                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                            спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления
+                                            эффекта.
                                         </p>
                                         <div class="product-reviews__review-item-footer">
                                             <div class="product-reviews__review-item-footer-info">
@@ -621,7 +642,7 @@
                                     </a>
                                 </li>
                                 <li class="product-reviews__reviews-item-wrapper">
-                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                    <a class="product-reviews__review-item" data-fancybox="gallery" href="#text-modal">
                                         <div class="product-reviews__review-item-header">
                                             <p class="product-reviews__review-item-title title-h3">
                                                 Чувствую себя
@@ -629,9 +650,9 @@
                                                 <span class="title-span">и хорошо</span> ! Спасибо!
                                             </p>
                                         </div>
-    
+
                                         <p class="product-reviews__review-item-text text">
-                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло!
                                         </p>
                                         <div class="product-reviews__review-item-footer">
                                             <div class="product-reviews__review-item-footer-info">
@@ -648,7 +669,7 @@
                                     </a>
                                 </li>
                                 <li class="product-reviews__reviews-item-wrapper">
-                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                    <a class="product-reviews__review-item" data-fancybox="gallery" href="#text-modal">
                                         <div class="product-reviews__review-item-header">
                                             <p class="product-reviews__review-item-title title-h3">
                                                 Чувствую себя
@@ -656,9 +677,11 @@
                                                 <span class="title-span">и хорошо</span> ! Спасибо!
                                             </p>
                                         </div>
-    
+
                                         <p class="product-reviews__review-item-text text">
-                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления эффекта.
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! Чувствую себя
+                                            спокойно и хорошо, тревога ушла и больше ничего не беспокоит! Спасибо! Буду продолжать принимать курсами для закрепления
+                                            эффекта.
                                         </p>
                                         <div class="product-reviews__review-item-footer">
                                             <div class="product-reviews__review-item-footer-info">
@@ -675,7 +698,7 @@
                                     </a>
                                 </li>
                                 <li class="product-reviews__reviews-item-wrapper">
-                                    <a class="product-reviews__review-item  " data-fancybox="gallery" href="#text-modal">
+                                    <a class="product-reviews__review-item" data-fancybox="gallery" href="#text-modal">
                                         <div class="product-reviews__review-item-header">
                                             <p class="product-reviews__review-item-title title-h3">
                                                 Чувствую себя
@@ -683,9 +706,9 @@
                                                 <span class="title-span">и хорошо</span> ! Спасибо!
                                             </p>
                                         </div>
-    
+
                                         <p class="product-reviews__review-item-text text">
-                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло! 
+                                            В последнее время чувствую тревогу и как будто панические атаки.. Но после приема мухомора все как рукой сняло!
                                         </p>
                                         <div class="product-reviews__review-item-footer">
                                             <div class="product-reviews__review-item-footer-info">
@@ -703,9 +726,7 @@
                                 </li>
                             </ul>
 
-                            <button class="product-reviews__button button">
-                               Показать еще
-                            </button>
+                            <button class="product-reviews__button button">Показать еще</button>
                         </div>
                     </div>
                 </section>
@@ -771,7 +792,6 @@
                         </div>
                     </div>
                 </section>
-
 
                 <div class="review-text-modal" id="text-modal">
                     <div class="review-item__content">
@@ -846,6 +866,8 @@
                         },
                     },
                 });
+
+               
             </script>
         </div>
     </body>

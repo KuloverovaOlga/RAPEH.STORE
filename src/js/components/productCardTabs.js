@@ -84,6 +84,16 @@ const productCardTabs = () => {
             }
         });
     });
+    const tabContents = document.querySelectorAll('.product-content__tab-content-inner');
+    window.addEventListener('resize', () => {
+            tabContents.forEach(item => {
+                if (item.classList.contains('isActive')) {
+                    item.querySelector('.product-content__tab-info').style.maxHeight = `${item.querySelector('.product-content__tab-info').scrollHeight}px`;
+                } else {
+                    item.querySelector('.product-content__tab-info').style.maxHeight = window.innerWidth > 768 ? '58.5rem' : '39rem'; 
+                }
+            })
+    })
 };
 
 export default productCardTabs;

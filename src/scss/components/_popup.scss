@@ -50,6 +50,9 @@ body::before {
     width: 100%;
 }
 
+input[type='text'] ~ .viewpass-btn line {
+    display: block;
+}
 
 .viewpass-btn {
     position: absolute;
@@ -58,13 +61,16 @@ body::before {
     transform: translateY(-50%);
     opacity: 0;
     visibility: hidden;
-width: 1.6rem;
-height: 1rem;
+    width: 1.6rem;
+    height: 1rem;
+    & line {
+        display: none;
+    }
     @media (max-width: 48em) {
         right: 4rem;
         top: 4rem;
         width: 2rem;
-height: 1rem;
+        height: 1rem;
     }
 }
 
@@ -92,7 +98,7 @@ height: 1rem;
                 width: 100vw;
                 min-height: 100vh;
                 height: fit-content;
-                padding: 22rem 2rem ;
+                padding: 22rem 2rem;
             }
             & .popup__content {
                 border-radius: 0;
@@ -714,7 +720,7 @@ height: 1rem;
             }
         }
 
-        & .popup__label-pass{
+        & .popup__label-pass {
             & input:focus ~ .viewpass-btn {
                 opacity: 1;
                 visibility: visible;
@@ -867,7 +873,7 @@ height: 1rem;
             }
         }
 
-        & .popup__label--pass-repeat{
+        & .popup__label--pass-repeat {
             & input:focus ~ .star {
                 opacity: 0;
                 visibility: hidden;
@@ -896,8 +902,6 @@ height: 1rem;
                 width: 100%;
             }
         }
-
-       
     }
 
     // ---------------------------------------------popup__registration-enter-code
