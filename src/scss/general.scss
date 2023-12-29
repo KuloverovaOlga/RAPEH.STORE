@@ -28,7 +28,7 @@ $grey: #848c88;
     &:hover {
         background-color: $black;
     }
-    & div {
+    & [class$='svg-box']  {
         width: 2.4rem;
         height: 2.4rem;
         & svg {
@@ -259,7 +259,7 @@ main {
     border-radius: 4rem;
     background-color: $green;
     transition: background-color 0.3s;
-    & div {
+    & [class$='svg-box'] {
         width: 3.2rem;
         height: 3.2rem;
         display: flex;
@@ -295,7 +295,7 @@ main {
     border-radius: 3.2rem;
     width: fit-content;
     transition: background-color 0.3s, color 0.3s;
-    & div {
+    & [class$='svg-box']  {
         width: 5.4rem;
         height: 0.9rem;
         display: flex;
@@ -648,10 +648,16 @@ main {
         }
     }
 
-    &.isActive {
+    &.isFavorite {
         & .product-card__like-svg-wrapper svg {
             fill: $orange;
             stroke: $orange;
+        }
+    }
+    &.isBasket {
+        & .product-card__basket {
+            background-color: $green;
+            
         }
     }
 
@@ -1352,6 +1358,12 @@ main {
             height: 8rem;
             bottom: -0.6rem;
             right: -0.4rem;
+            &:hover {
+                background-color: $white;
+                & .product-card__basket-svg-box svg {
+                    stroke: $black;
+                }
+            }
         }
 
         // .-basket-svg-box

@@ -60,8 +60,9 @@
       &__btn-link {
         position: relative;
         z-index: 1;
-              width: 3.2rem;
+        width: 3.2rem;
         height: 3.2rem;
+  
         &:hover {
             background-color: $green;
             & svg {
