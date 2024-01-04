@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+        <link rel="stylesheet" href="./scss/datepicker.material.css" />
         <title>Личный кабинет</title>
     </head>
     <body class="personal-account-page">
@@ -74,6 +74,25 @@
                                     <p class="account__table-title title-h4">Личные данные</p>
                                     <form class="account__table-data _form">
                                         <div class="account__table-field">
+                                            <label class="popup__label popup__label--star popup__label--required">
+                                                <span class="account__table-field-subscription popup__label-text subscription">Фамилия</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text input--name account__table-field-input popup__form-input"
+                                                        type="text"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+                                                    <span class="star"></span>
+                                                </span>
+                                                <span class="error-span subscription">Введите текстовое значение</span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Фамилия</p>
                                             <label for="" class="account__table-field-label">
                                                 <input
@@ -86,8 +105,27 @@
                                                     name="form[]"
                                                 />
                                             </label>
-                                        </div>
+                                        </div> -->
                                         <div class="account__table-field">
+                                            <label class="popup__label popup__label--star popup__label--required">
+                                                <span class="account__table-field-subscription popup__label-text subscription">Имя</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text input--name account__table-field-input popup__form-input"
+                                                        type="text"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+                                                    <span class="star"></span>
+                                                </span>
+                                                <span class="error-span subscription">Введите текстовое значение</span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Имя</p>
                                             <label for="" class="account__table-field-label">
                                                 <input
@@ -100,8 +138,27 @@
                                                     name="form[]"
                                                 />
                                             </label>
-                                        </div>
+                                        </div> -->
                                         <div class="account__table-field">
+                                            <label class="popup__label popup__label--star popup__label--required">
+                                                <span class="account__table-field-subscription popup__label-text subscription">Отчество</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text input--name account__table-field-input popup__form-input"
+                                                        type="text"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+                                                    <span class="star"></span>
+                                                </span>
+                                                <span class="error-span subscription">Введите текстовое значение</span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Отчество</p>
                                             <label for="" class="account__table-field-label">
                                                 <input
@@ -114,13 +171,14 @@
                                                     name="form[]"
                                                 />
                                             </label>
-                                        </div>
+                                        </div> -->
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Дата рождения</p>
                                             <label for="" class="account__table-field-label _date">
                                                 <input
-                                                    class="input__field input--tel text account__table-field-input"
-                                                    type="date"
+                                                    id="datepicker"
+                                                    class="input__field text account__table-field-input"
+                                                    type="text"
                                                     placeholder=""
                                                     data-validate
                                                     data-required="date"
@@ -165,23 +223,170 @@
                                     <p class="account__table-title title-h4">Создание нового пароля</p>
                                     <form class="account__table-data _password">
                                         <div class="account__table-field">
+                                            <label class="popup__label __viewpass popup__label--required">
+                                                <span class="popup__label-text subscription">Старый пароль</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text account__table-field-input popup__form-input"
+                                                        value="1223344"
+                                                        type="password"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required="password"
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+
+                                                    <span class="viewpass-btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13" fill="none">
+                                                            <path
+                                                                d="M16.6823 5.6625C16.8868 5.89219 17 6.1906 17 6.5C17 6.8094 16.8868 7.10781 16.6823 7.3375C15.3875 8.75 12.4404 11.5 9 11.5C5.55961 11.5 2.61247 8.75 1.3177 7.3375C1.1132 7.10781 1 6.8094 1 6.5C1 6.1906 1.1132 5.89219 1.3177 5.6625C2.61247 4.25 5.55961 1.5 9 1.5C12.4404 1.5 15.3875 4.25 16.6823 5.6625Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <line
+                                                                x1="1"
+                                                                y1="12"
+                                                                x2="17"
+                                                                y2="1"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M8.99943 8.99994C10.3615 8.99994 11.4657 7.88065 11.4657 6.49994C11.4657 5.11923 10.3615 3.99994 8.99943 3.99994C7.63737 3.99994 6.5332 5.11923 6.5332 6.49994C6.5332 7.88065 7.63737 8.99994 8.99943 8.99994Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Старый пароль</p>
-                                            <div class="account__table-field-input _accept">
+                                            <div class="account__table-field-input __viewpass">
                                                 <input disabled autocomplete="off" type="password" value="12234" class="_password text" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="account__table-field">
+                                            <label class="popup__label popup__label--pass-first __viewpass popup__label--star popup__label--required">
+                                                <span class="popup__label-text subscription">Придумайте пароль</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text account__table-field-input popup__form-input"
+                                                        type="password"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required="password"
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+
+                                                    <span class="star"></span>
+                                                    <span class="viewpass-btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13" fill="none">
+                                                            <path
+                                                                d="M16.6823 5.6625C16.8868 5.89219 17 6.1906 17 6.5C17 6.8094 16.8868 7.10781 16.6823 7.3375C15.3875 8.75 12.4404 11.5 9 11.5C5.55961 11.5 2.61247 8.75 1.3177 7.3375C1.1132 7.10781 1 6.8094 1 6.5C1 6.1906 1.1132 5.89219 1.3177 5.6625C2.61247 4.25 5.55961 1.5 9 1.5C12.4404 1.5 15.3875 4.25 16.6823 5.6625Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <line
+                                                                x1="1"
+                                                                y1="12"
+                                                                x2="17"
+                                                                y2="1"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M8.99943 8.99994C10.3615 8.99994 11.4657 7.88065 11.4657 6.49994C11.4657 5.11923 10.3615 3.99994 8.99943 3.99994C7.63737 3.99994 6.5332 5.11923 6.5332 6.49994C6.5332 7.88065 7.63737 8.99994 8.99943 8.99994Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </span>
+
+                                                    <span class="password-span subscription"
+                                                        >Требования к паролю - не менее 8 символов, без пробелов, латинские или кириллические буквы и цифры</span
+                                                    >
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Придумайте пароль</p>
-                                            <div class="account__table-field-input">
+                                            <div class="account__table-field-input __viewpass">
                                                 <input autocomplete="off" type="password" value="" class="_password text" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="account__table-field">
+                                            <label class="popup__label popup__label--star __viewpass popup__label--required popup__label--pass-repeat">
+                                                <span class="popup__label-text subscription">Повторите пароль</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                        class="input__field text account__table-field-input popup__form-input"
+                                                        type="password"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required="password"
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
+
+                                                    <span class="star"></span>
+
+                                                    <span class="viewpass-btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13" fill="none">
+                                                            <path
+                                                                d="M16.6823 5.6625C16.8868 5.89219 17 6.1906 17 6.5C17 6.8094 16.8868 7.10781 16.6823 7.3375C15.3875 8.75 12.4404 11.5 9 11.5C5.55961 11.5 2.61247 8.75 1.3177 7.3375C1.1132 7.10781 1 6.8094 1 6.5C1 6.1906 1.1132 5.89219 1.3177 5.6625C2.61247 4.25 5.55961 1.5 9 1.5C12.4404 1.5 15.3875 4.25 16.6823 5.6625Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <line
+                                                                x1="1"
+                                                                y1="12"
+                                                                x2="17"
+                                                                y2="1"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M8.99943 8.99994C10.3615 8.99994 11.4657 7.88065 11.4657 6.49994C11.4657 5.11923 10.3615 3.99994 8.99943 3.99994C7.63737 3.99994 6.5332 5.11923 6.5332 6.49994C6.5332 7.88065 7.63737 8.99994 8.99943 8.99994Z"
+                                                                stroke="#0E1C15"
+                                                                stroke-width="1.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <span class="error-span subscription">Пароли не совпадают</span>
+                                        </div>
+                                        <!-- <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Повторите новый пароль</p>
                                             <div class="account__table-field-input">
                                                 <input autocomplete="off" type="password" value="" class="_password text" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </form>
                                     <button class="account__table-data-btn _disabled button-long-arr" type="submit">
                                         <span class="account__table-data-btn-text button">Сохранить</span>
@@ -509,6 +714,10 @@
 
         <include src="./components/footer.html"></include>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="./js/datepicker.js"></script>
+        <script>
+            let datepicker = new Datepicker('#datepicker');
+        </script>
         <script>
             Fancybox.bind('[data-fancybox]', {
                 closeButton: true,

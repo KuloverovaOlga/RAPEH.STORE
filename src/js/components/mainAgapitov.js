@@ -1,5 +1,6 @@
 import personalAccount from './personalAccountTabs';
 import personalAccountForm from './personalAccountForm';
+import personalAccountDatepicker from './personalAccountDatepicker';
 import catalog from './catalog';
 import catalogFilter from './catalogFilter';
 import cartHeader from './cartHeader';
@@ -8,7 +9,9 @@ import cartCheckboxes from './cartCheckboxes';
 import makingOrderAccordion from './makingOrderAccordion';
 import makingOrderDelivery from './makingOrderDelivery';
 import makingOrderTabs from './makingOrderTabs';
+import makingOrderInputs from './makingOrderInputs';
 import notification from './notification';
+import saleAccordion from './saleAccordion';
 
 import cartSwiper from './swiper/cartSwiper';
 
@@ -22,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         personalAccountForm();
     } catch {}
+    // try {
+    //     personalAccountDatepicker();
+    // } catch {}
     try {
         catalog();
     } catch {}
@@ -51,5 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         makingOrderTabs();
+    } catch {}
+    try {
+        makingOrderInputs();
+    } catch {}
+    try {
+        saleAccordion();
     } catch {}
 });

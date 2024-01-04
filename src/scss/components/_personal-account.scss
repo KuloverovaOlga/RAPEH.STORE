@@ -10,6 +10,14 @@
         display: flex;
         gap: 1.2rem;
         margin-bottom: 6rem;
+        @media (max-width: 48em) {
+            gap: 0.8rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
     &__tab {
         width: 25rem;
@@ -21,6 +29,12 @@
         background-color: #f6f6f6;
         border-radius: 3.2rem;
         cursor: pointer;
+        @media (max-width: 48em) {
+            flex: none;
+            width: 35.4rem;
+            min-height: 11.2rem;
+            padding: 0 4.8rem;
+        }
         &._active {
             background-color: #c6ef4e;
         }
@@ -104,7 +118,7 @@
                     color: #fff;
                     transition: background-color 0.5s ease-in-out;
                     @media (max-width: 48em) {
-                        padding: 1.2rem 4rem 1.2rem 4.8rem;
+                        padding: 2.4rem 4rem 2.4rem 4.8rem;
                     }
                     &:hover {
                         background-color: #0e1c15;
@@ -190,7 +204,7 @@
                             margin-top: 6rem;
                             transition: background-color 0.5 ease-in-out;
                             @media (max-width: 48em) {
-                                padding: 1.2rem 4rem 1.2rem 4.8rem;
+                                padding: 2.4rem 4rem 2.4rem 4.8rem;
                             }
                             &:hover {
                                 background-color: #0e1c15;
@@ -291,6 +305,43 @@
                                     letter-spacing: 0.5rem;
                                 }
                             }
+                        }
+                        & .popup__label--pass-first {
+                            & input:focus ~ .password-span,
+                            & input:active ~ .password-span {
+                                height: 4.5rem;
+                                @media (max-width: 48em) {
+                                    height: 9.6rem;
+                                }
+                            }
+                            & input:focus ~ .star {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            & input:focus ~ .viewpass-btn {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+                        & .popup__label--pass-repeat {
+                            & input:focus ~ .star {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            & input:focus ~ .viewpass-btn {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+                        & .password-span {
+                            width: 50.7rem;
+                            display: block;
+                            height: 0;
+                            overflow: hidden;
+                            color: $black;
+                            transition: height 0.3s;
                         }
                     }
                     &-btn {
@@ -635,9 +686,6 @@
 
 @media (max-width: 48em) {
     .personal-account {
-        &__tabs {
-            display: none;
-        }
         &__tab-content {
             &.bonuses {
                 .bonuses {
