@@ -267,7 +267,7 @@ export function formSubmit(options = { validate: true }) {
       }
     }, 500);
     // clean form
-    formValidate.formClean(form);
+    // formValidate.formClean(form);
     // console output
     // formLogging(`form sent`);
   }
