@@ -185,11 +185,14 @@
                                                     autocomplete="off"
                                                     name="form[]"
                                                 />
+
+
+                                                
                                             </label>
                                         </div>
                                         <div class="account__table-field">
-                                            <p class="account__table-field-subscription subscription">Номер телефона</p>
-                                            <label for="" class="account__table-field-label">
+                                            <!-- <p class="account__table-field-subscription subscription">Номер телефона</p> -->
+                                            <!-- <label for="" class="account__table-field-label">
                                                 <input
                                                     class="input__field input--tel text account__table-field-input"
                                                     type="tel"
@@ -199,7 +202,47 @@
                                                     autocomplete="off"
                                                     name="form[]"
                                                 />
+                                                <span class="error-span subscription">Введите цифровое значение</span>
+                                              
+                                            </label> -->
+
+
+
+                                            <!-- <div class="form__input-wrapper">
+                                                <input
+                                                class="input__field input--tel text account__table-field-input"
+                                                type="tel"
+                                                placeholder=""
+                                                data-validate
+                                                data-required="tel"
+                                                autocomplete="off"
+                                                name="form[]"
+                                            />
+                
+                                                <span class="star"></span>
+                                            </div>
+                                            <span class="error-span subscription">Введите цифровое значение</span> -->
+
+
+
+                                            <label class="popup__label popup__label--star popup__label--required">
+                                                <span class="account__table-field-subscription popup__label-text subscription">Номер телефона</span>
+
+                                                <span class="form__input-wrapper">
+                                                    <input
+                                                    class="input__field input--tel text account__table-field-input"
+                                                    type="tel"
+                                                    placeholder=""
+                                                    data-validate
+                                                    data-required="tel"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                                    <span class="star"></span>
+                                                </span>
+                                                <span class="error-span subscription">Введите цифровое значение</span>
                                             </label>
+
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">E-mail</p>
@@ -210,7 +253,7 @@
                                     </form>
                                     <button class="account__table-data-btn button-long-arr" type="submit">
                                         <span class="account__table-data-btn-text button">Сохранить</span>
-                                        <div class="account__table-data-btn-icon">
+                                        <div class="account__table-data-btn-icon account__table-data-btn-svg-box">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
                                                 <path
                                                     d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
@@ -390,7 +433,7 @@
                                     </form>
                                     <button class="account__table-data-btn _disabled button-long-arr" type="submit">
                                         <span class="account__table-data-btn-text button">Сохранить</span>
-                                        <div class="account__table-data-btn-icon">
+                                        <div class="account__table-data-btn-icon account__table-data-btn-svg-box">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
                                                 <path
                                                     d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
