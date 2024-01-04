@@ -276,7 +276,7 @@ input[type='text'] ~ .viewpass-btn line {
         border-radius: 3.2rem;
         align-self: flex-start;
         transition: background-color 0.3s;
-        & div {
+        & [class$='svg-box'] {
             width: 2.4rem;
             height: 2.4rem;
             & svg {
@@ -291,6 +291,7 @@ input[type='text'] ~ .viewpass-btn line {
             width: 100%;
             justify-content: space-between;
             padding: 2.5rem 4.8rem;
+            border-radius: 6.4rem;
         }
     }
 
