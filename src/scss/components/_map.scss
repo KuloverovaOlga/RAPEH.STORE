@@ -68,7 +68,8 @@
         display: none;
     }
 
-    [class*='ground-pane'] {
+    [class*='ground-pane']
+   {
         -webkit-filter: grayscale(0.5);
         filter: grayscale(0.5);
     }
