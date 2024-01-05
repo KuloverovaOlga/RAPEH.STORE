@@ -65,6 +65,12 @@
       left: -5rem !important;;
       border-radius: 1.6rem!important;;
       overflow: hidden;
+
+      @media (max-width: 48em) {
+        border-radius: 3.2rem!important;;
+        top: -45.5rem !important;;
+        left: -12rem !important;;
+    }
   }
   [class$="balloon-overlay"]  [class$="balloon__tail"]  {
    display: none;
