@@ -412,6 +412,64 @@
         </div>
     </body>
     <script>
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     if (document.querySelector('.making-order__delivery-map')) {
+        //         function init() {
+        //             let map = new ymaps.Map(
+        //                 'makingOrderMap',
+        //                 {
+        //                     center: [55.814446538335254, 37.641919735260025],
+        //                     zoom: 10,
+        //                 },
+        //                 {
+        //                     yandexMapDisablePoiInteractivity: true,
+        //                 }
+        //             );
+
+        //             // style="width: 36rem; padding: 2.4rem; background-color: #fff; border-radius: 1.6rem"
+
+        //             // let iconBtnHref = './assets/images/balloonBtnIcon.svg';
+        //             // let iconCancelHref = './assets/images/ballonCancelIcon.svg';
+
+        //             let placemark = new ymaps.Placemark(
+        //                 [55.86773756887682, 37.66713250000002],
+        //                 {
+        //                     balloonContent: `
+        //                     <div class="balloon">
+        //                         <div class="balloon__title">Почта России отделение №121</div>
+        //                         <div class="balloon__address">107113, Москва, улица Сокольнический Вал, 2</div>
+        //                         <div class="balloon__schedule">пн-вс: 09:00-21:00</div>
+        //                         <div class="balloon__btn">
+        //                             <p>Выбрать</p>
+        //                         </div>
+        //                         <div class="balloon__cancel"></div>
+        //                     </div>
+        //                     `,
+        //                 },
+        //                 {
+        //                     iconLayout: 'default#image',
+        //                     iconImageHref: './assets/images/icons/place-mark.svg',
+        //                     iconImageSize: [30, 35],
+        //                     iconImageOffset: [-15, -35],
+        //                 }
+        //             );
+
+        //             map.controls.remove('geolocationControl');
+        //             map.controls.remove('searchControl');
+        //             map.controls.remove('trafficControl');
+        //             map.controls.remove('typeSelector');
+        //             map.controls.remove('fullscreenControl');
+        //             map.controls.remove('zoomControl');
+        //             map.controls.remove('rulerControl');
+        //             // map.behaviors.disable(["scrollZoom"]); // Опционально отключить скролл карты
+
+        //             map.geoObjects.add(placemark);
+        //         }
+
+        //         ymaps.ready(init);
+        //     }
+        // });
+
         document.addEventListener('DOMContentLoaded', function () {
             if (document.querySelector('.making-order__delivery-map')) {
                 function init() {
@@ -426,33 +484,71 @@
                         }
                     );
 
-                    // style="width: 36rem; padding: 2.4rem; background-color: #fff; border-radius: 1.6rem"
-
-                    // let iconBtnHref = './assets/images/balloonBtnIcon.svg';
-                    // let iconCancelHref = './assets/images/ballonCancelIcon.svg';
-
-                    let placemark = new ymaps.Placemark(
-                        [55.86773756887682, 37.66713250000002],
+                    let places = [
                         {
-                            // balloonContent: `
-                            // <div class="balloon">
-                            //     <div class="balloon__title">Почта России отделение №121</div>
-                            //     <div class="balloon__address">107113, Москва, улица Сокольнический Вал, 2</div>
-                            //     <div class="balloon__schedule">пн-вс: 09:00-21:00</div>
-                            //     <div class="balloon__btn">
-                            //         <p>Выбрать</p>
-                            //     </div>
-                            //     <div class="balloon__cancel"></div>
-                            // </div>
-                            // `,
+                            coordinates: [55.86773756887682, 37.66713250000002],
+                            title: 'Яндекс Маркет. Пункт выдачи',
+                            address: '107113, Москва, улица Сокольнический Вал, 2',
+                            schedule: 'пн-вс: 09:00-21:00',
                         },
+
                         {
-                            iconLayout: 'default#image',
-                            iconImageHref: './assets/images/icons/place-mark.svg',
-                            iconImageSize: [30, 35],
-                            iconImageOffset: [-15, -35],
-                        }
-                    );
+                            coordinates: [55.814446538335254, 37.641919735260025],
+                            title: 'Яндекс Маркет. Пункт выдачи',
+                            address: '107113, Москва, улица Сокольнический Вал, 2',
+                            schedule: 'пн-вс: 09:00-21:00',
+                        },
+                       
+                        // Добавьте другие объекты данных для каждой плейсмарки
+                    ];
+
+                    places.forEach(function (place) {
+                        let placemark = new ymaps.Placemark(
+                            place.coordinates,
+                            {
+                                balloonContent: `
+                        <div class="balloon">
+                            <div class="balloon__title title-h5">${place.title}</div>
+                            <div class="balloon__info-box">
+                            <div class="balloon__address text">${place.address}</div>
+                            <div class="balloon__schedule text">${place.schedule}</div>
+                        </div>
+                            <button class="balloon__btn button-long-arr button">
+                                <span>Выбрать</span>
+                                <span class='balloon__btn-svg-box'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M2.5 12.75L1.75 12.75L1.75 11.25L2.5 11.25L2.5 12.75ZM22.0303 11.4697C22.3232 11.7626 22.3232 12.2374 22.0303 12.5303L17.2574 17.3033C16.9645 17.5962 16.4896 17.5962 16.1967 17.3033C15.9038 17.0104 15.9038 16.5355 16.1967 16.2426L20.4393 12L16.1967 7.75736C15.9038 7.46447 15.9038 6.98959 16.1967 6.6967C16.4896 6.40381 16.9645 6.40381 17.2574 6.6967L22.0303 11.4697ZM2.5 11.25L21.5 11.25L21.5 12.75L2.5 12.75L2.5 11.25Z" fill="#FDFDFD"/>
+</svg>
+                                    </span>
+        
+                            </button>
+                        </div>
+                        `,
+                            },
+                            {
+                                iconLayout: 'default#image',
+                                iconImageHref: './assets/images/icons/place-mark--black.svg',
+                                iconImageSize: [30, 35],
+                                iconImageOffset: [-15, -35],
+                                hideIconOnBalloonOpen: false,
+                            }
+
+                            
+                        );
+
+                        map.geoObjects.add(placemark);
+
+
+                        placemark.events.add('balloonopen', function (e) {
+                    placemark.options.set('iconImageHref', './assets/images/icons/place-mark.svg');
+                });
+
+                // Событие закрытия балуна
+                placemark.events.add('balloonclose', function (e) {
+                    placemark.options.set('iconImageHref', './assets/images/icons/place-mark--black.svg');
+                });
+                        
+                    });
 
                     map.controls.remove('geolocationControl');
                     map.controls.remove('searchControl');
@@ -461,9 +557,6 @@
                     map.controls.remove('fullscreenControl');
                     map.controls.remove('zoomControl');
                     map.controls.remove('rulerControl');
-                    // map.behaviors.disable(["scrollZoom"]); // Опционально отключить скролл карты
-
-                    map.geoObjects.add(placemark);
                 }
 
                 ymaps.ready(init);

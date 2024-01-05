@@ -1,6 +1,74 @@
 .balloon {
-    width: 36rem;
     padding: 2.4rem;
-    background-color: red;
-    border-radius: 1.6rem;
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+
+
 }
+
+.balloon__info-box {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+}
+.balloon__btn {
+    background-color: $orange;
+    color: $white;
+    gap: 3.3rem;
+    padding: 1.4rem 2.4rem;
+    border-radius: 3.2rem;
+
+    & [class$='svg-box'] {
+        width: 2.4rem;
+    }
+}
+
+.balloon__schedule {
+    color: $black-50;
+}
+
+[class*="ground-pane"] {
+    -webkit-filter: grayscale(0.5);
+    filter: grayscale(0.5);
+}
+[class*='copyrights-pane'] {
+    display: none;
+}
+[class*='controls-pane'] {
+    display: none;
+}
+[class*='copyrights-promo'] {
+    display: none;
+}
+
+
+
+[class$="balloon__content"] {
+
+    padding: 0 !important;;
+    width:40.7rem !important;;
+    margin-right: 0 !important;;
+    box-shadow: 2.1rem 1.8rem 6.1rem 0 rgba(173, 173, 173, 0.25) !important;;
+    
+  }
+  [class$="balloon__content"] > ymaps {
+    width:40.7rem !important;;
+    height: fit-content !important;
+  }
+  // [class$="close-button"] {
+  //  display: none !important;
+  // }
+  [class$="balloon-overlay"] > ymaps > ymaps {
+      box-shadow: none !important;;
+      top: -30.5rem !important;;
+      left: -5rem !important;;
+      border-radius: 1.6rem!important;;
+      overflow: hidden;
+  }
+  [class$="balloon-overlay"]  [class$="balloon__tail"]  {
+   display: none;
+  }
+  [class$="balloon-overlay"]  [class$="close-button"]  {
+   margin-right: 0.3rem;
+  }
