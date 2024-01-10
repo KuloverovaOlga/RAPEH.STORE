@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="./scss/datepicker.material.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
         <title>Личный кабинет</title>
     </head>
     <body class="personal-account-page">
@@ -175,19 +175,7 @@
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">Дата рождения</p>
                                             <label for="" class="account__table-field-label _date">
-                                                <input
-                                                    id="datepicker"
-                                                    class="input__field text account__table-field-input"
-                                                    type="text"
-                                                    placeholder=""
-                                                    data-validate
-                                                    data-required="date"
-                                                    autocomplete="off"
-                                                    name="form[]"
-                                                />
-
-
-                                                
+                                                <input id="datepicker" class="input__field text account__table-field-input" type="text" data-input />
                                             </label>
                                         </div>
                                         <div class="account__table-field">
@@ -206,8 +194,6 @@
                                               
                                             </label> -->
 
-
-
                                             <!-- <div class="form__input-wrapper">
                                                 <input
                                                 class="input__field input--tel text account__table-field-input"
@@ -223,26 +209,23 @@
                                             </div>
                                             <span class="error-span subscription">Введите цифровое значение</span> -->
 
-
-
                                             <label class="popup__label popup__label--star popup__label--required">
                                                 <span class="account__table-field-subscription popup__label-text subscription">Номер телефона</span>
 
                                                 <span class="form__input-wrapper">
                                                     <input
-                                                    class="input__field input--tel text account__table-field-input"
-                                                    type="tel"
-                                                    placeholder=""
-                                                    data-validate
-                                                    data-required="tel"
-                                                    autocomplete="off"
-                                                    name="form[]"
-                                                />
+                                                        class="input__field input--tel text account__table-field-input"
+                                                        type="tel"
+                                                        placeholder=""
+                                                        data-validate
+                                                        data-required="tel"
+                                                        autocomplete="off"
+                                                        name="form[]"
+                                                    />
                                                     <span class="star"></span>
                                                 </span>
                                                 <span class="error-span subscription">Введите цифровое значение</span>
                                             </label>
-
                                         </div>
                                         <div class="account__table-field">
                                             <p class="account__table-field-subscription subscription">E-mail</p>
@@ -757,9 +740,18 @@
 
         <include src="./components/footer.html"></include>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-        <script src="./js/datepicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
         <script>
-            let datepicker = new Datepicker('#datepicker');
+            // let datepicker = new Datepicker('#datepicker');
+    
+            $('#datepicker').flatpickr({
+                locale: 'ru',
+                // enableTime: true,
+                dateFormat: 'd-m-Y',
+     
+            });
         </script>
         <script>
             Fancybox.bind('[data-fancybox]', {

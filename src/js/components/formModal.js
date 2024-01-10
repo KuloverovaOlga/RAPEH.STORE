@@ -64,10 +64,15 @@ export function formFieldsInit(options = { viewPass: false }) {
         let inputType = targetElement.classList.contains('_viewpass-active')
           ? 'password'
           : 'text';
-        targetElement.parentElement
-          .querySelector('input')
-          .setAttribute('type', inputType);
-        targetElement.classList.toggle('_viewpass-active');
+          console.log(targetElement)
+          if (targetElement.classList.contains('viewpass-btn')) {
+            
+            targetElement.parentElement
+            .querySelector('input')
+            .setAttribute('type', inputType);
+            targetElement.classList.toggle('_viewpass-active');
+          }
+     
       }
     });
   }

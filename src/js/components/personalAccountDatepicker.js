@@ -1,5 +1,5 @@
-const personalAccountDatepicker = () => {
-    let datepicker = new Datepicker('#datepicker');
-};
+// const personalAccountDatepicker = () => {
+//     let datepicker = new Datepicker('#datepicker');
+// };
 
-export default personalAccountDatepicker;
+// export default personalAccountDatepicker;

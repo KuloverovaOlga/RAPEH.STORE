@@ -16,29 +16,29 @@ const personalAccount = () => {
     //   });
     // }
 
-    tab.addEventListener('click', () => {
-      const tabId = tab.dataset.tab;
+  //   tab.addEventListener('click', () => {
+  //     const tabId = tab.dataset.tab;
 
-      // Hide all tab contents
-      tabContents.forEach((content) => {
-        if (content.dataset.content === tabId) {
-          content.style.display = 'block';
-          if(content.classList.contains('account')) {
-            content.style.display = 'flex';
-          }
-        } else {
-          content.style.display = 'none';
-        }
-      });
+  //     // Hide all tab contents
+  //     tabContents.forEach((content) => {
+  //       if (content.dataset.content === tabId) {
+  //         content.style.display = 'block';
+  //         if(content.classList.contains('account')) {
+  //           content.style.display = 'flex';
+  //         }
+  //       } else {
+  //         content.style.display = 'none';
+  //       }
+  //     });
 
-      // Remove active class from all tabs
-      tabs.forEach((t) => {
-        t.classList.remove('_active');
-      });
+  //     // Remove active class from all tabs
+  //     tabs.forEach((t) => {
+  //       t.classList.remove('_active');
+  //     });
 
-      // Add active class to the clicked tab
-      tab.classList.add('_active');
-    });
+  //     // Add active class to the clicked tab
+  //     tab.classList.add('_active');
+  //   });
   });
 };
 
