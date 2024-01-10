@@ -141,6 +141,20 @@ main {
         bottom: -3rem;
     }
 }
+.flatpickr-calendar {
+    --swiper-theme-color: $orange!important;
+}
+
+.flatpickr-day.selected {
+    background-color: $orange;
+    border-color:  $orange;;
+}
+.flatpickr-day.today  {
+    border-color:  $orange;;
+}
+.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month  {
+
+}
 
 // }
 //text

@@ -341,7 +341,7 @@
                                 />
                             </label>
 
-                            <span class="error-span subscription"></span>
+                            <span class="error-span active subscription">Ошибка</span>
                         </div>
                         <div class="popup__input-group input-group">
                             <label class="popup__label popup__label-pass __viewpass">
@@ -349,13 +349,14 @@
 
                                 <span class="form__input-wrapper">
                                     <input
-                                    class="input__field text popup__form-input"
+                                    class="input__field text popup__form-input "
                                     type="password"
                                     placeholder="Введите пароль"
                                     data-validate
                                     data-required="password"
                                     autocomplete="off"
                                     name="form[]"
+                          
                                 />
 
                                   
@@ -392,7 +393,7 @@
                                 </span>
 
                             </label>
-                            <span class="error-span subscription"></span>
+                            <span class="error-span active subscription">Ошибка</span>
                         </div>
 
                         <button type="submit" class="popup__body-btn button button-long-arr popup__body-btn-personal-area-button">
@@ -470,6 +471,13 @@
     <div class="popup__wrapper">
         <div class="popup__content">
             <div class="popup__body">
+                <button data-popup="#popup__entrys-personal-area" type="button" class="popup__body-back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
                 <button data-close type="button" class="popup__body-close-btn close-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
@@ -518,6 +526,8 @@
     <div class="popup__wrapper">
         <div class="popup__content">
             <div class="popup__body popup__body-password-recovery-end">
+            
+
                 <button data-close type="button" class="popup__body-close-btn close-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
@@ -537,6 +547,14 @@
     <div class="popup__wrapper">
         <div class="popup__content">
             <div class="popup__body">
+
+                <button data-popup="#popup__entrys-personal-area" type="button" class="popup__body-back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
                 <button data-close type="button" class="popup__body-close-btn close-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
