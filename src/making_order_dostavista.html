@@ -49,66 +49,83 @@
                                                     <p class="making-order__form-title text">Данные получателя</p>
                                                     <div class="making-order__form-inputs">
                                                         <label for="" class="making-order__form-label">
-                                                            <input
-                                                                class="input__field text input--name making-order__form-input"
-                                                                type="text"
-                                                                placeholder="Фамилия"
-                                                                data-validate
-                                                                data-required
-                                                                autocomplete="off"
-                                                                name="form[]"
-                                                            />
+                                                            <span class="form__input-wrapper">
+                                                                <input
+                                                                    class="input__field text input--name making-order__table-field-input popup__form-input"
+                                                                    type="text"
+                                                                    placeholder="Фамилия"
+                                                                    data-validate
+                                                                    data-required
+                                                                    autocomplete="off"
+                                                                    name="form[]"
+                                                                />
+                                                                <span class="star"></span>
+                                                            </span>
+                                                            <span class="error-span subscription">Введите текстовое значение</span>
                                                         </label>
+
                                                         <label for="" class="making-order__form-label">
-                                                            <input
-                                                                class="input__field text input--name making-order__form-input"
-                                                                type="text"
-                                                                placeholder="Имя"
-                                                                data-validate
-                                                                data-required
-                                                                autocomplete="off"
-                                                                name="form[]"
-                                                            />
+                                                            <span class="form__input-wrapper">
+                                                                <input
+                                                                    class="input__field text input--name making-order__table-field-input popup__form-input"
+                                                                    type="text"
+                                                                    placeholder="Имя"
+                                                                    data-validate
+                                                                    data-required
+                                                                    autocomplete="off"
+                                                                    name="form[]"
+                                                                />
+                                                                <span class="star"></span>
+                                                            </span>
+                                                            <span class="error-span subscription">Введите текстовое значение</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                                 <div class="making-order__form-box">
                                                     <p class="making-order__form-title text">Контакты</p>
                                                     <div class="making-order__form-inputs">
-                                                        <label for="" class="making-order__form-label">
-                                                            <input
-                                                                class="input__field text input--mail making-order__form-input"
-                                                                type="text"
-                                                                placeholder="E-mail"
-                                                                data-validate
-                                                                data-required="email"
-                                                                autocomplete="off"
-                                                                name="form[]"
-                                                            />
+                                                        <label for="" class=" making-order__form-label">
+                                                            <span class="form__input-wrapper">
+                                                                <input
+                                                                    class="input__field input--mail text making-order__table-field-input popup__form-input"
+                                                                    type="tel"
+                                                                    placeholder="E-mail"
+                                                                    data-validate
+                                                                    data-required="email"
+                                                                    autocomplete="off"
+                                                                    name="form[]"
+                                                                />
+                                                                <span class="star"></span>
+                                                            </span>
+                                                            <span class="error-span subscription"></span>
                                                         </label>
                                                         <label for="" class="making-order__form-label">
-                                                            <input
-                                                                class="input__field input--tel text making-order__form-input"
-                                                                type="tel"
-                                                                placeholder="Телефон"
-                                                                data-validate
-                                                                data-required="tel"
-                                                                autocomplete="off"
-                                                                name="form[]"
-                                                            />
+                                                            <span class="form__input-wrapper">
+                                                                <input
+                                                                    class="input__field input--tel text making-order__table-field-input popup__form-input"
+                                                                    type="tel"
+                                                                    placeholder="Телефон"
+                                                                    data-validate
+                                                                    data-required="tel"
+                                                                    autocomplete="off"
+                                                                    name="form[]"
+                                                                />
+                                                                <span class="star"></span>
+                                                            </span>
+                                                            <span class="error-span subscription">Введите цифровое значение</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                                 <div class="making-order__form-box">
                                                     <p class="making-order__form-title text">Примечание к заказу</p>
-                                                    <textarea
-                                                        class="input__field input--textarea text making-order__form-textarea"
-                                                        placeholder="Ваш комментарий..."
-                                                        data-validate
-                                                        data-required="text"
-                                                        autocomplete="off"
-                                                        name="form[]"
-                                                    ></textarea>
+                                                    <div class="making-order__form-textarea">
+                                                        <textarea
+                                                            class="input__field input--textarea text"
+                                                            placeholder="Ваш комментарий..."
+                                                            autocomplete="off"
+                                                            name="form[]"
+                                                        ></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -154,78 +171,99 @@
                                                 <p class="making-order__delivery-third-title text">Ваш адрес</p>
                                                 <div class="making-order__delivery-third-form">
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Населенный пункт"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                       
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text  making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Населенный пункт"
+                                                                data-validate
+                                                                data-required
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                            <span class="star"></span>
+                                                        </span>
+                                                        <span class="error-span subscription">Введите текстовое значение</span>
                                                     </label>
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Улица, дом"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                        
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Улица, дом"
+                                                                data-validate
+                                                                data-required
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                            <span class="star"></span>
+                                                        </span>
+                                                        <span class="error-span subscription"></span>
                                                     </label>
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Квартира"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Квартира"
+                                                             
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                      
+                                                        </span>
+                                                        <span class="error-span subscription"></span>
                                                     </label>
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Подъезд"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Подъезд"
+                                                             
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                      
+                                                        </span>
+                                                        <span class="error-span subscription"></span>
                                                     </label>
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Этаж"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Этаж"
+                                                             
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                         
+                                                        </span>
+                                                        <span class="error-span subscription"></span>
                                                     </label>
                                                     <label for="" class="making-order__delivery-thrid-label">
-                                                        <input
-                                                            class="input__field text input--name making-order__delivery-third-input"
-                                                            type="text"
-                                                            placeholder="Домофон"
-                                                            data-validate
-                                                            data-required
-                                                            autocomplete="off"
-                                                            name="form[]"
-                                                        />
+                                                        <span class="form__input-wrapper">
+                                                            <input
+                                                                class="input__field text making-order__table-field-input popup__form-input"
+                                                                type="text"
+                                                                placeholder="Домофон"
+                                                             
+                                                                autocomplete="off"
+                                                                name="form[]"
+                                                            />
+                                                          
+                                                        </span>
+                                                        <span class="error-span subscription"></span>
                                                     </label>
                                                 </div>
-                                                <div class="making-order__delivery-third-textarea">
+                                                <div class="making-order__delivery-third-textarea making-order__textarea-box">
                                                     <textarea
                                                         class="input__field input--textarea text"
                                                         placeholder="Ваш комментарий..."
-                                                        data-validate
-                                                        data-required="text"
+                                                      
                                                         autocomplete="off"
                                                         name="form[]"
                                                     ></textarea>

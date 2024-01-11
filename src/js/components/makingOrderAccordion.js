@@ -5,6 +5,7 @@ const makingOrderAccordion = () => {
         accordionItemHeader.addEventListener('click', () => {
             const isActive = accordionItemHeader.classList.contains('active');
             const accordionItemBody = accordionItemHeader.nextElementSibling;
+           
 
             // Проверяем, открыт ли текущий элемент
             if (!isActive) {
