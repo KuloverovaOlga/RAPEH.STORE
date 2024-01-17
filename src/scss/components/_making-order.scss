@@ -585,6 +585,19 @@
                 }
             }
         }
+        &-sale {
+            margin-top: 2rem;
+            & span {
+                color: $orange;
+            }
+        }
+        &-delivery-text {
+            margin-top: 2rem;
+            width: 71rem;
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+        }
         &-icon {
             flex: 1;
             display: flex;
