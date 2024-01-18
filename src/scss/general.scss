@@ -110,14 +110,18 @@ main {
     position: relative;
 }
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.form__input-wrapper input {
     outline: 1px solid transparent;
-    transition: outline 0.3s;
+    border: 1px solid transparent;
+    transition: border 0.3s 0.1s;
+    
 }
 
 ._form-error input,
 ._form-error textarea {
-    outline: 1px solid #c22f2f;
+    border: 1px solid #c22f2f;
+    transition: border 0.2s;
 }
 
 .text-change__form-success {

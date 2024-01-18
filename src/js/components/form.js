@@ -30,11 +30,6 @@
 
 // // export default form
 
-
-
-
-
-
 // import { bodyLockStatus, bodyLock, bodyUnlock } from '../utils/constants';
 // var $ = require('jquery');
 
@@ -51,7 +46,6 @@
 //     $(selector).addClass('popup_show');
 //     bodyLock();
 // }
-
 
 // const openModalWithPromise = (selector) => {
 //     return new Promise((resolve) => {
@@ -122,7 +116,7 @@
 //                         if(checkbox) {
 //                             checkbox.checked = false;
 //                         }
-                       
+
 //                     });
 //                 },
 //             });
@@ -157,19 +151,17 @@
 
 // export default form;
 
-
-
 import './formModal';
 import { formFieldsInit, formSubmit } from './formModal';
 
+window.$ = window.jQuery = require('jquery');
+
 const form = () => {
+    // form fields
+    formFieldsInit({ viewPass: true });
 
-
-  // form fields
-  formFieldsInit({ viewPass: true });
-  
-  // submit form
-  formSubmit();
+    // submit form
+    formSubmit();
 
     const codeInputs = document.querySelectorAll('.popup__fields-num');
     // Функция для обработки ввода в каждом поле
@@ -188,187 +180,215 @@ const form = () => {
     //     return Array.from(codeInputs).map(input => input.value).join('');
     // }
     codeInputs.forEach((item, i) => {
-      item.addEventListener('input', ()=> {
-        handleInput(i+1)})
-    })
+        item.addEventListener('input', () => {
+            handleInput(i + 1);
+        });
+    });
 
-    const passFirst = document.querySelector('.popup__label--pass-first input')
-    const passRepeat = document.querySelector('.popup__label--pass-repeat input')
+    const passFirst = document.querySelector('.popup__label--pass-first input');
+    const passRepeat = document.querySelector('.popup__label--pass-repeat input');
 
-    function passRep () {
+    function passRep() {
         const inputValue = passRepeat.value.trim();
         const inputFirstValue = passFirst.value.trim();
         const parent = passRepeat.parentElement.parentElement;
         const span = parent.nextElementSibling;
 
-            if (inputValue !== inputFirstValue) {
-                span.classList.add('active');
-                parent.classList.add('_form-error');
-            }  else  {
-                span.classList.remove('active');
-                parent.classList.remove('_form-error');
-            }
+        if (inputValue !== inputFirstValue) {
+            span.classList.add('active');
+            parent.classList.add('_form-error');
+        } else {
+            span.classList.remove('active');
+            parent.classList.remove('_form-error');
+        }
     }
 
-    function passFir () {
+    function passFir() {
         const inputValue = passFirst.value.trim();
         const parent = passFirst.parentElement.parentElement;
 
-        if (!/^[a-zA-Zа-яА-Я0-9]{8,}$/.test(inputValue) && inputValue !='') {
+        if (!/^[a-zA-Zа-яА-Я0-9]{8,}$/.test(inputValue) && inputValue != '') {
             parent.classList.add('_form-error');
-        }  else  {
+        } else {
             parent.classList.remove('_form-error');
         }
     }
 
     passFirst.addEventListener('input', () => {
-        passRep()
-        passFir()
-
-    })
+        passRep();
+        passFir();
+    });
     passFirst.addEventListener('blur', () => {
-        passRep()
-        passFir()
-    })
+        passRep();
+        passFir();
+    });
     passRepeat.addEventListener('input', () => {
-        passRep()
-    })
+        passRep();
+    });
     passRepeat.addEventListener('blur', () => {
-        passRep()
-    })
+        passRep();
+    });
 
+    const tel = document.querySelectorAll('.input--tel');
 
-    const tel = document.querySelectorAll('.input--tel')
-
-    tel.forEach(item => {
+    tel.forEach((item) => {
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
             const span = item.parentElement.nextElementSibling;
             const parent = item.parentElement.parentElement;
 
-            if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue !='' ) {
-              
+            if (!/^[0-9 ()+]+$/.test(inputValue) && inputValue != '') {
                 span.classList.add('active');
                 parent.classList.add('_form-error');
-            }  else  if (inputValue.length < 11 ) {
+            } else if (inputValue.length < 11) {
                 parent.classList.add('_form-error');
-             } else {
+            } else {
                 span.classList.remove('active');
                 parent.classList.remove('_form-error');
-             
             }
-        })
-    })
-    const mail = document.querySelectorAll('.input--mail')
+        });
+    });
+    const mail = document.querySelectorAll('.input--mail');
 
-    mail.forEach(item => {
+    mail.forEach((item) => {
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
             const parent = item.parentElement.parentElement;
 
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(inputValue) && inputValue !='') {
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(inputValue) && inputValue != '') {
                 parent.classList.add('_form-error');
-            }  else  {
+            } else {
                 parent.classList.remove('_form-error');
             }
-        })
-    })
+        });
+    });
 
-    const name = document.querySelectorAll('.input--name')
-    name.forEach(item => {
+    const name = document.querySelectorAll('.input--name');
+    name.forEach((item) => {
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
             const span = item.parentElement.nextElementSibling;
             const parent = item.parentElement.parentElement;
 
-            if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(inputValue) && inputValue !='' ) {
-              
+            if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(inputValue) && inputValue != '') {
                 span.classList.add('active');
                 parent.classList.add('_form-error');
             } else {
                 span.classList.remove('active');
                 parent.classList.remove('_form-error');
-             
             }
-        })
-    })
-    
+        });
+    });
+    const dropdown = document.querySelectorAll('.input-dropdown');
+    console.log(dropdown);
+    dropdown.forEach((item) => {
+        const span = item.parentElement.nextElementSibling;
+        const parent = item.parentElement.parentElement;
+        item.addEventListener('change', () => {
+            let radio = item.closest('.form__dropdown_top').nextElementSibling.querySelectorAll('input');
+           
+            radio.forEach((ra) => {
+                if (ra.checked) {
+                    span.classList.remove('active');
+                    parent.classList.remove('_form-error');
+                } else {
+                    span.classList.add('active');
+                    parent.classList.add('_form-error');
+              
+                }
+            });
+        });
+        item.addEventListener('blur', () => {
+            setTimeout(() => {
+                if (item.classList.contains('filled')) {
+                    span.classList.remove('active');
+                    parent.classList.remove('_form-error');
+                } else {
+                    span.classList.add('active');
+                    parent.classList.add('_form-error');
+                }
+            }, 200);
+        });
+        item.addEventListener('input', () => {
+            let radio = item.closest('.form__dropdown_top').nextElementSibling.querySelectorAll('input');
+       
+            radio.forEach((ra) => {
+                ra.checked = false;
+            });
+            span.classList.add('active');
+            parent.classList.add('_form-error');
+            item.classList.remove('filled')
 
-    const required = document.querySelectorAll('.popup__label--required input, .popup__label--required textarea')
+        });
+    });
 
-    required.forEach(item => {
+    const required = document.querySelectorAll('.popup__label--required input, .popup__label--required textarea');
+
+    required.forEach((item) => {
         item.addEventListener('blur', () => {
             const inputValue = item.value.trim();
-           
+
             if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
                 item.parentElement.querySelector('.star').style.opacity = 1;
-            }  else  {
+            } else {
                 item.parentElement.querySelector('.star').style.opacity = 0;
             }
-        })
+        });
         item.addEventListener('input', () => {
             const inputValue = item.value.trim();
-        
+
             if (inputValue === '' || item.parentElement.parentElement.classList.contains('_form-error')) {
                 item.parentElement.querySelector('.star').style.opacity = 1;
-            }  else  {
+            } else {
                 item.parentElement.querySelector('.star').style.opacity = 0;
             }
-        })
-    })
-
-     
+        });
+    });
 
     function setupFormListener(formSelector, submitButtonSelector) {
         const form = document.querySelector(formSelector);
         const submitButton = document.querySelector(submitButtonSelector);
-    
+
         const formElements = form.querySelectorAll('input, textarea');
         const formElementCheckbox = form.querySelectorAll('.popup__input-checkbox');
-        const formElementsParents = form.querySelectorAll('.input-group')
-        const formElementsLabel = form.querySelectorAll('.popup__label')
-    
-     
+        const formElementsParents = form.querySelectorAll('.input-group');
+        const formElementsLabel = form.querySelectorAll('.popup__label');
+
         function updateSubmitButtonState() {
-            const isEmpty = Array.from(formElements).some(element => {
+            const isEmpty = Array.from(formElements).some((element) => {
                 return element.value.trim() === '';
             });
-            const formError = Array.from(formElementsParents).some(element => {
-           
+            const formError = Array.from(formElementsParents).some((element) => {
                 return element.classList.contains('_form-error');
             });
-            const formErrorLabel = Array.from(formElementsLabel).some(element => {
-         
+            const formErrorLabel = Array.from(formElementsLabel).some((element) => {
                 return element.classList.contains('_form-error');
             });
-            const formErrorCheckbox = Array.from(formElementCheckbox).some(element => {
-         
+            const formErrorCheckbox = Array.from(formElementCheckbox).some((element) => {
                 return !element.checked;
             });
-         
+
             // Устанавливаем или удаляем атрибут disabled в зависимости от условия
-            if (isEmpty || (formError || formErrorLabel) || formErrorCheckbox) {
+            if (isEmpty || formError || formErrorLabel || formErrorCheckbox) {
                 submitButton.setAttribute('disabled', 'disabled');
             } else {
                 submitButton.removeAttribute('disabled');
             }
         }
-    
-        formElements.forEach(element => {
+
+        formElements.forEach((element) => {
             element.addEventListener('input', updateSubmitButtonState);
         });
-    
+
         updateSubmitButtonState();
     }
-    
+
     // Использование:
     setupFormListener('.popup__entrys-personal-area-form', '.popup__body-btn-personal-area-button');
     setupFormListener('.popup__password-recovery-form', '.popup__password-recovery-body-btn');
     setupFormListener('.popup__body-registration-form', '.popup__body-btn-registration-form');
     setupFormListener('.popup__sign-up-form', '.popup__sign-up-form-btn');
     setupFormListener('.popup__review-form', '.popup__review-form-btn');
+};
 
-}
-
-export default form
-
+export default form;
