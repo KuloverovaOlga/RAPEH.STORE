@@ -3,8 +3,6 @@
     display: flex;
     gap: 2.4rem;
     flex-direction: column;
-
-
 }
 
 .balloon__info-box {
@@ -28,9 +26,17 @@
     color: $black-50;
 }
 
-[class*="ground-pane"] {
+[class*='ground-pane'],
+[class*='events-pane'] {
     -webkit-filter: grayscale(0.5);
     filter: grayscale(0.5);
+}
+
+.widget__map {
+    border-radius: 3rem;
+    overflow: hidden;
+    --color-greay: #fc5b31;
+    --border-radius: 2.4rem;
 }
 [class*='copyrights-pane'] {
     display: none;
@@ -42,39 +48,133 @@
     display: none;
 }
 
-
-
-[class$="balloon__content"] {
-
-    padding: 0 !important;;
-    width:40.7rem !important;;
-    margin-right: 0 !important;;
-    box-shadow: 2.1rem 1.8rem 6.1rem 0 rgba(173, 173, 173, 0.25) !important;;
-    
-  }
-  [class$="balloon__content"] > ymaps {
-    width:40.7rem !important;;
+[class$='balloon__content'] {
+    padding: 0 !important;
+    width: 40.7rem !important;
+    margin-right: 0 !important;
+    box-shadow: 2.1rem 1.8rem 6.1rem 0 rgba(173, 173, 173, 0.25) !important;
+}
+[class$='balloon__content'] > ymaps {
+    width: 40.7rem !important;
     height: fit-content !important;
-  }
-  // [class$="close-button"] {
-  //  display: none !important;
-  // }
-  [class$="balloon-overlay"] > ymaps > ymaps {
-      box-shadow: none !important;;
-      top: -30.5rem !important;;
-      left: -5rem !important;;
-      border-radius: 1.6rem!important;;
-      overflow: hidden;
+}
+// [class$="close-button"] {
+//  display: none !important;
+// }
+[class$='balloon-overlay'] > ymaps > ymaps {
+    box-shadow: none !important;
+    top: -30.5rem !important;
+    left: -5rem !important;
+    border-radius: 1.6rem !important;
+    overflow: hidden;
 
-      @media (max-width: 48em) {
-        border-radius: 3.2rem!important;;
-        top: -45.5rem !important;;
-        left: -12rem !important;;
+    @media (max-width: 48em) {
+        border-radius: 3.2rem !important;
+        top: -45.5rem !important;
+        left: -12rem !important;
     }
-  }
-  [class$="balloon-overlay"]  [class$="balloon__tail"]  {
-   display: none;
-  }
-  [class$="balloon-overlay"]  [class$="close-button"]  {
-   margin-right: 0.3rem;
-  }
+}
+[class$='balloon-overlay'] [class$='balloon__tail'] {
+    display: none;
+}
+[class$='balloon-overlay'] [class$='close-button'] {
+    margin-right: 0.3rem;
+}
+
+.widget__title {
+    display: none;
+}
+.widget__list {
+    height: 33rem !important;
+    margin-top: 1.5rem;
+    @media (max-width: 48em) {
+        position: static;
+        margin-top: 1.5rem;
+        height: 75rem!important;
+        overflow: hidden;
+        transform: translateY(0);
+        width: 100%;
+    }
+}
+.widget__content {
+    max-width: none;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+}
+
+.widget__wrapper {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    @media (max-width: 48em) {
+        width: 61rem;
+    }
+}
+
+.ymaps-2-1-79-suggest-item:not(:last-child),
+.widget__popup-item:not(:last-child),
+.ymaps-2-1-79-suggest-item:last-child,
+.widget__popup-item:last-child {
+    margin: 0 1.5rem !important;
+}
+
+.widget__label-text {
+    font-size: 1.3rem;
+    @media (max-width: 48em) {
+        font-size: 2.6rem;
+    }
+}
+.widget__header {
+    padding: 1.5rem 1.6rem 1.6rem;
+    @media (max-width: 48em) {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+}
+.widget__input {
+    border-radius: 1.6rem;
+    border: 1px solid transparent;
+    padding: 1.55rem 1.6rem;
+    transition: border 0.3s;
+}
+
+.widget__input--search:not(:focus),
+.ydw-suggest-inactive {
+    background-color: #f5f4f2 !important;
+    border: 1px solid transparent !important;
+    transition: border 0.3s;
+}
+
+.widget__input--search.active,
+.widget__location-title,
+.widget__location-detail,
+[class$='search__suggest-item'] {
+    font-size: 1.6rem !important;
+
+    @media (max-width: 48em) {
+        font-size: 3.2rem !important;
+    }
+}
+[class$='search__suggest-item'] {
+    padding-top: 2.1rem !important;
+    padding-bottom: 2.1rem !important;
+}
+
+.widget__popup-item {
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+}
+
+.widget__location-desc,
+.widget__location-detail-span {
+    font-size: 1.3rem;
+    @media (max-width: 48em) {
+        font-size: 2.6rem;
+    }
+}
+.widget__input.active {
+    border: 1px solid $black;
+}
