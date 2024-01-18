@@ -36,6 +36,7 @@ const entryPoints = {
     making_order_other: path.resolve(__dirname, 'src', 'index.js'),
     making_order_dostavista: path.resolve(__dirname, 'src', 'index.js'),
     making_order_yandex: path.resolve(__dirname, 'src', 'index.js'),
+    making_order_post: path.resolve(__dirname, 'src', 'index.js'),
     index: path.resolve(__dirname, 'src', 'index.js'),
     main: path.resolve(__dirname, 'src', 'index.js'),
     404: path.resolve(__dirname, 'src', 'index.js'),
