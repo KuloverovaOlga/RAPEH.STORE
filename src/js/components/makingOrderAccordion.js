@@ -11,7 +11,7 @@ const makingOrderAccordion = () => {
             if (!isActive) {
                 // Добавляем класс и устанавливаем высоту только для активного элемента
                 accordionItemHeader.classList.add('active');
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 600 + 'px';
                 accordionItemBody.style.marginTop = '4rem';
             } else {
                 // Если текущий элемент уже открыт, закрываем его
@@ -19,6 +19,15 @@ const makingOrderAccordion = () => {
                 accordionItemBody.style.maxHeight = 0;
                 accordionItemBody.style.marginTop = '0';
             }
+
+            window.addEventListener('resize', () => {
+                if (accordionItemHeader.classList.contains('active')) {
+                    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 600 + 'px';
+                } else {
+                    accordionItemBody.style.maxHeight = 0;
+
+                }
+            })
         });
     });
 };
