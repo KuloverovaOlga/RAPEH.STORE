@@ -4,9 +4,13 @@ import { rem } from '../../utils/constants';
 
 const cartSwiper = () => {
     const swiperInner = new Swiper('.cart__swiper', {
-        slidesPerView: 'auto',
-
+        slidesPerView: 1,
+      
         grabCursor: true,
+
+        pagination: {
+            el: '.cart__swiper .swiper-pagination',
+          },
         navigation: {
             nextEl: '.cart__swiper .swiper-button-next',
             prevEl: '.cart__swiper .swiper-button-prev',

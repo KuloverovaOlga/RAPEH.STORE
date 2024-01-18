@@ -8,7 +8,9 @@ const similarProductsSwiper = () => {
     grid: {
       rows: 2,
     },
-
+    pagination: {
+      el: '.similar-products__swiper .swiper-pagination',
+    },
     grabCursor: true,
     navigation: {
       nextEl: ".similar-products__swiper .swiper-button-next",

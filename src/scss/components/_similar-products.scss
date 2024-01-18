@@ -24,6 +24,7 @@
     // .similar-products__swiper-slide-swiper-wrapper
 
     &__swiper-slide-swiper-wrapper {
+  
     }
 
     // .similar-products__swiper-slide-swiper-slide
@@ -45,6 +46,10 @@
 
     &__swiper-slide-swiper-button-next {
     }
+
+    &__swiper-pagination.swiper-pagination {
+       display: none;
+      }
 }
 @media (max-width: 48em) {
     .similar-products {
@@ -74,6 +79,7 @@
         // .similar-products__swiper-slide-swiper-wrapper
     
         &__swiper-slide-swiper-wrapper {
+            padding-bottom: 6.6rem;
         }
     
         // .similar-products__swiper-slide-swiper-slide
@@ -90,6 +96,16 @@
        .similar-products__swiper-slide-swiper-button-next {
         display: none;
         }
+
+        &__swiper-pagination.swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: auto!important
+            ;
+            bottom: 0!important;
+            gap: 1.2rem;
+          }
     }
         
     }

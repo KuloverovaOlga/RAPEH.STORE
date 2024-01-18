@@ -1,4 +1,8 @@
 .cart {
+
+
+
+
     padding-top: 17.7rem;
     &__title {
         margin-bottom: 6rem;
@@ -570,6 +574,14 @@
         }
     }
     &__swiper {
+       & .swiper-wrapper {
+        @media (max-width: 48em) {
+            padding-bottom: 3rem;
+        }
+
+     
+       }
+
         @media (max-width: 48em) {
             .swiper-button-next,
             .swiper-button-prev {
@@ -577,4 +589,34 @@
             }
         }
     }
+ 
+
+    &__swiper-pagination.swiper-pagination {
+        display: none;
+        @media (max-width: 48em) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: auto!important
+            ;
+            bottom: 0!important;
+            gap: 1.2rem;
+
+
+        }
+       
+
+        & .swiper-pagination-bullet {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background-color: #d9d9d9;
+            opacity: 1;
+            transition: background-color 0.3s;
+            margin: 0 !important;
+        }
+       & .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $black;
+        }
+      }
 }

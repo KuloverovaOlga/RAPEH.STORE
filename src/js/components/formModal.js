@@ -43,7 +43,7 @@ export function formFieldsInit(options = { viewPass: false }) {
         targetElement.classList.remove('_form-focus');
         targetElement.parentElement.classList.remove('_form-focus');
       }
-      if (targetElement.hasAttribute('data-validate')) {
+      if (targetElement.hasAttribute('data-validate') && !targetElement.classList.contains('input-dropdown')) {
         formValidate.validateInput(targetElement);
       }
       if (

@@ -30,6 +30,7 @@ import animNumbers from './animNumbers';
 import headerModal from './headerModal';
 import articleTabs from './articlesTabs';
 import modalRange from './modalRange';
+import dropdown from './dropdown';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -74,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
         form();
+    } catch {}
+    try {
+        dropdown();
     } catch {}
 
     try {
@@ -135,12 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // const form = document.querySelector('.sign-up__form')
-    // const btn = document.querySelector('.sign-up__form button')
-
-    // form.addEventListener('submit', () => {
-    //     form.textContent = 'effsfsfe'
-    // })
+    // import $ from "jquery";
 
 });
 
