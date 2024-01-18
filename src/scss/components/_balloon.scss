@@ -154,7 +154,9 @@
     border: 1px solid transparent !important;
     transition: border 0.3s;
 }
-
+.widget__locations {
+    max-height: 75rem;
+}
 .widget__input--search.active,
 .widget__location-title,
 .widget__location-detail,
