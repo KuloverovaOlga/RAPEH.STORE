@@ -195,3 +195,16 @@
 .widget__input.active {
     border: 1px solid $black;
 }
+.widget__label-button {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.widget__label-img,
+.widget__location-faq-img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.widget__location-checkbox-input~.widget__location-checkbox-label:before {
+    width: 3.2rem;
+    height: 3.2rem;  
+}

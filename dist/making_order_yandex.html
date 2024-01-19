@@ -1553,7 +1553,7 @@
                                                 <div class="making-order__form-box">
                                                     <p class="making-order__form-title text">Контакты</p>
                                                     <div class="making-order__form-inputs">
-                                                        <label for="" class=" making-order__form-label popup__label--required">
+                                                        <label for="" class="making-order__form-label popup__label--required">
                                                             <span class="form__input-wrapper">
                                                                 <input
                                                                     class="input__field input--mail text making-order__table-field-input popup__form-input"
@@ -1637,11 +1637,9 @@
                                                 </div>
                                             </div>
                                             <div class="making-order__delivery-content">
-                                                
-
                                                 <div class="making-order__delivery-second-tabs-content">
                                                     <div class="making-order__delivery-second-tabs-content-map" data-content="first">
-                                                        <div class="making-order__yandex-map" id="makingOrderMap"></div>
+                                                        <div class="making-order__yandex-map" id="makingOrderYandexMap"></div>
                                                     </div>
                                                 </div>
                                                 <div class="making-order__delivery-second-result">
@@ -1689,9 +1687,7 @@
                                                     </div>
                                                 </div>
                                             </label>
-                                            <p class="making-order__option-sale text">
-                                                При оплате переводом <span>скидка 3% </span> 
-                                            </p>
+                                            <p class="making-order__option-sale text">При оплате переводом <span>скидка 3% </span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1882,54 +1878,55 @@
     </body>
     <script src="https://ndd-widget.landpro.site/widget.js"></script>
 
-
-<script>
-    (function(w) {
-        function startWidget() {
-            w.YaDelivery.createWidget({
-                containerId: 'makingOrderMap',         // Идентификатор HTML-элемента (контейнера), в котором будет отображаться виджет
-                params: {
-                    city: "Москва",                     // Город отображаемый на карте при запуске
-                    size:{                              // Размеры виджета
-                        // "height": "150rem",              // Высота
-                        "width": "100%"                 // Ширина
-                    },
-                    source_platform_station: "05e809bb-4521-42d9-a936-0fb0744c0fb3",  // Станция отгрузки
-                    physical_dims_weight_gross: 10000,  // Вес отправления
-                    delivery_price: "от 100",           // Стоимость доставки
-                    delivery_term: "от 1 дня",          // Срок доставки
-                    show_select_button: true,           // Отображение кнопки выбора ПВЗ (false - скрыть кнопку, true - показать кнопку)
-                    filter: {
-                        type: [                         // Тип способа доставки
-                            "pickup_point",             // Пункт выдачи заказа
-                            "terminal"                  // Постамат
-                        ],
-                        is_yandex_branded: false,       // Тип пункта выдачи заказа (false - Партнерские ПВЗ, true - ПВЗ Яндекса)
-                        payment_methods: [              // Способ оплаты
-                            "already_paid",             // Доступен для доставки предоплаченных заказов
-                            "card_on_receipt"           // Доступна оплата картой при получении
-                        ],  
-                        payment_methods_filter: "or",      // Фильтр по типам оплаты
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.querySelector('.making-order__yandex-map')) {
+                (function (w) {
+                    function startWidget() {
+                        w.YaDelivery.createWidget({
+                            containerId: 'makingOrderYandexMap', // Идентификатор HTML-элемента (контейнера), в котором будет отображаться виджет
+                            params: {
+                                city: 'Москва', // Город отображаемый на карте при запуске
+                                size: {
+                                    // Размеры виджета
+                                    // "height": "150rem",              // Высота
+                                    width: '100%', // Ширина
+                                },
+                                source_platform_station: '05e809bb-4521-42d9-a936-0fb0744c0fb3', // Станция отгрузки
+                                physical_dims_weight_gross: 10000, // Вес отправления
+                                delivery_price: 'от 100', // Стоимость доставки
+                                delivery_term: 'от 1 дня', // Срок доставки
+                                show_select_button: true, // Отображение кнопки выбора ПВЗ (false - скрыть кнопку, true - показать кнопку)
+                                filter: {
+                                    type: [
+                                        // Тип способа доставки
+                                        'pickup_point', // Пункт выдачи заказа
+                                        'terminal', // Постамат
+                                    ],
+                                    is_yandex_branded: false, // Тип пункта выдачи заказа (false - Партнерские ПВЗ, true - ПВЗ Яндекса)
+                                    payment_methods: [
+                                        // Способ оплаты
+                                        'already_paid', // Доступен для доставки предоплаченных заказов
+                                        'card_on_receipt', // Доступна оплата картой при получении
+                                    ],
+                                    payment_methods_filter: 'or', // Фильтр по типам оплаты
+                                },
+                            },
+                        });
                     }
-                },
-            });
-        }
-        w.YaDelivery
-            ? startWidget()
-            : document.addEventListener('YaNddWidgetLoad', startWidget);
-    })(window);
-                                                        // Подписка на событие
-    document.addEventListener('YaNddWidgetPointSelected', function (data){
-                                                       
-
-        console.log(data.detail.id);
-        console.log(data.detail.address.full_address);
-        console.log(data.detail.address.country);
-        console.log(data.detail.address.locality);
-        console.log(data.detail.address.street);
-        console.log(data.detail.address.house);
-        console.log(data.detail.address.comment);
-    });
-    
-</script>
+                    w.YaDelivery ? startWidget() : document.addEventListener('YaNddWidgetLoad', startWidget);
+                })(window);
+                // Подписка на событие
+                document.addEventListener('YaNddWidgetPointSelected', function (data) {
+                    console.log(data.detail.id);
+                    console.log(data.detail.address.full_address);
+                    console.log(data.detail.address.country);
+                    console.log(data.detail.address.locality);
+                    console.log(data.detail.address.street);
+                    console.log(data.detail.address.house);
+                    console.log(data.detail.address.comment);
+                });
+            }
+        });
+    </script>
 </html>
