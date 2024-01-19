@@ -302,7 +302,7 @@ const form = () => {
         });
         item.addEventListener('blur', () => {
             setTimeout(() => {
-                if (item.classList.contains('filled')) {
+                if (item.classList.contains('filled') && item.value) {
                     span.classList.remove('active');
                     parent.classList.remove('_form-error');
                    
@@ -317,11 +317,13 @@ const form = () => {
                             locality.value = '';
                             localitySpan.classList.add('active');
                             localityParent.classList.add('_form-error');
+                            localityParent.classList.remove('filled');
                         }
                         if (street.value) {
                             street.value = '';
                             streeSpan.classList.add('active');
                             streetParent.classList.add('_form-error');
+                            streetParent.classList.remove('filled');
                         }
                     }
 
@@ -333,11 +335,13 @@ const form = () => {
                             street.value = '';
                             streeSpan.classList.add('active');
                             streetParent.classList.add('_form-error');
+                            streetParent.classList.remove('filled');
                         }
                     }
                 } else {
                     span.classList.add('active');
                     parent.classList.add('_form-error');
+                    item.classList.remove('filled');
                 }
             }, 200);
         });
