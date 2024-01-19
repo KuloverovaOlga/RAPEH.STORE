@@ -185,13 +185,13 @@ const form = () => {
         });
     });
 
-    const passFirst = document.querySelector('.popup__label--pass-first input');
-    const passRepeat = document.querySelector('.popup__label--pass-repeat input');
+    const passFirst = document.querySelectorAll('.popup__label--pass-first input');
+    const passRepeat = document.querySelectorAll('.popup__label--pass-repeat input');
 
-    function passRep() {
-        const inputValue = passRepeat.value.trim();
-        const inputFirstValue = passFirst.value.trim();
-        const parent = passRepeat.parentElement.parentElement;
+    function passRep(i) {
+        const inputValue = passRepeat[i].value.trim();
+        const inputFirstValue = passFirst[i].value.trim();
+        const parent = passRepeat[i].parentElement.parentElement;
         const span = parent.nextElementSibling;
 
         if (inputValue !== inputFirstValue) {
@@ -203,9 +203,9 @@ const form = () => {
         }
     }
 
-    function passFir() {
-        const inputValue = passFirst.value.trim();
-        const parent = passFirst.parentElement.parentElement;
+    function passFir(i) {
+        const inputValue = passFirst[i].value.trim();
+        const parent = passFirst[i].parentElement.parentElement;
 
         if (!/^[a-zA-Zа-яА-Я0-9]{8,}$/.test(inputValue) && inputValue != '') {
             parent.classList.add('_form-error');
@@ -213,21 +213,26 @@ const form = () => {
             parent.classList.remove('_form-error');
         }
     }
-
-    passFirst.addEventListener('input', () => {
-        passRep();
-        passFir();
-    });
-    passFirst.addEventListener('blur', () => {
-        passRep();
-        passFir();
-    });
-    passRepeat.addEventListener('input', () => {
-        passRep();
-    });
-    passRepeat.addEventListener('blur', () => {
-        passRep();
-    });
+    passFirst.forEach((item, i) => {
+        item.addEventListener('input', () => {
+            passRep(i);
+            passFir(i);
+        });
+        item.addEventListener('blur', () => {
+            passRep(i);
+            passFir(i);
+        });
+    })
+    passRepeat.forEach((item, i) => {
+        item.addEventListener('input', () => {
+            passRep(i);
+        });
+        item.addEventListener('blur', () => {
+            passRep(i);
+        });
+    })
+   
+   
 
     const tel = document.querySelectorAll('.input--tel');
 
@@ -269,7 +274,7 @@ const form = () => {
             const inputValue = item.value.trim();
             const span = item.parentElement.nextElementSibling;
             const parent = item.parentElement.parentElement;
-
+            console.log(span)
             if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(inputValue) && inputValue != '') {
                 span.classList.add('active');
                 parent.classList.add('_form-error');
@@ -384,7 +389,8 @@ const form = () => {
         const form = document.querySelector(formSelector);
         const submitButton = document.querySelector(submitButtonSelector);
 
-        const formElements = form.querySelectorAll('input, textarea');
+        const formElements = form.querySelectorAll('input[data-required], textarea[data-required]');
+        console.log(formElements)
         const formElementCheckbox = form.querySelectorAll('.popup__input-checkbox');
         const formElementsParents = form.querySelectorAll('.input-group');
         const formElementsLabel = form.querySelectorAll('.popup__label');
@@ -424,6 +430,8 @@ const form = () => {
     setupFormListener('.popup__body-registration-form', '.popup__body-btn-registration-form');
     setupFormListener('.popup__sign-up-form', '.popup__sign-up-form-btn');
     setupFormListener('.popup__review-form', '.popup__review-form-btn');
+    setupFormListener('.account__table-data._form', '.account__table-data-btn._form');
+    setupFormListener('.account__table-data._password', '.account__table-data-btn._password');
 };
 
 export default form;
