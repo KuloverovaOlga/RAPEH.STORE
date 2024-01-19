@@ -286,7 +286,7 @@ const form = () => {
         const parent = item.parentElement.parentElement;
         item.addEventListener('change', () => {
             let radio = item.closest('.form__dropdown_top').nextElementSibling.querySelectorAll('input');
-           
+
             radio.forEach((ra) => {
                 if (ra.checked) {
                     span.classList.remove('active');
@@ -294,15 +294,47 @@ const form = () => {
                 } else {
                     span.classList.add('active');
                     parent.classList.add('_form-error');
-              
                 }
             });
+
+            // if(item.classList.contains('input-dropdown--locality'))
+            // if(item.classList.contains('input-dropdown--street'))
         });
         item.addEventListener('blur', () => {
             setTimeout(() => {
                 if (item.classList.contains('filled')) {
                     span.classList.remove('active');
                     parent.classList.remove('_form-error');
+                   
+                    if (item.classList.contains('input-dropdown--region')) {
+                        const locality = document.querySelector('.input-dropdown--locality');
+                        const street = document.querySelector('.input-dropdown--street');
+                        const localitySpan = locality.parentElement.nextElementSibling;
+                        const localityParent = locality.parentElement.parentElement;
+                        const streeSpan = street.parentElement.nextElementSibling;
+                        const streetParent = street.parentElement.parentElement;
+                        if (locality.value) {
+                            locality.value = '';
+                            localitySpan.classList.add('active');
+                            localityParent.classList.add('_form-error');
+                        }
+                        if (street.value) {
+                            street.value = '';
+                            streeSpan.classList.add('active');
+                            streetParent.classList.add('_form-error');
+                        }
+                    }
+
+                    if (item.classList.contains('input-dropdown--locality')) {
+                        const street = document.querySelector('.input-dropdown--street');
+                        const streeSpan = street.parentElement.nextElementSibling;
+                        const streetParent = street.parentElement.parentElement;
+                        if (street.value) {
+                            street.value = '';
+                            streeSpan.classList.add('active');
+                            streetParent.classList.add('_form-error');
+                        }
+                    }
                 } else {
                     span.classList.add('active');
                     parent.classList.add('_form-error');
@@ -311,14 +343,13 @@ const form = () => {
         });
         item.addEventListener('input', () => {
             let radio = item.closest('.form__dropdown_top').nextElementSibling.querySelectorAll('input');
-       
+
             radio.forEach((ra) => {
                 ra.checked = false;
             });
             span.classList.add('active');
             parent.classList.add('_form-error');
-            item.classList.remove('filled')
-
+            item.classList.remove('filled');
         });
     });
 
