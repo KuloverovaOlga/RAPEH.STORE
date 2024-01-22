@@ -1,14 +1,16 @@
-const makingOrderTabs = () => {
+const makingOrderTabs = (selector) => {
     // Get the radio buttons and content sections
-    const deliveryOptions = document.querySelectorAll('.making-order__option-input');
-
+    const parent = document.querySelector(selector)
+    console.log(parent)
+    const deliveryOptions = parent.querySelectorAll('.making-order__option-input');
+    console.log(deliveryOptions)
     // Function to handle the tab switching
     function handleTabSwitch(event) {
         const target = event.target.dataset.target;
-        const content = document.querySelector(`[data-content="${target}"]`);
+        const content = parent.querySelector(`[data-content="${target}"]`);
 
         if (content) {
-            document.querySelectorAll('[data-content]').forEach((el) => {
+            parent.querySelectorAll('[data-content]').forEach((el) => {
                 el.style.display = 'none';
                 console.log(1);
             });
@@ -23,7 +25,8 @@ const makingOrderTabs = () => {
     });
 
     // Initially hide all content except the first one on page load
-    document.querySelector('[data-content="first"]').style.display = 'block';
+    parent.querySelector('[data-content="first"]').style.display = 'block';
+    // document.querySelector('[data-content="third"]').style.display = 'block';
 };
 
 export default makingOrderTabs;
