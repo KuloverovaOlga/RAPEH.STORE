@@ -666,9 +666,6 @@
             }
 
             svg {
-             
-                
-
                 path {
                     stroke: $black;
                 }
@@ -733,8 +730,8 @@
             align-items: center;
             gap: 1.2rem;
             @media (max-width: 48em) {
-               padding: 0.8rem 0;
-               gap: 2.4rem;
+                padding: 0.8rem 0;
+                gap: 2.4rem;
             }
             & input {
                 display: none;
@@ -800,5 +797,59 @@
                 // margin-left: auto;
             }
         }
+    }
+
+    // .making-order__delivery-title
+
+    &__delivery-title {
+    }
+
+    // .making-order__delivery-info
+
+    &__delivery-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.6rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 1.6rem;
+            align-items: flex-start;
+        }
+    }
+
+    // .making-order__delivery-adress
+
+    &__delivery-adress {
+    }
+
+    // .making-order__delivery-edit
+
+    &__delivery-edit {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    // .making-order__delivery-edit-icon
+
+    &__delivery-edit-icon {
+        width: 2rem;
+        height: 2rem;
+        & svg {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 48em) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    // .making-order__delivery-edit-text
+
+    &__delivery-edit-text {
     }
 }
