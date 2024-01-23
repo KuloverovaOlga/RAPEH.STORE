@@ -68,7 +68,7 @@
       height: 2px;
       width: 100%;
       background-color: $line;
-      z-index: -1;
+      z-index: 0;
     }
   }
 
@@ -235,13 +235,13 @@
       &:after {
         content: "";
         position: absolute;
-        top: 8rem;
+        top: 7.7rem;
         left: 0;
         right: 0;
         height: 2px;
         width: 100%;
         background-color: $line;
-        z-index: -1;
+        z-index: 0;
       }
     }
   
@@ -328,7 +328,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 2px;
+      height: 4px;
       width: 100%;
       background-color: transparent;
     }

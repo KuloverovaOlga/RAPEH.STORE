@@ -32,7 +32,9 @@
     }
     &__swiper {
         margin-top: 0;
-        border-top: 2px solid rgba(18, 35, 26, 0.1);
+        // border-top: 2px solid rgba(18, 35, 26, 0.1);
+        opacity: 0;
+        visibility: hidden;
     }
     &__table-field-input {
         background-color: $white;
