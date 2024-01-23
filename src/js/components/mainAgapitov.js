@@ -14,6 +14,7 @@ import notification from './notification';
 import saleAccordion from './saleAccordion';
 
 import cartSwiper from './swiper/cartSwiper';
+import scroll from './scroll';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -69,5 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         saleAccordion();
+    } catch {}
+    try {
+        scroll();
     } catch {}
 });

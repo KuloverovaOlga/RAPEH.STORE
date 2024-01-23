@@ -463,17 +463,18 @@ height: fit-content;
             display: flex;
             gap: 2rem;
             width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            &::-webkit-scrollbar {
-                width: 0; /* ширина скроллбара */
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color: transparent; /* цвет ползунка */
-            }
-            &::-webkit-scrollbar-track {
-                background: transparent; /* цвет трека */
-            }
+            // overflow-x: auto;
+            // overflow-y: hidden;
+            // &::-webkit-scrollbar {
+            //     width: 0; /* ширина скроллбара */
+            // }
+            // &::-webkit-scrollbar-thumb {
+            //     background-color: transparent; /* цвет ползунка */
+            // }
+            // &::-webkit-scrollbar-track {
+            //     background: transparent; /* цвет трека */
+            // }
+            margin-bottom: 1.5rem;
         }
 
         // .product-content__info-desk-item
