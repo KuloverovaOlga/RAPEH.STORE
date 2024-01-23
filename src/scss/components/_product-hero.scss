@@ -572,12 +572,13 @@
     // .product-hero__swiper-slide-img-box
 
     &__swiper-slide-img-box {
-        width: 57.8rem;
-        height: 69.6rem;
+        width: 55.8rem;
+        height: 65.6rem;
         & img {
-            object-fit: cover;
+            object-fit: fill;
             height: 100%;
             width: 100%;
+            border-radius: 50%;
         }
     }
 
