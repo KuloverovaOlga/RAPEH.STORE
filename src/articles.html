@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css" /> -->
+      
         <title>Статьи</title>
     </head>
     <body>
@@ -11,7 +14,7 @@
             <main class="main">
                 <include src="./components/bottom-menu.html"></include>
                 <include src="./components/popup.html"></include>
-  <include src="./components/watsapp.html"></include>
+                <include src="./components/watsapp.html"></include>
                 <section class="articles" id="articles">
                     <div class="container">
                         <div class="articles__inner">
@@ -20,39 +23,37 @@
                                     <span class="title-span">Информация и опыт</span> для физического и духовного процветания и нормализации потока энергии
                                 </p>
                                 <div class="articles__header-sign-up">
-                                  <p class="articles__header-sign-up-title title-h4">
-                                    +10 000 человек обрели ценный дар
-                                  </p>
-                                  <div class="articles__header-sign-up-img-wrapper">
-                                   <div class="articles__header-sign-up-img-box">
-                                    <img src="./assets/images/article-sign1.webp" alt="">
-                                   </div>
-                                   <div class="articles__header-sign-up-img-box">
-                                    <img src="./assets/images/article-sign2.webp" alt="">
-                                   </div>
-                                   <div class="articles__header-sign-up-img-box">
-                                    <img src="./assets/images/article-sign3.webp" alt="">
-                                   </div>
-                                   <div class="articles__header-sign-up-img-box">
-                                    <img src="./assets/images/article-sign4.webp" alt="">
-                                   </div>
-                                  </div>
-                                  <div class="articles__header-sign-up-btn-box">
-                                  <button  class="articles__header-sign-up-btn">
-                                    <span class="articles__header-sign-up-btn-text button">Подписаться</span>
-                                    <span class="articles__header-sign-up-btn-svg-box">
-                                        <svg viewBox="0 0 24 25" fill="none">
-                                            <path
-                                                d="M2.50032 12.75L1.75032 12.75L1.75032 11.25L2.50032 11.25L2.50032 12.75ZM22.0307 11.4697C22.3235 11.7626 22.3235 12.2374 22.0307 12.5303L17.2577 17.3033C16.9648 17.5962 16.4899 17.5962 16.197 17.3033C15.9041 17.0104 15.9041 16.5355 16.197 16.2426L20.4397 12L16.197 7.75736C15.9041 7.46447 15.9041 6.98959 16.197 6.6967C16.4899 6.40381 16.9648 6.40381 17.2577 6.6967L22.0307 11.4697ZM2.50032 11.25L21.5003 11.25L21.5003 12.75L2.50032 12.75L2.50032 11.25Z"
-                                            />
-                                        </svg>
-                                    </span>
-                                </button>
-                              </div>
+                                    <p class="articles__header-sign-up-title title-h4">+10 000 человек обрели ценный дар</p>
+                                    <div class="articles__header-sign-up-img-wrapper">
+                                        <div class="articles__header-sign-up-img-box">
+                                            <img src="./assets/images/article-sign1.webp" alt="" />
+                                        </div>
+                                        <div class="articles__header-sign-up-img-box">
+                                            <img src="./assets/images/article-sign2.webp" alt="" />
+                                        </div>
+                                        <div class="articles__header-sign-up-img-box">
+                                            <img src="./assets/images/article-sign3.webp" alt="" />
+                                        </div>
+                                        <div class="articles__header-sign-up-img-box">
+                                            <img src="./assets/images/article-sign4.webp" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="articles__header-sign-up-btn-box">
+                                        <button class="articles__header-sign-up-btn">
+                                            <span class="articles__header-sign-up-btn-text button">Подписаться</span>
+                                            <span class="articles__header-sign-up-btn-svg-box">
+                                                <svg viewBox="0 0 24 25" fill="none">
+                                                    <path
+                                                        d="M2.50032 12.75L1.75032 12.75L1.75032 11.25L2.50032 11.25L2.50032 12.75ZM22.0307 11.4697C22.3235 11.7626 22.3235 12.2374 22.0307 12.5303L17.2577 17.3033C16.9648 17.5962 16.4899 17.5962 16.197 17.3033C15.9041 17.0104 15.9041 16.5355 16.197 16.2426L20.4397 12L16.197 7.75736C15.9041 7.46447 15.9041 6.98959 16.197 6.6967C16.4899 6.40381 16.9648 6.40381 17.2577 6.6967L22.0307 11.4697ZM2.50032 11.25L21.5003 11.25L21.5003 12.75L2.50032 12.75L2.50032 11.25Z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
-
                             </div>
                             <div class="articles__body">
+                                <div class="mycustom-scroll" data-mcs-theme="3d-dark">
                                 <ul class="articles__filter-box">
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn articles__filter-btn--first isActive text" type="button" data-filter="all">Все</button>
@@ -67,43 +68,46 @@
                                     </li>
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn text" type="button" data-filter=".articles__list-item--amazonia">
-                                          <span class="articles__filter-btn-img-box">
-                                            <img src="./assets/images/articlesmin2.webp" alt="" />
-                                        </span>
-                                          Амазония</button>
+                                            <span class="articles__filter-btn-img-box">
+                                                <img src="./assets/images/articlesmin2.webp" alt="" />
+                                            </span>
+                                            Амазония
+                                        </button>
                                     </li>
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn text" type="button" data-filter=".articles__list-item--mushrooms">
-                                          <span class="articles__filter-btn-img-box">
-                                            <img src="./assets/images/articlesmin3.webp" alt="" />
-                                        </span>
-                                        Грибы</button>
+                                            <span class="articles__filter-btn-img-box">
+                                                <img src="./assets/images/articlesmin3.webp" alt="" />
+                                            </span>
+                                            Грибы
+                                        </button>
                                     </li>
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn text" type="button" data-filter=".articles__list-item--medicines-amazonia">
-                                          <span class="articles__filter-btn-img-box">
-                                            <img src="./assets/images/articlesmin4.webp" alt="" />
-                                        </span>
+                                            <span class="articles__filter-btn-img-box">
+                                                <img src="./assets/images/articlesmin4.webp" alt="" />
+                                            </span>
                                             Лекарства Амазонии
                                         </button>
                                     </li>
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn text" type="button" data-filter=".articles__list-item--self-development">
-                                          <span class="articles__filter-btn-img-box">
-                                            <img src="./assets/images/articlesmin5.webp" alt="" />
-                                        </span>
-                                        Саморазвитие
+                                            <span class="articles__filter-btn-img-box">
+                                                <img src="./assets/images/articlesmin5.webp" alt="" />
+                                            </span>
+                                            Саморазвитие
                                         </button>
                                     </li>
                                     <li class="articles__filter-item">
                                         <button class="articles__filter-btn text" type="button" data-filter=".articles__list-item--meditations">
-                                          <span class="articles__filter-btn-img-box">
-                                            <img src="./assets/images/articlesmin6.webp" alt="" />
-                                        </span>
-                                          Медитации
+                                            <span class="articles__filter-btn-img-box">
+                                                <img src="./assets/images/articlesmin6.webp" alt="" />
+                                            </span>
+                                            Медитации
                                         </button>
                                     </li>
                                 </ul>
+                            </div>
                                 <div class="articles__list-box">
                                     <ul class="articles__list-first-box">
                                         <li class="mix articles__list-item articles__list-item--all">
@@ -201,265 +205,265 @@
                                             </div>
                                         </li>
                                     </ul>
-<ul class="articles__list-all-box">
-                                    <li class="mix articles__list-item articles__list-item--mushrooms">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles4.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Грибы </span></p>
-                                            </div>
-                                            <p class="articles__link-title title-h3">Как влияют грибы на организм человека?</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--amazonia">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles5.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Амазония </span></p>
-                                            </div>
-                                            <p class="articles__link-title title-h3">Исцеление в сердце Амазонки: мудрость и практика Курандеро</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--self-development">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles6.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
-                                            </div>
-                                            <p class="articles__link-title title-h3">Скручивания в йоге. Польза и противопоказания</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--self-development">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles7.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
-                                            </div>
-                                            <p class="articles__link-title title-h3">Зачем нужны сложные асаны при занятии йогой?</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--amazonia">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles8.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Амазония </span></p>
-
-                                                <a href="#" class="articles__link-img-box-video-link">
-                                                    <div class="articles__link-img-box-video-link-btn">
-                                                        <div class="articles__link-img-box-video-link-btn-svg-box">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="none">
+                                    <ul class="articles__list-all-box">
+                                        <li class="mix articles__list-item articles__list-item--mushrooms">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles4.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
                                                                 <path
-                                                                    d="M2.459 1.13415C1.39384 0.456324 0 1.22147 0 2.48401V8.65466C0 9.9172 1.39384 10.6823 2.459 10.0045L7.30737 6.91919C8.29537 6.29047 8.29536 4.8482 7.30737 4.21948L2.459 1.13415Z"
-                                                                    fill="#0E1C15"
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
                                                                 />
                                                             </svg>
                                                         </div>
-                                                    </div>
-                                                    <p class="articles__link-img-box-video-link-text title-h5">Смотреть видео</p>
-                                                </a>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Грибы </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Как влияют грибы на организм человека?</p>
                                             </div>
-                                            <p class="articles__link-title title-h3">Амазония когда то была на дне моря</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--self-development">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles9.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--amazonia">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles5.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Амазония </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Исцеление в сердце Амазонки: мудрость и практика Курандеро</p>
                                             </div>
-                                            <p class="articles__link-title title-h3">Медитация с рапэ для успокоения нервной системы: советы и практики</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--self-development">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles10.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--self-development">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles6.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Скручивания в йоге. Польза и противопоказания</p>
                                             </div>
-                                            <p class="articles__link-title title-h3">Медитация с рапэ для успокоения нервной системы: советы и практики</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--self-development">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles11.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--self-development">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles7.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Зачем нужны сложные асаны при занятии йогой?</p>
                                             </div>
-                                            <p class="articles__link-title title-h3">Что такое чакры человека? 7 мистических струн Духа!</p>
-                                        </div>
-                                    </li>
-                                    <li class="mix articles__list-item articles__list-item--medicines-amazonia">
-                                        <div class="articles__link-inner">
-                                            <div class="articles__link-img-box">
-                                                <img src="./assets/images/articles12.webp" alt="" />
-                                                <a href="#" class="articles__link-img-box-link">
-                                                    <div class="articles__img-box-link-svg-box">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
-                                                            <path
-                                                                stroke="none"
-                                                                d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
-                                                            />
-                                                            <path
-                                                                d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                fill="none"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <p class="articles__link-img-box-data text">21 октября 2023</p>
-                                                <p class="articles__link-img-box-category text">Статьи | <span> Лекарства Амазонии </span></p>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--amazonia">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles8.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Амазония </span></p>
+
+                                                    <a href="#" class="articles__link-img-box-video-link">
+                                                        <div class="articles__link-img-box-video-link-btn">
+                                                            <div class="articles__link-img-box-video-link-btn-svg-box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="none">
+                                                                    <path
+                                                                        d="M2.459 1.13415C1.39384 0.456324 0 1.22147 0 2.48401V8.65466C0 9.9172 1.39384 10.6823 2.459 10.0045L7.30737 6.91919C8.29537 6.29047 8.29536 4.8482 7.30737 4.21948L2.459 1.13415Z"
+                                                                        fill="#0E1C15"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <p class="articles__link-img-box-video-link-text title-h5">Смотреть видео</p>
+                                                    </a>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Амазония когда то была на дне моря</p>
                                             </div>
-                                            <p class="articles__link-title title-h3">Рапэ что это? Сакральный источник познания самого себя!</p>
-                                        </div>
-                                    </li>
-                                  </ul>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--self-development">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles9.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Медитация с рапэ для успокоения нервной системы: советы и практики</p>
+                                            </div>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--self-development">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles10.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Медитация с рапэ для успокоения нервной системы: советы и практики</p>
+                                            </div>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--self-development">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles11.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Саморазвитие </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Что такое чакры человека? 7 мистических струн Духа!</p>
+                                            </div>
+                                        </li>
+                                        <li class="mix articles__list-item articles__list-item--medicines-amazonia">
+                                            <div class="articles__link-inner">
+                                                <div class="articles__link-img-box">
+                                                    <img src="./assets/images/articles12.webp" alt="" />
+                                                    <a href="#" class="articles__link-img-box-link">
+                                                        <div class="articles__img-box-link-svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M1.10286 16.8843L0.395754 17.5914L1.80997 19.0056L2.51707 18.2985L1.10286 16.8843ZM17.5171 3.29852C17.9076 2.908 17.9076 2.27483 17.5171 1.88431C17.1265 1.49378 16.4934 1.49378 16.1029 1.88431L17.5171 3.29852ZM2.51707 18.2985L17.5171 3.29852L16.1029 1.88431L1.10286 16.8843L2.51707 18.2985Z"
+                                                                />
+                                                                <path
+                                                                    d="M4.80997 1.59142L17.81 1.59142L17.81 14.5914"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    fill="none"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <p class="articles__link-img-box-data text">21 октября 2023</p>
+                                                    <p class="articles__link-img-box-category text">Статьи | <span> Лекарства Амазонии </span></p>
+                                                </div>
+                                                <p class="articles__link-title title-h3">Рапэ что это? Сакральный источник познания самого себя!</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="articles__pagination-wpapper content__pagination-wpapper">
                                     <button class="articles__pagination-btn-prev content__pagination-btn-prev" disabled>
@@ -506,5 +510,18 @@
 
             <include src="./components/footer.html"></include>
         </div>
+            <!-- <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+            <script  src="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script>
+                $('.mycustom-scroll').mCustomScrollbar({
+                    axis: 'x', // вертикальный скролл
+                    theme: 'rounded-dots', // тема
+                    scrollInertia: '300', // продолжительность прокрутки, значение в миллисекундах
+                 
+                    mouseWheel: {
+                        deltaFactor: 300, // кол-во пикселей на одну прокрутку колёсика мыши
+                    },
+                });
+            </script> -->
     </body>
 </html>
