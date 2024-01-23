@@ -8,10 +8,33 @@ const scroll = () => {
             scrollInertia: '300', // продолжительность прокрутки, значение в миллисекундах
     
             mouseWheel: {
-                deltaFactor: 30, // кол-во пикселей на одну прокрутку колёсика мыши
+                deltaFactor: 300, // кол-во пикселей на одну прокрутку колёсика мыши
             },
         });
     
+
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.mCSB_container').forEach(item => {
+                item.style.left = 0
+            })
+            document.querySelectorAll('.mCSB_dragger').forEach(item => {
+                item.style.left = 0
+            })
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                setTimeout(() => {
+                    document.querySelectorAll('.mCSB_container').forEach(item => {
+                        item.style.left = 0
+                    })
+                    document.querySelectorAll('.mCSB_dragger').forEach(item => {
+                        item.style.left = 0
+                    })
+                }, 500)
+               
+            }
+        })
    
 };
 

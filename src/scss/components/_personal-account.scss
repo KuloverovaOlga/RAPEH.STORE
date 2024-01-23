@@ -6,10 +6,13 @@
 
 .personal-account {
     padding-top: 17.7rem;
+    &__heading {
+        margin-bottom: 6rem;
+    }
     &__tabs {
         display: flex;
         gap: 1.2rem;
-        margin-bottom: 6rem;
+     
         @media (max-width: 48em) {
             gap: 0.8rem;
             overflow-x: auto;

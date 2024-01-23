@@ -901,14 +901,20 @@ main {
 .mCustomScrollbar   {
     -webkit-overflow-scrolling:touch;
 }
+// .catalog__tags-mycustom-scroll .mCSB_container {
+//     width: fit-content!important;
+// }
 .mCSB_container {
     width: fit-content!important;
+    z-index: 0!important;;
     margin-bottom: 0!important;
-    
+    transition: left 0.3s;
+    @media (max-width: 48em) {
+        transition: none;
+    }
 }
 .mCSB_scrollTools {
     position: relative;
-    display: none;
     &::after {
         content: "";
         position: absolute;
@@ -918,18 +924,20 @@ main {
         transform: translateY(-50%);
         height: 2px;
         width: 100%;
-        background-color: $light-grey;
+        background-color: rgba(17, 34, 25, 0.1);
         z-index: -1;
     }
-    @media (max-width: 48em) {
-        display: block;
-    }
-
 }
 
+.mCSB_dragger {
+    transition: left 0.3s;
+    @media (max-width: 48em) {
+        transition: none;
+    }
+}
 .mCSB_dragger_bar {
-    height: 3px!important;
-    border-radius: 3rem!important;
+    height: 4px!important;
+    // border-radius: 3rem!important;
     background-color:$green!important;
     margin: 0!important;
     position: relative;
