@@ -12,7 +12,7 @@
 
     &__inner {
         display: flex;
-        gap: 3.5rem;
+        gap: 0.5rem;
         padding: 5rem;
         border-radius: 4rem;
         background-color: $light-grey;
@@ -572,13 +572,14 @@
     // .product-hero__swiper-slide-img-box
 
     &__swiper-slide-img-box {
-        width: 55.8rem;
+        margin-top: 5rem;
+        width: 57.8rem;
         height: 65.6rem;
         & img {
-            object-fit: fill;
+            object-fit: cover;
             height: 100%;
             width: 100%;
-            border-radius: 50%;
+            border-radius: 10rem;
         }
     }
 
@@ -612,7 +613,7 @@
         flex-direction: column;
         gap: 0.8rem;
         top: 7.2rem;
-        left: 53.3rem;
+        left: 60.3rem;
     }
 
     // .product-hero__discount
@@ -1175,7 +1176,7 @@
         // .product-hero__swiper-slide-img-box
 
         &__swiper-slide-img-box {
-            width: 36.8rem;
+            width: 40.8rem;
             height: 51.2rem;
         }
 

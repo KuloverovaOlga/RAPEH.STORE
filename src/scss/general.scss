@@ -908,6 +908,7 @@ main {
 }
 .mCSB_scrollTools {
     position: relative;
+    display: none;
     &::after {
         content: "";
         position: absolute;
@@ -920,6 +921,10 @@ main {
         background-color: $light-grey;
         z-index: -1;
     }
+    @media (max-width: 48em) {
+        display: block;
+    }
+
 }
 
 .mCSB_dragger_bar {
