@@ -312,8 +312,10 @@ const form = () => {
                     parent.classList.remove('_form-error');
                    
                     if (item.classList.contains('input-dropdown--region')) {
-                        const locality = document.querySelector('.input-dropdown--locality');
-                        const street = document.querySelector('.input-dropdown--street');
+                        const locality =item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--locality');
+                        console.log(locality)
+                        const street = item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--street');
+                        console.log(street)
                         const localitySpan = locality.parentElement.nextElementSibling;
                         const localityParent = locality.parentElement.parentElement;
                         const streeSpan = street.parentElement.nextElementSibling;
@@ -333,7 +335,7 @@ const form = () => {
                     }
 
                     if (item.classList.contains('input-dropdown--locality')) {
-                        const street = document.querySelector('.input-dropdown--street');
+                        const street = item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--street');
                         const streeSpan = street.parentElement.nextElementSibling;
                         const streetParent = street.parentElement.parentElement;
                         if (street.value) {
