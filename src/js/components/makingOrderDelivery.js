@@ -9,6 +9,21 @@ const makingOrderDelivery = () => {
             element.classList.add('_active');
         });
     });
+
+    const lists = document.querySelectorAll('.making-order__delivery-second-list')
+
+    lists.forEach(item => {
+        item.addEventListener('click', (e) => {
+            let target = e.target;
+            let btns = item.querySelectorAll('.making-order__delivery-second-btn')
+            if (target.classList.contains('making-order__delivery-second-btn')) {
+                btns.forEach(btn => {
+                    btn.classList.remove('active')
+                })
+                target.classList.add('active')
+            }
+        })
+    })
 };
 
 

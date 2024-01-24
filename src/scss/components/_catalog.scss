@@ -271,7 +271,7 @@
         }
         &__tags {
             gap: 0 1.2rem;
-            min-width: 150rem!important;
+            min-width: max-content!important;
             &-box {
                 gap: 0.8rem;
                 padding: 3.2rem 2.8rem;
