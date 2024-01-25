@@ -406,17 +406,11 @@
     &__item-svg-box {
         width: 2.4rem;
         height: 2.4rem;
-        & svg {
+        & img {
             object-fit: cover;
             height: 100%;
             width: 100%;
-            & .hero__item-svg-stroke {
-                stroke: $black;
-            }
-
-            & .hero__item-svg-fill {
-                fill: $black;
-            }
+           
         }
     }
 
@@ -751,17 +745,10 @@
             transform: translateY(-50%);
             width: 8.8rem;
             height: 8.8rem;
-            & svg {
+            & img {
                 object-fit: cover;
                 height: 100%;
                 width: 100%;
-                & .hero__item-svg-stroke {
-                    stroke: $orange;
-                }
-
-                & .hero__item-svg-fill {
-                    fill: $orange;
-                }
             }
         }
 

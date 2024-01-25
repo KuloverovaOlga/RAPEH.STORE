@@ -3,13 +3,16 @@ const notification = () => {
     const notification = document.querySelector('.notification');
 
     productCardBasket.forEach((item) => {
-        item.addEventListener('click', function () {
-            console.log(1);
-            notification.classList.add('_show');
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            item.closest(".product-card").classList.toggle("isBasket");
+            if (item.closest(".product-card").classList.contains("isBasket")) {
+                notification.classList.add('_show');
 
-            setTimeout(function () {
-                notification.classList.remove('_show');
-            }, 4000);
+                setTimeout(function () {
+                    notification.classList.remove('_show');
+                }, 2000);
+            }
         });
     });
 };

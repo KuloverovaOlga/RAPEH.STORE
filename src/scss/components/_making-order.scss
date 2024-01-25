@@ -318,6 +318,8 @@
         }
         &-second {
             &-search {
+                // display: grid;
+                // grid-template-columns: repeat(2, 1fr);
                 display: flex;
                 flex-direction: column;
                 gap: 2.4rem;
@@ -476,7 +478,15 @@
                     gap: 3.2rem;
                     margin-bottom: 3.2rem;
                 }
+              
+                &--sdek-samov {
+                    margin-bottom: 4rem;
+                    @media (max-width: 48em) {
+                        margin-bottom: 4.8rem;
+                    }
+                }
             }
+
             &-input {
                 width: 100%;
                 color: #000;

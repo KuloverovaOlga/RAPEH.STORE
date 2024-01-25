@@ -9,7 +9,7 @@ const productCardMin = () => {
         }
         if (target.classList.contains("product-card__basket")) {
           e.preventDefault();
-          target.closest(".product-card").classList.toggle("isBasket");
+          // target.closest(".product-card").classList.toggle("isBasket");
         }
       });
     })
