@@ -483,18 +483,11 @@
     &__item-svg-box {
         width: 2.4rem;
         height: 2.4rem;
-        & svg {
+        & img {
             object-fit: cover;
             height: 100%;
             width: 100%;
-            & .product-hero__item-svg-stroke {
-                stroke: $black;
-            }
-
-            & .product-hero__item-svg-stroke-fill {
-                stroke: $black;
-                fill: $black;
-            }
+           
         }
     }
 
@@ -1109,7 +1102,7 @@
             width: 3.2rem;
             height: 3.2rem;
             flex-shrink: 0;
-            & svg {
+            & img {
                 object-fit: contain;
             }
         }

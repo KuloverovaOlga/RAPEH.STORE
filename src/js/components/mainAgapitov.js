@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         makingOrderDelivery();
     } catch {}
     try {
-        makingOrderTabs('[data-sposob-content = "delivery-sdek"]');
+        makingOrderTabs('[data-sposob-content = "delivery-sdek-samov"]');
     } catch {}
     try {
         makingOrderTabs('[data-sposob-content = "delivery-poshta"]');
