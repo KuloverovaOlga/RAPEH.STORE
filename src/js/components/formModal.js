@@ -64,7 +64,7 @@ export function formFieldsInit(options = { viewPass: false }) {
         let inputType = targetElement.classList.contains('_viewpass-active')
           ? 'password'
           : 'text';
-          console.log(targetElement)
+          // console.log(targetElement)
           if (targetElement.classList.contains('viewpass-btn')) {
             
             targetElement.parentElement

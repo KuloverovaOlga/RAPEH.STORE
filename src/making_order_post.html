@@ -588,7 +588,30 @@
 
 
 
+//                     <?foreach ($sdek_pvz as $item) {
 
+// if ($item->type == 'PVZ') {
+//    $type_del = 136;
+// }else {
+//  $type_del = 368;
+// }
+// $name = $item->name;
+// $position = $item->location;
+// $work_time = $item->work_time;
+
+
+// ?>
+
+// {
+//    coordinates: [<?=$position->latitude;?>, <?=$position->longitude;?>],
+//    title: '<?=$name;?>',
+//    address: '<? echo $position->address;?>',
+//    schedule: '<?=$work_time;?>',
+//    type: <?=$type_del;?>,
+//    code: <?=$item->location->city_code;?>,
+//    addressf:'<?=$item->location->address_full;?>'
+// },
+// <? }  ?>
 
 
                     places.forEach(function (place) {

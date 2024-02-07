@@ -2,11 +2,15 @@ const makingOrderAccordion = () => {
     const accordionItemHeaders = document.querySelectorAll('.making-order__accordion-heading');
 
     accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.classList.add('active');
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 600 + 'px';
+        accordionItemBody.style.marginTop = '4rem';
+    
+
         accordionItemHeader.addEventListener('click', () => {
             const isActive = accordionItemHeader.classList.contains('active');
-            const accordionItemBody = accordionItemHeader.nextElementSibling;
-           
-
+   const accordionItemBody = accordionItemHeader.nextElementSibling;
             // Проверяем, открыт ли текущий элемент
             if (!isActive) {
                 // Добавляем класс и устанавливаем высоту только для активного элемента

@@ -1,9 +1,11 @@
 const productCardHero = () => {
     const button = document.querySelector('.product-hero__info-basket-favorite');
 
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
         button.classList.toggle('isActive');
     });
+
 
     const parentMain = document.querySelector('.product-hero')
 
@@ -18,6 +20,7 @@ const productCardHero = () => {
         const counterNumber = counter.querySelector('.product-hero__information-counter-number');
     
         counterParent.addEventListener('click', (e) => {
+            e.preventDefault()
             if (e.target != counter && e.target != decrementButton && e.target != incrementButton && e.target != counterNumber) {
                 counterParent.classList.add('active');
             }

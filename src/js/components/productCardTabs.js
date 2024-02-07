@@ -15,7 +15,7 @@ const productCardTabs = () => {
             content.classList.remove('isActive');
         });
         tabContentInfo.forEach((info) => {
-          info.style.maxHeight = window.innerWidth > 768 ? '58.5rem' : '39rem';
+          info.style.maxHeight = window.innerWidth > 768 ? '56rem' : '39rem';
         });
 
         const activeTab = document.querySelector(`.product-content__tab[data-tab="${tabIndex}"]`);
@@ -71,7 +71,7 @@ const productCardTabs = () => {
                 //   parent.classList.toggle("isActive");
 
                 if (item.classList.contains('isActive')) {
-                    content.style.maxHeight = window.innerWidth > 768 ? '58.5rem' : '39rem';
+                    content.style.maxHeight = window.innerWidth > 768 ? '56rem' : '39rem';
                  setTimeout(() => {
                   item.classList.remove('isActive');
                  },500)
@@ -90,7 +90,7 @@ const productCardTabs = () => {
                 if (item.classList.contains('isActive')) {
                     item.querySelector('.product-content__tab-info').style.maxHeight = `${item.querySelector('.product-content__tab-info').scrollHeight}px`;
                 } else {
-                    item.querySelector('.product-content__tab-info').style.maxHeight = window.innerWidth > 768 ? '58.5rem' : '39rem'; 
+                    item.querySelector('.product-content__tab-info').style.maxHeight = window.innerWidth > 768 ? '56rem' : '39rem'; 
                 }
             })
     })
