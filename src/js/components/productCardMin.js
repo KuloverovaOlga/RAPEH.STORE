@@ -5,15 +5,12 @@ window.$ = window.jQuery = require('jquery');
 const productCardMin = () => {
 
 
-    const notification = document.querySelector('.notification');
     const addBasketButton = document.querySelector('.popup__add-basket-button');
     const checkboxs = document.querySelectorAll('.popup__add-basket-info-weight-radio-label');
 
-    // const inputCheckbox = e.currentTarget.querySelector('input'); // Получаем текущий чекбокс
+    
     const counters = document.querySelectorAll('.popup__add-basket-information-counter');
-    // const decrementButton = counter.querySelector('.popup__add-basket-information-counter-btn--min img');
-    // const incrementButton = counter.querySelector('.popup__add-basket-information-counter-btn--plus img');
-    // const counterNumber = counter.querySelector('.popup__add-basket-information-counter-number');
+   
 
     document.addEventListener('click', (e) => {
         let target = e.target;
@@ -110,16 +107,16 @@ const productCardMin = () => {
       }
   });
 
-  addBasketButton.addEventListener('click', () => {
+  // addBasketButton.addEventListener('click', () => {
       // target.closest('.product-card').classList.add('isBasket');
       // if (target.closest('.product-card').classList.contains('isBasket')) {
-      //     notification.classList.add('_show');
+          // notification.classList.add('_show');
 
-      //     setTimeout(function () {
-      //         notification.classList.remove('_show');
-      //     }, 2000);
+          // setTimeout(function () {
+          //     notification.classList.remove('_show');
+          // }, 2000);
       // }
-  });
+  // });
 };
 
 export default productCardMin();

@@ -20,6 +20,9 @@
     & [class$='svg-box'] {
         width: 2.4rem;
     }
+    &.active {
+        background-color: $black;
+    }
 }
 
 .balloon__schedule {
@@ -107,10 +110,28 @@ border-right: none!important;
 }
 
 
-[class$='cluster-tabs__menu-item'],[class$=cluster-tabs__menu-item_current_yes] {
+[class$='cluster-tabs__menu-item'],[class$='cluster-tabs__menu-item_current_yes'] {
 padding: 1rem!important;
-font-size: 1.6rem!important;
+font-size: 1.4rem!important;
 color: $black!important;
+transition: background 0.3s;
+background: transparent!important;
+@media (max-width: 48em) {
+    padding: 2rem!important;
+    font-size: 2.8rem!important;
+}
+}
+
+[class$='cluster-tabs__menu-item_current_yes'] [class$='cluster-tabs__menu-item-text'] {
+    color: $orange!important;
+}
+
+[class$='cluster-tabs__menu-item-text'] {
+color: $black!important;
+transition: color 0.3s;
+&:hover {
+    color: $orange!important;
+}
 }
 
 
