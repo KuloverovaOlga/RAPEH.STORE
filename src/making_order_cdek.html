@@ -267,22 +267,25 @@
                                                 </div>
 
                                                 <div class="making-order__delivery-second-tabs-heading">
+                                                   
                                                     <label class="making-order__option">
                                                         <input
-                                                            checked
+                                                        checked
                                                             hidden
                                                             type="radio"
                                                             value="2"
                                                             class="making-order__option-input"
                                                             name="delivery_option"
                                                             data-target="first"
+                                                           
                                                         />
                                                         <div class="making-order__option-box">
-                                                            <p class="making-order__option-text text">Вид списком</p>
+                                                            <p class="making-order__option-text text">На карте</p>
                                                         </div>
                                                     </label>
                                                     <label class="making-order__option">
                                                         <input
+                                                           
                                                             hidden
                                                             type="radio"
                                                             value="2"
@@ -291,12 +294,15 @@
                                                             data-target="second"
                                                         />
                                                         <div class="making-order__option-box">
-                                                            <p class="making-order__option-text text">На карте</p>
+                                                            <p class="making-order__option-text text">Вид списком</p>
                                                         </div>
                                                     </label>
                                                 </div>
                                                 <div class="making-order__delivery-second-tabs-content">
-                                                    <div class="making-order__delivery-second-tabs-content-first" data-content="first">
+                                                    <div class="making-order__delivery-second-tabs-content-second" data-content="first">
+                                                        <div class="making-order__delivery-map" id="makingOrderMap"></div>
+                                                    </div>
+                                                    <div class="making-order__delivery-second-tabs-content-first" data-content="second">
                                                         <div class="making-order__delivery-second-list">
                                                             <div class="making-order__delivery-second-item">
                                                                 <div class="making-order__delivery-second-info">
@@ -380,9 +386,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="making-order__delivery-second-tabs-content-second" data-content="second">
-                                                        <div class="making-order__delivery-map" id="makingOrderMap"></div>
-                                                    </div>
+                                                 
                                                 </div>
                                                 <div class="making-order__delivery-second-result">
                                                     <p class="text">Стоимость доставки:</p>

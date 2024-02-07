@@ -1,156 +1,3 @@
-// // import IMask from 'imask';
-
-// // const form = (selector) => {
-
-// //     const form = document.querySelector(selector);
-// //     form.addEventListener('submit', (e) => {
-// //         e.preventDefault();
-
-// //         const name = form.querySelector('.input--name').value;
-
-// //         function validateName(name) {form
-// //             return name.trim() !== '';
-// //         }
-
-// //         if (!validateName(name)) {
-// //             alert('Введите корректное имя.');
-// //             return;
-// //         } else {
-// //             form.submit()
-// //         }
-// //     });
-
-// //     const tel = form.querySelector('.input--tel')
-
-// //     IMask(tel, {
-// //         mask: '+{7}(000)000-00-00',
-// //     });
-
-// // }
-
-// // export default form
-
-// import { bodyLockStatus, bodyLock, bodyUnlock } from '../utils/constants';
-// var $ = require('jquery');
-
-// function closeModal(selector) {
-//     document.querySelector(selector).setAttribute('aria-hidden', 'true');
-//     $('html').removeClass('popup-show');
-//     document.querySelector(selector).classList.remove('popup_show');
-//     bodyUnlock();
-// }
-
-// function openModal(selector) {
-//     document.querySelector(selector).setAttribute('aria-hidden', 'false');
-//     $('html').addClass('popup-show');
-//     $(selector).addClass('popup_show');
-//     bodyLock();
-// }
-
-// const openModalWithPromise = (selector) => {
-//     return new Promise((resolve) => {
-//         openModal(selector);
-//         resolve();
-//     });
-// };
-
-// const form = (selector) => {
-//     const form = document.querySelector(selector);
-//     const name = form.querySelector('.input--name');
-//     const phone = form.querySelector('.input--tel');
-//     const checkbox = form.querySelector('.input--checkbox');
-//     const nameError = form.querySelector('.input--name + span.error-span');
-//     const phoneError = form.querySelector('.input--tel + span.error-span');
-
-//     name.addEventListener('input', function (event) {
-//         if (name.validity.valid) {
-//             nameError.innerText = '';
-//             nameError.classList.remove('active');
-//             name.classList.remove('invalid');
-//         } else {
-//             if (name.validity.valueMissing) {
-//                 nameError.classList.add('active');
-//                 name.classList.add('invalid');
-//             }
-//             nameError.innerText = 'Введите текстовое значение';
-//             nameError.classList.add('active');
-//             name.classList.add('invalid');
-//         }
-//     });
-
-//     phone.addEventListener('input', function (event) {
-//         if (phone.validity.valid) {
-//             phoneError.textContent = '';
-//             phoneError.classList.remove('active');
-//             phone.classList.remove('invalid');
-//         } else {
-//             if (phone.validity.valueMissing) {
-//                 phoneError.classList.add('active');
-//                 phone.classList.add('invalid');
-//             }
-//             phoneError.innerText = 'Введите числовое значение';
-//             phoneError.classList.add('active');
-//             phone.classList.add('invalid');
-//         }
-//     });
-
-//     form.addEventListener('submit', (e) => {
-//         e.preventDefault();
-
-//         const submittedName = name.value.trim();
-//         const submittedPhone = phone.value.trim();
-
-//         if (submittedName !== '' && submittedPhone !== '' && (!checkbox || (checkbox && checkbox.checked))) {
-//             $.ajax({
-//                 // ваш код для отправки данных
-//                 success: function () {
-//                     if (form.closest('.popup')) {
-//                         closeModal(`#${form.closest('.popup').id}`)
-//                         // document.querySelector(`#${form.closest('.popup').id}`).setAttribute('aria-hidden', 'true');
-//                         // document.querySelector(`#${form.closest('.popup').id}`).classList.remove('popup_show');
-//                     }
-//                     // После успешной отправки выполните следующий код
-//                     openModalWithPromise(e.target.dataset.popupMessage).then(() => {
-//                         name.value = '';
-//                         phone.value = '';
-//                         if(checkbox) {
-//                             checkbox.checked = false;
-//                         }
-
-//                     });
-//                 },
-//             });
-//         } else {
-//             if (submittedName == '') {
-//                 name.classList.add('invalid');
-//                 nameError.textContent = 'Заполните поле';
-//                 nameError.classList.add('active');
-//             }
-//             if (submittedPhone == '') {
-//                 phone.classList.add('invalid');
-//                 phoneError.textContent = 'Заполните поле';
-//                 phoneError.classList.add('active');
-//             }
-//             if (!checkbox.checked) {
-//                 checkbox.nextElementSibling.style.color = 'red'
-//             }
-
-//             return;
-//         }
-//     });
-
-//     document.addEventListener('click', (e) => {
-//         if (e.target.classList.contains('popup__success-wrapper')) {
-//             closeModal(`#${e.target.closest('.popup').id}`);
-//         }
-//         if (e.target.classList.contains('success-close-btn')) {
-//             closeModal(`#${e.target.closest('.popup').id}`);
-//         }
-//     });
-// };
-
-// export default form;
-
 import './formModal';
 import { formFieldsInit, formSubmit } from './formModal';
 
@@ -171,17 +18,64 @@ const form = () => {
             codeInputs[index].focus();
         }
     }
-    // // Функция для проверки, введены ли все цифры
-    // function isCodeComplete() {
-    //     return Array.from(codeInputs).every(input => input.value !== '');
-    // }
-    // // Функция для получения кода
-    // function getCode() {
-    //     return Array.from(codeInputs).map(input => input.value).join('');
-    // }
     codeInputs.forEach((item, i) => {
         item.addEventListener('input', () => {
             handleInput(i + 1);
+        });
+        item.addEventListener('focus', () => {
+            // Проверяем предыдущие инпуты на наличие незаполненных данных
+            for (let j = i - 1; j >= 0; j--) {
+                if (codeInputs[j].value === '') {
+                    // Если находим незаполненный инпут, перенаправляем фокус на него
+                    codeInputs[j].focus();
+                    break;
+                }
+            }
+        });
+    });
+
+    const firstInput = codeInputs[0];
+
+    // Добавляем обработчик события для вставки кода в первый инпут
+    firstInput.addEventListener('paste', (event) => {
+        // Предотвращаем стандартное поведение вставки
+        event.preventDefault();
+
+        // Получаем вставленный текст
+        const pastedText = (event.clipboardData || window.clipboardData).getData('text');
+
+        // Разбиваем текст на отдельные символы
+        const characters = pastedText.split('');
+
+        // Перебираем все инпуты и устанавливаем значение
+        codeInputs.forEach((input, index) => {
+            if (characters[index]) {
+                input.value = characters[index];
+                input.classList.remove('_form-error');
+                input.classList.add('_filled');
+                input.parentElement.classList.remove('_form-error');
+            }
+        });
+
+        if (characters.length > codeInputs.length || characters.length == codeInputs.length) {
+            codeInputs[codeInputs.length - 1].focus();
+        }
+        if (characters.length < codeInputs.length) {
+            codeInputs[characters.length - 1].focus();
+        }
+    });
+
+    codeInputs.forEach((item, i) => {
+        item.addEventListener('input', () => {
+            handleInput(i + 1);
+        });
+
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Backspace' && item.value === '') {
+                if (i > 0) {
+                    codeInputs[i - 1].focus();
+                }
+            }
         });
     });
 
@@ -222,7 +116,7 @@ const form = () => {
             passRep(i);
             passFir(i);
         });
-    })
+    });
     passRepeat.forEach((item, i) => {
         item.addEventListener('input', () => {
             passRep(i);
@@ -230,9 +124,7 @@ const form = () => {
         item.addEventListener('blur', () => {
             passRep(i);
         });
-    })
-   
-   
+    });
 
     const tel = document.querySelectorAll('.input--tel');
 
@@ -274,7 +166,7 @@ const form = () => {
             const inputValue = item.value.trim();
             const span = item.parentElement.nextElementSibling;
             const parent = item.parentElement.parentElement;
-            console.log(span)
+   
             if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(inputValue) && inputValue != '') {
                 span.classList.add('active');
                 parent.classList.add('_form-error');
@@ -285,7 +177,7 @@ const form = () => {
         });
     });
     const dropdown = document.querySelectorAll('.input-dropdown');
-    console.log(dropdown);
+   
     dropdown.forEach((item) => {
         const span = item.parentElement.nextElementSibling;
         const parent = item.parentElement.parentElement;
@@ -310,12 +202,12 @@ const form = () => {
                 if (item.classList.contains('filled') && item.value) {
                     span.classList.remove('active');
                     parent.classList.remove('_form-error');
-                   
+
                     if (item.classList.contains('input-dropdown--region')) {
-                        const locality =item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--locality');
-                        console.log(locality)
+                        const locality = item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--locality');
+           
                         const street = item.closest('.making-order__delivery-third-form').querySelector('.input-dropdown--street');
-                        console.log(street)
+             
                         const localitySpan = locality.parentElement.nextElementSibling;
                         const localityParent = locality.parentElement.parentElement;
                         const streeSpan = street.parentElement.nextElementSibling;
@@ -392,7 +284,7 @@ const form = () => {
         const submitButton = document.querySelector(submitButtonSelector);
 
         const formElements = form.querySelectorAll('input[data-required], textarea[data-required]');
-        console.log(formElements)
+   
         const formElementCheckbox = form.querySelectorAll('.popup__input-checkbox');
         const formElementsParents = form.querySelectorAll('.input-group');
         const formElementsLabel = form.querySelectorAll('.popup__label');

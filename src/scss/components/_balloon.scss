@@ -33,16 +33,16 @@
 }
 
 
-.widget__map {
-    border-radius: 3rem!important;
-    overflow: hidden!important;
-    --color-greay: #fc5b31;
-    --border-radius: 2.4rem;
-    height: 45rem !important;
-    @media (max-width: 48em) {
-        height: 40rem !important;
-    }
-}
+// .widget__map {
+//     border-radius: 3rem!important;
+//     overflow: hidden!important;
+//     --color-greay: #fc5b31;
+//     --border-radius: 2.4rem;
+//     height: 45rem !important;
+//     @media (max-width: 48em) {
+//         height: 40rem !important;
+//     }
+// }
 [class*='copyrights-pane'] {
     display: none;
 }
@@ -59,6 +59,13 @@
     margin-right: 0 !important;
     box-shadow: 2.1rem 1.8rem 6.1rem 0 rgba(173, 173, 173, 0.25) !important;
 }
+[class$='cluster-content'] {
+    width: fit-content!important;
+    height:  fit-content!important;
+   
+}
+
+
 [class$='balloon__content'] > ymaps {
     width: 40.7rem !important;
     height: fit-content !important;
@@ -85,126 +92,29 @@
 [class$='balloon-overlay'] [class$='close-button'] {
     margin-right: 0.3rem;
 }
-
-.widget__title {
-    display: none;
-}
-.widget__list {
-    height: 33rem !important;
-    overflow: hidden;
-    margin-top: 1.5rem;
-    @media (max-width: 48em) {
-        position: static;
-        margin-top: 1.5rem;
-        max-height: 75rem !important;
-        height: fit-content!important;
-        overflow: hidden;
-        transform: translateY(0);
-        width: 100%;
-    }
-}
-.widget__content {
-    max-width: none;
-    padding-right: 0;
-    margin-bottom: 1.5rem;
+[class$='tabs__content-item'] ymaps:first-child {
+    display: none!important;
+    opacity: 0;
+    height: 0!important;
+    padding: 0!important;
+    
 }
 
-.widget__wrapper {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    height: fit-content!important;
-    @media (max-width: 48em) {
-        width: 61rem;
-    }
+
+
+[class$='cluster-tabs__section_type_nav'] {
+border-right: none!important;
 }
 
-.ymaps-2-1-79-suggest-item:not(:last-child),
-.widget__popup-item:not(:last-child),
-.ymaps-2-1-79-suggest-item:last-child,
-.widget__popup-item:last-child {
-    margin: 0 1.5rem !important;
+
+[class$='cluster-tabs__menu-item'],[class$=cluster-tabs__menu-item_current_yes] {
+padding: 1rem!important;
+font-size: 1.6rem!important;
+color: $black!important;
 }
 
-.widget__label-text {
-    font-size: 1.6rem;
-    line-height: 1.7rem;
-    @media (max-width: 48em) {
-        line-height: 3.4rem;
-        font-size: 3.2rem;
-    }
-}
-.widget__header {
-    padding: 1.5rem 1.6rem 1.6rem;
-    border-radius: 2.4rem;
-    @media (max-width: 48em) {
-        position: static;
-        box-shadow: none;
-        width: 100%;
-        border-bottom-right-radius: 24px;
-        border-bottom-left-radius: 24px;
-    }
-}
-.widget__input {
-    border-radius: 1.6rem;
-    border: 1px solid transparent;
-    padding: 1.55rem 1.6rem;
-    transition: border 0.3s;
-}
 
-.widget__input--search:not(:focus),
-.ydw-suggest-inactive {
-    background-color: #f5f4f2 !important;
-    border: 1px solid transparent !important;
-    transition: border 0.3s;
-}
-.widget__locations {
-    max-height: 75rem;
-    border-radius: 2.4rem;
-}
-.widget__input--search.active,
-.widget__location-title,
-.widget__location-detail,
-[class$='search__suggest-item'] {
-    font-size: 1.6rem !important;
-    line-height: 1.7rem;
-    @media (max-width: 48em) {
-        line-height: 3.4rem;
-        font-size: 3.2rem !important;
-    }
-}
-[class$='search__suggest-item'] {
-    padding-top: 2.1rem !important;
-    padding-bottom: 2.1rem !important;
-}
 
-.widget__popup-item {
-    margin-left: 1.5rem !important;
-    margin-right: 1.5rem !important;
-}
-
-.widget__location-desc,
-.widget__location-detail-span {
-    font-size: 1.3rem;
-    line-height: 1.4rem;
-    @media (max-width: 48em) {
-        line-height: 2.8rem;
-        font-size: 2.6rem;
-    }
-}
-.widget__input.active {
-    border: 1px solid $black;
-}
-.widget__label-button {
-    width: 2.4rem;
-    height: 2.4rem;
-}
-.widget__label-img,
-.widget__location-faq-img {
-    width: 2.4rem;
-    height: 2.4rem;
-}
-.widget__location-checkbox-input~.widget__location-checkbox-label:before {
-    width: 3.2rem;
-    height: 3.2rem;  
+#ecom-widget {
+    height: 49rem!important;
 }

@@ -451,6 +451,7 @@
                             position: absolute;
                             bottom: 4.5rem;
                             right: 2rem;
+                          
                         }
                         &-image {
                             width: 21.6rem;
@@ -629,6 +630,9 @@
             &.orders__table-item {
                 display: flex;
                 align-items: center;
+                gap:1rem;
+                // display: grid;
+                // grid-template-columns: repeat(4,  1fr);
                 &:hover {
                     .orders__table-element {
                         &._numbering {
@@ -641,16 +645,38 @@
                     .orders {
                         &__table-element {
                             &:nth-child(1) {
-                                width: 45.5rem;
+                                width: 44.5rem;
                             }
                             &:nth-child(2) {
-                                width: 39rem;
+                                width: 38rem;
                             }
                             &:nth-child(3) {
-                                width: 44rem;
+                                width: 43rem;
                             }
                             &:nth-child(4) {
                                 width: 25rem;
+                            }
+                        }
+                    }
+                }
+                &._withStatus {
+                    gap: 1.5rem;
+                    .orders {
+                        &__table-element {
+                            &:nth-child(1) {
+                                width: 31rem;
+                            }
+                            &:nth-child(2) {
+                                width: 26rem;
+                            }
+                            &:nth-child(3) {
+                                width: 26rem;
+                            }
+                            &:nth-child(4) {
+                                width: 45rem;
+                            }
+                            &:nth-child(5) {
+                                width: 20rem;
                             }
                         }
                     }
@@ -887,6 +913,7 @@
                                 border-radius: 50%;
                                 bottom: 0.6rem;
                                 right: 0.6rem;
+                                pointer-events: none;
                             }
                             &-image {
                                 width: 15.2rem;

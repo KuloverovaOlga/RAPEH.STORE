@@ -288,7 +288,7 @@
             border-radius: 4rem;
             overflow: hidden;
             @media (max-width: 48em) {
-                height: 98rem;
+                height: 49rem;
                 border-radius: 4.8rem;
             }
         }
@@ -347,9 +347,10 @@
                     margin-top: 2.4rem;
                     margin-bottom: 4rem;
                     &-second {
-                        display: none;
+                        max-height: 49rem;
                     }
                     &-first {
+                        display: none;
                         max-height: 49rem;
                         padding: 3.2rem;
                         background-color: #fff;

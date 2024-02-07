@@ -2,8 +2,6 @@
     padding: 11rem 0;
     // .product-content__inner
 
-
-
     &__inner {
         display: flex;
         gap: 18rem;
@@ -249,7 +247,7 @@
 
     &__tab-content-wrap {
         background-color: $light-grey;
-     
+        width: 106.6rem;
         padding: 8rem 10rem 7.5rem 7rem;
         border-radius: 0 8rem 8rem 8rem;
         position: relative;
@@ -266,7 +264,7 @@
         z-index: 0;
         position: relative;
         padding-bottom: 2rem;
-height: fit-content;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -278,7 +276,6 @@ height: fit-content;
         }
         &.isActive {
             & .product-content__tab-info {
-
             }
 
             & .product-content__tab-description,
@@ -299,9 +296,6 @@ height: fit-content;
         }
     }
 
-
-
-
     // .product-content__tab-content
 
     &__tab-info {
@@ -312,7 +306,6 @@ height: fit-content;
         scrollbar-color: $black $white;
         margin-right: -1.5rem;
         transition: max-height 0.5s;
-
     }
 
     &__tab-description {
@@ -332,7 +325,7 @@ height: fit-content;
     &__tab-instructions-list {
     }
     &__tab-instructions-item {
-
+        list-style-type: none;
         &:not(:last-child) {
             margin-bottom: 3.5rem;
         }
@@ -582,7 +575,7 @@ height: fit-content;
             &:nth-child(2) {
                 width: 20rem;
             }
-       
+
             &:not(:first-of-type) {
                 margin-left: -4.5rem;
                 padding-left: 3.5rem;
@@ -668,7 +661,7 @@ height: fit-content;
         // .product-content__tab-content-wrap
 
         &__tab-content-wrap {
-    
+            width: 100%;
             padding: 4rem;
             border-radius: 0 4rem 4rem 4rem;
         }
@@ -682,7 +675,6 @@ height: fit-content;
             }
             &.isActive {
                 & .product-content__tab-info {
-                 
                     // display: block !important;
                     // height: 39rem;
                     max-height: 39rem;
@@ -690,8 +682,7 @@ height: fit-content;
             }
         }
 
-        &__tab-info  {
-
+        &__tab-info {
         }
 
         // .product-content__tab-content
@@ -739,5 +730,5 @@ height: fit-content;
                 border-bottom: 2px dotted $black-50;
             }
         }
-}
+    }
 }
