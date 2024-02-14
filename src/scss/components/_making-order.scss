@@ -196,8 +196,8 @@
         }
         &-content {
             padding: 0 1rem;
-            max-height: 0;
-            margin-top: 0;
+            max-height: 200rem;
+            margin-top: 4rem;
             overflow: hidden;
             transition: max-height 0.5s ease-in, margin-top 0.5s ease-in;
             &._options {
@@ -290,6 +290,10 @@
             @media (max-width: 48em) {
                 height: 49rem;
                 border-radius: 4.8rem;
+                width: 61rem;
+            }
+            & > ymaps {
+                width: 100%!important;
             }
         }
         &-first {

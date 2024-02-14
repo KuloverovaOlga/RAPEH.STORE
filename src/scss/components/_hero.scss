@@ -282,7 +282,7 @@
             font-weight: 400;
             line-height: 24px; /* 75% */
             letter-spacing: 1.28px;
-            display: flex !important;
+            display: flex;
             align-items: center;
             justify-content: center;
             transition: color 0.3s, background-color 0.3s;
@@ -632,7 +632,7 @@
             width: fit-content !important;
             left: auto !important;
             top: auto !important;
-            bottom: 15rem !important;
+            bottom: 15.5rem !important;
             right: 0 !important;
             transform: none !important;
             border-radius: 4.8rem 0 0 0;
