@@ -20,7 +20,42 @@ const heroSwiper = () => {
                 return '<span class="' + className + '">' + (index + 1) + '</span>';
             },
         },
+        on: {
+            init: function () {
+                updatePagination(this);
+            },
+            slideChange: function () {
+                updatePagination(this);
+            },
+        },
     });
+
+    function updatePagination(swiper) {
+        const bullets = paginationContainer.querySelectorAll('.swiper-pagination-bullet');
+        console.log(bullets)
+        const numSlides = swiper.slides.length;
+        const activeIndex = swiper.realIndex;
+
+        bullets.forEach((bullet, index) => {
+            bullet.classList.remove('custom-bullet-active', 'custom-bullet-active-next', 'custom-bullet-active-prev');
+
+            let position = index - activeIndex;
+
+            if (position < 0) {
+                position += numSlides;
+            }
+        
+            if (position > 2 || position < 0) {
+                bullet.style.display = 'none';
+            } else {
+                bullet.style.display = 'flex';
+            }
+        
+   
+        });
+    }
+
+
 
 }
 

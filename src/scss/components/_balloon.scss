@@ -107,6 +107,7 @@
 
 [class$='cluster-tabs__section_type_nav'] {
 border-right: none!important;
+width: 10rem!important;
 }
 
 
@@ -117,8 +118,8 @@ color: $black!important;
 transition: background 0.3s;
 background: transparent!important;
 @media (max-width: 48em) {
-    padding: 2rem!important;
-    font-size: 2.8rem!important;
+    padding: 1rem!important;
+    font-size: 2rem!important;
 }
 }
 
@@ -133,9 +134,13 @@ transition: color 0.3s;
     color: $orange!important;
 }
 }
-
+[class$='panel-pane']{
+    display: none !important;
+  } 
+  
 
 
 #ecom-widget {
     height: 49rem!important;
+    width: 100%;
 }

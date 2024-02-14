@@ -313,13 +313,15 @@
         -webkit-line-clamp: 18; // количество строк
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+  
     }
 
     &__tab-instructions {
         display: -webkit-box !important;
-        -webkit-line-clamp: 18; // количество строк
+        -webkit-line-clamp: 16; // количество строк
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+    
     }
 
     &__tab-instructions-list {
@@ -697,7 +699,7 @@
         }
 
         &__tab-instructions {
-            -webkit-line-clamp: 9; // количество строк
+            -webkit-line-clamp: 8; // количество строк
             height: fit-content;
             max-height: 39rem;
         }
@@ -717,7 +719,7 @@
         }
 
         &__tab-details-list {
-            gap: 3.2rem;
+            gap: 3.4rem;
         }
         &__tab-details-item {
             display: flex;
