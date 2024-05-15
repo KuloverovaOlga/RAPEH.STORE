@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "YandexSansDisplay";
+  src: url("./assets/fonts/YandexSansDisplay-Bold.eot");
+  src: local("YandexSansDisplay-Bold"), local("YandexSansDisplay-Bold"), url("./assets/fonts/YandexSansDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/YandexSansDisplay-Bold.woff2") format("woff2"), url("./assets/fonts/YandexSansDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("./assets/fonts/CeraPro-Bold.eot");
+  src: local("CeraPro-Bold"), local("CeraPro-Bold"), url("./assets/fonts/CeraPro-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CeraPro-Bold.woff2") format("woff2"), url("./assets/fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("./assets/fonts/CeraPro-Medium.eot");
+  src: local("CeraPro-Medium"), local("CeraPro-Medium"), url("./assets/fonts/CeraPro-Medium.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CeraPro-Medium.woff2") format("woff2"), url("./assets/fonts/CeraPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("./assets/fonts/CeraPro-Regular.eot");
+  src: local("CeraPro-Regular"), local("CeraPro-Regular"), url("./assets/fonts/CeraPro-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CeraPro-Regular.woff2") format("woff2"), url("./assets/fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("./assets/fonts/MontserratAlternates-Medium.eot");
+  src: local("MontserratAlternates-Medium"), local("MontserratAlternates-Medium"), url("./assets/fonts/MontserratAlternates-Medium.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/MontserratAlternates-Medium.woff2") format("woff2"), url("./assets/fonts/MontserratAlternates-Medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}/*# sourceMappingURL=fonts.css.map */
